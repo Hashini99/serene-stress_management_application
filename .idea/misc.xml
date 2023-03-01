@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_create_account.xml" value="0.30714285714285716" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_forget_password.xml" value="0.1" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_loading_screen.xml" value="0.1" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_main.xml" value="0.14447463768115942" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_profile.xml" value="0.1" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_update_profile.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
