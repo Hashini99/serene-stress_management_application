@@ -1,6 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent">-->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    tools:context=".CreateAccount">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp">
+
+                <TextView
+                    style="@style/viewParent.headerText.NoMode"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Register Now"
+                    android:textColor="@color/main_2" />
+
+                <ImageView
+                    android:layout_width="115dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginRight="-6dp"
+                    android:src="@mipmap/ic_launcher_round" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="352dp"
+                android:layout_height="620dp"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                //name
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_name"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/viewsMargin">
+
+                    <EditText
+                        android:id="@+id/et_name"
+                        style="@style/modifiedEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Name"
+                        android:inputType="textPersonName"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                //email
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_email"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/viewsMargin">
+
+                    <EditText
+                        android:id="@+id/et_Email"
+                        style="@style/modifiedEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Email"
+                        android:inputType="textEmailAddress"
+
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                //password
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_password"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/viewsMargin">
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        style="@style/modifiedEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                //confirm pw
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/layout_repeat_password"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/viewsMargin">
+
+                    <EditText
+                        android:id="@+id/et_repeat_password"
+                        style="@style/modifiedEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"
+                        android:maxLines="1" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+<!--                //address-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/layout_address"-->
+<!--                    style="@style/parent"-->
+<!--                    android:layout_marginTop="@dimen/viewsMargin"-->
+<!--                    android:layout_height="100dp">-->
+
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/et_address"-->
+<!--                        android:height="100dp"-->
+<!--                        style="@style/modifiedEditText"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:hint="Address"-->
+<!--                        android:inputType="textPersonName"-->
+<!--                        android:maxLines="3" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                //mobile-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/layout_phone"-->
+<!--                    style="@style/parent"-->
+<!--                    android:layout_marginTop="@dimen/viewsMargin">-->
+
+<!--                    <EditText-->
+<!--                        android:id="@+id/et_phone"-->
+<!--                        style="@style/modifiedEditText"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:hint="Mobile Number"-->
+
+<!--                        android:inputType="phone"-->
+<!--                        android:maxLines="1" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/textInputPassword"-->
+<!--                    style="@style/parent"-->
+<!--                    android:layout_marginTop="@dimen/viewsMargin"/>-->
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="142dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:backgroundTint="@color/main_2"
+                    android:onClick="register"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Register" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/textInputPasswordd"
+                    style="@style/parent"
+                    android:layout_marginTop="@dimen/viewsMargin"/>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="366dp"
+                    android:layout_height="56dp"
+                    android:layout_marginBottom="170dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.488"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buttonRegister">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_weight="1"
+                        android:text="Do you have an account?"
+                        android:textColor="@color/main_2"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/montserrat_medium"/>
+
+                    <TextView
+                        android:id="@+id/textViewLogin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2.6"
+
+
+                        android:text="Login"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/montserrat_medium"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:weightSum="12">
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

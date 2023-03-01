@@ -3,4 +3,12 @@
     <item name="imageView" type="id" />
     <item name="textView" type="id" />
     <item name="progressBar" type="id" />
+    <item name="layout_name" type="id" />
+    <item name="et_name" type="id" />
+    <item name="layout_password" type="id" />
+    <item name="et_password" type="id" />
+    <item name="layout_repeat_password" type="id" />
+    <item name="et_repeat_password" type="id" />
+    <item name="layout_address" type="id" />
+    <item name="et_address" type="id" />
 </resources>
