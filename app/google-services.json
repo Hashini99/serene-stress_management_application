@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "875279646734",
+    "project_id": "research-45d97",
+    "storage_bucket": "research-45d97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875279646734:android:a6bd31fb408fcca47afc5f",
+        "android_client_info": {
+          "package_name": "com.example.serene"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875279646734-a0msto7u5l2pnjo20tco849h3e6tj2rk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyAaagEyYIjGuEhRg5K7w0OxFi-tc9itI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875279646734-a0msto7u5l2pnjo20tco849h3e6tj2rk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
