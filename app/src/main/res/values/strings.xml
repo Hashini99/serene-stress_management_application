@@ -12,4 +12,110 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
+
+
+
+<!-- meditation-->
+    <string name="get_started">Get Started</string>
+    <string name="current_level">Current Level</string>
+    <string name="aspiring_monk">Aspiring Monk</string>
+    <string name="level_up_in">LEVEL UP IN:</string>
+    <string name="settings">Settings</string>
+    <string name="_0_focus">0</string>
+    <string name="_100_focus">100</string>
+    <string name="focus_time">Focus Time:</string>
+    <string name="_65">65</string>
+    <string name="break_time">Break Time:</string>
+    <string name="_15">15</string>
+    <string name="_5">5</string>
+    <string name="no_of_sessions">No. of sessions:</string>
+    <string name="mins">mins</string>
+    <string name="_00_00">00:00</string>
+    <string name="stop">Stop</string>
+    <string name="distracted_baby_description">You have very low attention span and you are easily distracted like a baby. But you know the potential of the human mind and you are ready to work to achieve it</string>
+    <string name="distracted_baby">Distracted Baby</string>
+    <string name="testing">Testing</string>
+    <string name="_24">24</string>
+    <string name="min_left">Min Left</string>
+    <string name="calm_in_calamity">Calm in calamity</string>
+    <string name="aspiring_monk_description">You suddenly realize that work gets completed faster when you give dedicated time to it. You decide to use this discovery to your advantage</string>
+    <string name="calmInCalamityDescription">You have started to realize the motion of restless thoughts in your head and you know you have the power to control it. You have just got the taste of the superpowers that being human brings with</string>
+    <string name="glimpseofinnerpeace">Glimpse of inner peace</string>
+    <string name="glimpseOfInnerPeaceDescription">Be it giving a corporate presentation or making your bed. You do it with utmost awareness. You hardly used your entire mental faculty for doing one thing at a time and being present in the moment. This new found improved way of life is quite surprising and startling.</string>
+    <string name="_40">40</string>
+    <string name="usage_statistics">Usage Statistics</string>
+    <string name="date1">Date1</string>
+    <string name="date2">Date2</string>
+    <string name="date3">Date3</string>
+    <string name="date4">Date4</string>
+    <string name="date5">Date5</string>
+    <string name="date6">Date6</string>
+    <string name="date7">Date7</string>
+    <string name="date8">Date8</string>
+    <string name="date9">Date9</string>
+    <string name="date10">Date10</string>
+    <string name="colon">:</string>
+    <string name="time1">Time1</string>
+    <string name="time2">Time2</string>
+    <string name="time3">Time3</string>
+    <string name="time4">Time4</string>
+    <string name="time5">Time5</string>
+    <string name="time6">Time6</string>
+    <string name="time7">Time7</string>
+    <string name="time8">Time8</string>
+    <string name="time9">Time9</string>
+    <string name="time10">Time10</string>
+    <string name="Mins">Mins</string>
+    <string name="pause">Pause</string>
+    <string name="_45">45</string>
+    <string name="_20">20</string>
+    <string name="_10">10</string>
+    <string name="stats">Stats</string>
+    <string name="b_monk">B Monk</string>
+    <string name="first_page_text">Get ready to unlock the super powers of being human</string>
+    <string name="don_t_show_this_message_again">Don\'t show this message again</string>
+    <string name="focus_time_running">Focus Time</string>
+    <string name="dnd">DND</string>
+    <string name="super_mode">Super Mode</string>
+    <string name="super_m">Super</string>
+    <string name="mode_s">Mode</string>
+    <string name="success">Success</string>
+    <string name="congratulations_on_level_up">Congratulations on Level Up</string>
+    <string name="confirm">Confirm</string>
+    <string name="next_level_up_in_10_mins">Next level up in 40 mins</string>
+
+
+<!--mood select-->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="or_sign_up_using">or Sign Up Using</string>
+    <string name="hey_there">HEY THERE !!</string>
+    <string name="choose_your_mood">CHOOSE YOUR MoooooD…</string>
+    <string name="happy">HAPPY</string>
+    <string name="tired">TIRED</string>
+    <string name="sad">SAD</string>
+    <string name="exhausted">EXHAUSTED</string>
+    <string name="anger">ANGER</string>
+    <string name="what_do_you_want_to_try">What do you want to try</string>
+    <string name="game">GAME</string>
+    <string name="music">Music</string>
+    <string name="chill">CHILL</string>
+    <string name="meditation">MEDITATION</string>
+    <string name="exercise">EXERCISE</string>
+    <string name="memoir">MEMOIR</string>
+    <string name="movies">MOVIES</string>
+    <string name="choose_your_language">CHOOSE YOUR LANGUAGE</string>
+    <string name="watch_vids">WATCH VIDS</string>
+    <string name="jokes">JOKES</string>
+    <string name="edm">EDM</string>
+    <string name="write_some_best_memories">Write Some Best Memories</string>
+    <string name="save">SAVE</string>
+    <string name="express_anger">EXPRESS_ANGER</string>
+    <string name="express">EXPRESS</string>
+    <string name="sunlight">SUNLIGHT</string>
+    <string name="or">or</string>
+    <string name="new_user_register">New User? Register</string>
+    <string name="or_signup_using">or SignUp Using</string>
+
+
+
 </resources>
