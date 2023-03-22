@@ -8,7 +8,6 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -114,7 +113,7 @@ class CreateAccount : AppCompatActivity(){
                     )
 
                     Firebase.firestore.collection("users").document(uid).set(user).addOnSuccessListener {
-                        startActivity(Intent(this, Home::class.java))
+                        startActivity(Intent(this,JournalAddEditNoteActivity::class.java))
                         finish()
                     }
 
@@ -129,8 +128,14 @@ class CreateAccount : AppCompatActivity(){
 
             fun goToLogin(view: View) {
                 startActivity(Intent(this, Login::class.java))
-                finish()
+           finish()
             }
+//    fun goToLogin(savedInstanceState: Bundle?) {
+////                startActivity(Intent(this, Login::class.java))
+////                finish()
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_login)
+//    }
 
            override fun onBackPressed() {
                startActivity(Intent(this, Login::class.java))
