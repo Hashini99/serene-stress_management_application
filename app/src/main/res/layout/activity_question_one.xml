@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+
+    tools:context=".montly_quiz.Quiz"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="18dp"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/question_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:layout_marginVertical="20dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text = "In the last month, how often have you been upset because of
+something that happened unexpectedly?" />
+
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginVertical="16dp"
+            android:layout_gravity="center"
+            >
+
+
+
+
+        </LinearLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/questions_card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="18dp"
+            android:layout_marginHorizontal="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="24dp">
+
+
+                <TextView
+                    android:id="@+id/q1_option_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:background="@drawable/quiz_option_border"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="Never"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/q1_option_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:textColor="@color/black"
+                    android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:background="@drawable/quiz_option_border"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="Almost Never"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/q1_option_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:background="@drawable/quiz_option_border"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:text="Sometimes"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/q1_option_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/quiz_option_border"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:padding="15dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Fairly Often"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/q1_option_five"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/quiz_option_border"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Very Often"
+                    android:textSize="18sp"/>
+
+                <Button
+                    android:id="@+id/submit_btn"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:text="Next Question"
+                    android:textSize="12sp"
+                    android:onClick="go_to_q2"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:layout_marginTop="14dp"
+                    android:background="#41c1dd" />
+
+
+            </LinearLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+</ScrollView>
