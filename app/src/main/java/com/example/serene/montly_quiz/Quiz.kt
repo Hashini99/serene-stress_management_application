@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.serene.CreateAccount
+import com.example.serene.Login
 import com.example.serene.R
 import kotlinx.android.synthetic.main.activity_question_one.*
 import kotlinx.android.synthetic.main.activity_select_mood.*
@@ -49,6 +50,7 @@ class Quiz:AppCompatActivity() {
 private operator fun Int.plus(buttonValue: String): Int {
     return total+ mark1
 }
+
     fun go_to_q2(view: View) {
         startActivity(Intent(this, Question2::class.java))
         finish()

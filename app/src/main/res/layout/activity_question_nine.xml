@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
 
-    tools:context=".montly_quiz.Quiz"
+    tools:context=".montly_quiz.Qusetion9"
 
     >
 
@@ -40,8 +40,8 @@
                     android:layout_marginVertical="20dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text = "In the last month, how often have you been upset because of
-something that happened unexpectedly?" />
+                    android:text = "In the last month, how often have you been angered because of
+things that were outside of your control?" />
 
 
 
@@ -78,11 +78,11 @@ something that happened unexpectedly?" />
                 android:orientation="vertical"
                 android:paddingHorizontal="16dp"
                 android:paddingVertical="24dp"
-                android:onClick="go_to_q2">
+              >
 
 
                 <TextView
-                    android:id="@+id/q1_option_one"
+                    android:id="@+id/q9_option_one"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -94,11 +94,11 @@ something that happened unexpectedly?" />
                     android:padding="15dp"
                     android:text="Never"
                     android:clickable="true"
-                    android:onClick="go_to_q2"
+
                     android:textSize="18sp"/>
 
                 <TextView
-                    android:id="@+id/q1_option_two"
+                    android:id="@+id/q9_option_two"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
@@ -110,11 +110,11 @@ something that happened unexpectedly?" />
                     android:padding="15dp"
                     android:text="Almost Never"
                     android:clickable="true"
-                    android:onClick="go_to_q2"
+
                     android:textSize="18sp"/>
 
                 <TextView
-                    android:id="@+id/q1_option_three"
+                    android:id="@+id/q9_option_three"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
@@ -126,11 +126,11 @@ something that happened unexpectedly?" />
                     android:padding="15dp"
                     android:text="Sometimes"
                     android:clickable="true"
-                    android:onClick="go_to_q2"
+
                     android:textSize="18sp"/>
 
                 <TextView
-                    android:id="@+id/q1_option_four"
+                    android:id="@+id/q9_option_four"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
@@ -142,10 +142,10 @@ something that happened unexpectedly?" />
                     android:fontFamily="@font/montserrat_medium"
                     android:text="Fairly Often"
                     android:clickable="true"
-                    android:onClick="go_to_q2"
+
                     android:textSize="18sp"/>
                 <TextView
-                    android:id="@+id/q1_option_five"
+                    android:id="@+id/q9_option_five"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
@@ -157,13 +157,13 @@ something that happened unexpectedly?" />
                     android:fontFamily="@font/montserrat_medium"
                     android:text="Very Often"
                     android:clickable="true"
-                    android:onClick="go_to_q2"
+
                     android:textSize="18sp"/>
 
                 <Button
                     android:id="@+id/submit_btn"
                     android:textSize="12sp"
-                    android:onClick="go_to_q2"
+                    android:onClick="go_to_q10"
                     android:fontFamily="@font/montserrat_medium"
                     android:layout_marginTop="14dp"
                     android:layout_width="250dp"
