@@ -1,0 +1,98 @@
+package com.example.serene.daily_habits
+
+import android.content.Intent
+import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
+import android.widget.EditText
+import android.widget.Spinner
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
+import com.example.serene.Login
+import com.example.serene.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_add_dailyhabit.*
+import java.text.SimpleDateFormat
+import java.util.*
+
+
+//data class Habit(
+//    val title: String="",
+//    val minit
+//)
+
+class AddDailyHabits : AppCompatActivity(), TimePickerFragment.DialogTimeListener {
+
+   // private lateinit var viewModel: AddHabitViewModel
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_add_dailyhabit)
+
+        supportActionBar?.title = getString(R.string.add_habit)
+
+//        val factory = ViewModelFactory.getInstance(this)
+//        viewModel = ViewModelProvider(this, factory)[AddHabitViewModel::class.java]
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.menu_add, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            R.id.action_save -> {
+                val title = findViewById<EditText>(R.id.add_ed_title).text.toString()
+
+                val minutesFocus = findViewById<EditText>(R.id.add_ed_minutes_focus).text.toString().toLong()
+
+                val startTime = findViewById<TextView>(R.id.add_tv_start_time).text.toString()
+
+                val priorityLevel = findViewById<Spinner>(R.id.sp_priority_level).selectedItem.toString()
+
+                if (title.isNotEmpty()) {
+                    val habit = hashMapOf(
+                        "user" to FirebaseAuth.getInstance().currentUser?.uid,
+                        "title" to title,
+                        //"title" to add_ed_title.text.toString(),
+                        "minutesFocus" to minutesFocus,
+                        //"startTime" to "${Calendar.getInstance().get(Calendar.HOUR_OF_DAY)}:${Calendar.getInstance().get(Calendar.MINUTE)}",
+                        "startTime" to startTime,
+                        "priorityLevel" to priorityLevel
+                    )
+//                    viewModel.saveHabit(habit)
+//                    finish()
+                    Firebase.firestore.collection("habits").add(habit).addOnSuccessListener {
+                        startActivity(Intent(this, Login::class.java))
+                        finish()
+                    }
+                } else {
+                    Toast.makeText(this, getString(R.string.empty_message), Toast.LENGTH_SHORT)
+                        .show()
+                }
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    fun showTimePicker(view: View) {
+        val dialogFragment = TimePickerFragment()
+        dialogFragment.show(supportFragmentManager, "timePicker")
+    }
+
+    override fun onDialogTimeSet(tag: String?, hourOfDay: Int, minute: Int) {
+        val calendar = Calendar.getInstance()
+        calendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
+        calendar.set(Calendar.MINUTE, minute)
+        val dateFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+        findViewById<TextView>(R.id.add_tv_start_time).text = dateFormat.format(calendar.time)
+    }
+}
