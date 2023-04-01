@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".daily_habits.DailyHabitSingleView">
+
+
+    <LinearLayout
+        android:layout_width="390dp"
+        android:layout_height="211dp"
+
+        android:orientation="vertical">
+
+
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:hint="@string/title_hint">-->
+
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                android:id="@+id/add_ed_title"-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:maxLines="1"-->
+        <!--                tools:ignore="TextContrastCheck" />-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <ImageButton
+            android:id="@+id/imageButton6"
+            android:layout_width="79dp"
+            android:layout_height="48dp"
+            app:srcCompat="@drawable/back_icon" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/title_hint">
+
+            <TextView
+                android:id="@+id/txt_habittitle"
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:text="title"
+                android:textColor="@color/black" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_ed_title"
+            android:layout_width="match_parent"
+            android:layout_height="101dp"
+            android:maxLines="1"
+            tools:ignore="TextContrastCheck" />
+
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/title_hint">
+        <TextView
+            android:id="@+id/txt_habittime"
+            style="@style/viewParent.headerText.NoMode"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:text="focus"
+            android:textColor="@color/black" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_ed_focus_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:ignore="TextContrastCheck"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="@string/focus_time_duration_hint">
+        <TextView
+            android:id="@+id/txt_habitstart"
+            style="@style/viewParent.headerText.NoMode"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:text="start"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_ed_start_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:inputType="number"
+            android:lines="1" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"/>
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button" />
+
+</LinearLayout>
