@@ -13,23 +13,23 @@ class MeditationMain : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_meditation_main)
 
-        val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-
-        val firstTime = sharedPreferences.getString("FirstTimeInstall", "")
-
-        if(firstTime.equals("Yes")) {
-            val intent = Intent(this, MeditationSecond::class.java)
-            startActivity(intent)
-            finish()
-
-        } else {
-
-            val editor = sharedPreferences.edit()
-            editor.apply {
-                putString("FirstTimeInstall", "Yes")
-            }.apply()
-
-        }
+//        val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
+//
+//        val firstTime = sharedPreferences.getString("FirstTimeInstall", "")
+//
+//        if(firstTime.equals("Yes")) {
+//            val intent = Intent(this, MeditationSecond::class.java)
+//            startActivity(intent)
+//            finish()
+//
+//        } else {
+//
+//            val editor = sharedPreferences.edit()
+//            editor.apply {
+//                putString("FirstTimeInstall", "Yes")
+//            }.apply()
+//
+//        }
 
     }
 

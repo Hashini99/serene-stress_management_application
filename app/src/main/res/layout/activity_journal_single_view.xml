@@ -35,64 +35,71 @@
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_alignParentLeft="true"
                     android:layout_marginLeft="8dp"
-                    android:text="Profile"
                     android:fontFamily="@font/montserrat_medium"
-                    android:textColor="@color/blue3" />
+                    android:text="Journal Summery"
+                    android:textColor="@color/blue3"
+                    android:textSize="35sp" />
 
-                <ImageView
-                    android:layout_width="115dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginRight="-6dp"
-                    android:src="@mipmap/ic_launcher_round" />
+
             </RelativeLayout>
 
             <TextView
-                style="@style/viewParent.headerText.NoMode"
-                android:layout_width="150dp"
-                android:layout_height="35dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:text="Name"
-                android:fontFamily="@font/montserrat_medium"
-                android:textColor="@color/blue3"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/txt_name"
+                android:id="@+id/txt_date"
                 style="@style/viewParent.headerText.NoMode"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat"
                 android:text="Loading..."
-                android:fontFamily="@font/montserrat_medium"
-                android:textColor="@color/black" />
+                android:textColor="@color/blue3" />
+
+            <TextView
+                android:id="@+id/txt_time"
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat"
+                android:text="Loading..."
+                android:textColor="@color/blue3"
+                android:textSize="25sp" />
 
             <TextView
                 style="@style/viewParent.headerText.NoMode"
                 android:layout_width="150dp"
                 android:layout_height="35dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Title"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat"
+                android:text="Loading..."
+                android:textColor="@color/blue3"
+                android:textSize="25sp" />
+
+            <TextView
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginTop="@dimen/viewsMargin"
-                android:text="Email"
-                android:textColor="@color/blue3"
                 android:fontFamily="@font/montserrat_medium"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/txt_email"
-                style="@style/viewParent.headerText.NoMode"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:text="Loading..."
-                android:fontFamily="@font/montserrat_medium"
-                android:textColor="@color/black" />
+                android:text="Description"
+                android:textColor="@color/white"
+                android:textSize="28sp" />
 
             <!--            <TextView-->
             <!--                style="@style/viewParent.headerText.NoMode"-->
@@ -136,13 +143,26 @@
             <!--                android:text="Loading..."-->
             <!--                android:textColor="@color/black" />-->
 
+            <TextView
+                android:id="@+id/txt_description"
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="388dp"
+                android:layout_height="303dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat"
+                android:text="Loading..."
+                android:textColor="@color/blue3"
+                android:textSize="25sp" />
+
             <Button
                 android:id="@+id/button"
                 android:layout_width="215dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Update Profile"
                 android:fontFamily="@font/montserrat_medium"
+                android:onClick="delete_journal"
+                android:text="Delete"
                 android:textColor="@color/white" />
 
 

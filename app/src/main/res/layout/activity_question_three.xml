@@ -168,10 +168,12 @@
                     android:layout_width="250dp"
                     android:layout_height="64dp"
                     android:text="Next Question"
-                    android:textColor="@color/black"
+
                     android:layout_gravity="center"
                     android:layout_marginVertical="32dp"
-                    android:backgroundTint="@color/button"/>
+
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/blue3"/>
 
 
             </LinearLayout>

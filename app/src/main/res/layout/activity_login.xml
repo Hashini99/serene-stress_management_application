@@ -38,7 +38,7 @@
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
                     android:text="LOGIN"
-                    android:textColor="@color/main_2" />
+                    android:textColor="@color/blue3" />
 
                 <ImageView
                     android:layout_width="157dp"
@@ -80,20 +80,20 @@
                 android:layout_marginTop="10dp"
                 android:onClick="goToForgetPassword"
                 android:text="Forgot Password?"
-                android:textColor="@color/main"
+                android:textColor="@color/blue3"
                 android:textSize="@dimen/newsMoreTextSize" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputPasswordd"
                 style="@style/parent"
-                android:layout_marginTop="@dimen/viewsMargin"/>
+                android:layout_marginTop="@dimen/viewsMargin" />
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="142dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/black"
+                android:backgroundTint="@color/blue3"
                 android:onClick="login"
 
                 android:text="Login" />
@@ -101,7 +101,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textInputPassworddd"
                 style="@style/parent"
-                android:layout_marginTop="@dimen/viewsMargin"/>
+                android:layout_marginTop="@dimen/viewsMargin" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -122,7 +122,7 @@
                     android:layout_marginLeft="60dp"
                     android:layout_weight="1"
                     android:text="Don't have an account?"
-                    android:textColor="@color/main"
+                    android:textColor="@color/blue3"
                     android:textSize="18sp" />
 
                 <TextView
@@ -144,6 +144,6 @@
         android:layout_width="0dp"
         android:layout_height="1dp"
         android:layout_weight="3"
-        android:background="@color/main_2" />
+        android:background="@color/blue3" />
 
 </RelativeLayout>

@@ -5,10 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-
-    tools:context=".montly_quiz.Question6"
-
-    >
+    tools:context=".quiz.QuizQuestionsActivity"
+    android:background="@drawable/ic_bg">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,8 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             app:cardCornerRadius="18dp"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="10dp">
+            android:layout_marginHorizontal="32dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -32,18 +29,22 @@
 
 
                 <TextView
-                    android:id="@+id/question_1"
+                    android:id="@+id/question"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="18sp"
+                    android:textSize="24sp"
                     android:layout_gravity="center"
                     android:layout_marginVertical="20dp"
-                    android:textColor="@color/black"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text = "In the last month, how often have you found that you could not cope
-with all the things that you had to do?" />
+                    tools:text = "What flag is this?" />
 
-
+                <ImageView
+                    android:id="@+id/flag_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="32dp"
+                    tools:src="@drawable/ic_flag_of_new_zealand"
+                    android:contentDescription="Flag Image"/>
 
             </LinearLayout>
 
@@ -59,7 +60,26 @@ with all the things that you had to do?" />
             android:layout_gravity="center"
             >
 
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:indeterminate="false"
+                android:layout_gravity="center"
+                android:progress="1"
+                android:max="10"
+                android:scaleY="2"/>
 
+            <TextView
+                android:id="@+id/progress_bar_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="10/10"
+                android:textSize="14sp"
+                android:layout_weight="10"
+                android:textColor="@color/white"
+                android:layout_marginStart="10dp"/>
 
 
         </LinearLayout>
@@ -70,111 +90,83 @@ with all the things that you had to do?" />
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardCornerRadius="18dp"
-            android:layout_marginHorizontal="30dp">
+            android:layout_marginHorizontal="5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingHorizontal="16dp"
-                android:paddingVertical="24dp"
-                >
+                android:paddingVertical="24dp">
 
 
                 <TextView
-                    android:id="@+id/q6_option_one"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginVertical="5dp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:background="@drawable/quiz_option_border"
-                    android:gravity="center"
-                    android:padding="15dp"
-                    android:text="Never"
-                    android:clickable="true"
-
-                    android:textSize="18sp"/>
-
-                <TextView
-                    android:id="@+id/q6_option_two"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="10dp"
-                    android:textColor="@color/black"
-                    android:layout_marginVertical="5dp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:background="@drawable/quiz_option_border"
-                    android:gravity="center"
-                    android:padding="15dp"
-                    android:text="Almost Never"
-                    android:clickable="true"
-
-                    android:textSize="18sp"/>
-
-                <TextView
-                    android:id="@+id/q6_option_three"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_marginVertical="5dp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:background="@drawable/quiz_option_border"
-                    android:gravity="center"
-                    android:padding="15dp"
-                    android:text="Sometimes"
-                    android:clickable="true"
-
-                    android:textSize="18sp"/>
-
-                <TextView
-                    android:id="@+id/q6_option_four"
+                    android:id="@+id/option_one"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginVertical="5dp"
                     android:background="@drawable/quiz_option_border"
                     android:gravity="center"
-                    android:textColor="@color/black"
                     android:padding="15dp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="Fairly Often"
-                    android:clickable="true"
-
+                    tools:text="Australia"
                     android:textSize="18sp"/>
+
                 <TextView
-                    android:id="@+id/q6_option_five"
+                    android:id="@+id/option_two"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginVertical="5dp"
-                    android:textColor="@color/black"
                     android:background="@drawable/quiz_option_border"
                     android:gravity="center"
                     android:padding="15dp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="Very Often"
-                    android:clickable="true"
-
+                    tools:text="New Zealand"
                     android:textSize="18sp"/>
 
+                <TextView
+                    android:id="@+id/option_three"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/quiz_option_border"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    tools:text="Fiji"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/option_four"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/quiz_option_border"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    tools:text="Belgium"
+                    android:textSize="18sp"/>
+<!--                <TextView-->
+<!--                    android:id="@+id/option_five"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="10dp"-->
+<!--                    android:layout_marginVertical="5dp"-->
+<!--                    android:background="@drawable/quiz_option_border"-->
+<!--                    android:gravity="center"-->
+<!--                    android:padding="15dp"-->
+<!--                    tools:text="Belgium"-->
+<!--                    android:textSize="18sp"/>-->
                 <Button
                     android:id="@+id/submit_btn"
-                    android:textSize="12sp"
-                    android:onClick="go_to_q7"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:layout_marginTop="14dp"
-                    android:layout_width="250dp"
-                    android:layout_height="64dp"
-                    android:text="Next Question"
-
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center"
-                    android:layout_marginVertical="32dp"
-
-                    android:textColor="@color/white"
-                    android:backgroundTint="@color/blue3"/>
+                    tools:text="Next Question"
+                    android:textSize="17sp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/semi_round_btn" />
 
 
             </LinearLayout>

@@ -1,91 +1,6 @@
 package com.example.serene
 
-//import android.app.ProgressDialog
-//import android.content.Intent
-//import android.net.Uri
-//import androidx.appcompat.app.AppCompatActivity
-//import android.os.Bundle
-//import android.view.View
-//import android.widget.EditText
-//import android.widget.Toast
-//import androidx.core.content.ContextCompat.startActivity
-//import com.google.firebase.Timestamp
-//import com.google.firebase.auth.FirebaseAuth
-//import com.google.firebase.firestore.ktx.firestore
-//import com.google.firebase.ktx.Firebase
-//import com.google.firebase.storage.FirebaseStorage
-//import com.google.protobuf.Empty
-//import com.google.type.DateTime
-//import kotlinx.android.synthetic.main.activity_new_order.*
-//import kotlinx.coroutines.awaitAll
-//import java.net.URI
-//import java.text.SimpleDateFormat
-//import java.time.Instant
-//import java.time.LocalDateTime
-//import java.time.format.DateTimeFormatter
-//import java.util.*
-//import kotlin.collections.hashMapOf as hashMapOf
-//
-//
-//
-//class JournalAddEditNoteActivity : AppCompatActivity() {
-//
-////    lateinit var editNoteTitle: EditText
-////    lateinit var textTitle: EditText
-//    lateinit var editTitle: EditText
-//    lateinit var editDesc: EditText
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        editTitle = findViewById(R.id.editNoteTitle)
-//        editDesc = findViewById(R.id.editNoteDescription)
-//
-//        try {
-//            this.supportActionBar!!.hide()
-//        } catch (e: NullPointerException) {}
-//
-//        setContentView(R.layout.activity_journal_add_edit_note)
-//    }
-//
-//    override fun onBackPressed() {
-//        super.onBackPressed()
-//        startActivity(Intent(this, JournalMainActivity::class.java))
-//        finish()
-//    }
-//}
-//fun save(view: View) {
-////    val editNoteTitle= textTitle.text.toString()
-////    val description = textDescription.text.toString()
-//
-//    val noteTitle= editTitle.text.toString()
-//    val noteDesc= editDesc.text.toString()
-//
-//    val formatter = SimpleDateFormat("yyyy_MM_dd_HH_mm_ss", Locale.getDefault())
-//    val now = Date()
-//    val fileName = formatter.format(now)
-//
-//    val journal = hashMapOf(
-//        "user" to FirebaseAuth.getInstance().currentUser?.uid,
-////        "prescription" to prescriptionURL,
-//        "title" to textTitle.text.toString(),
-//        "description" to textDescription.text.toString(),
-//        "datetime" to Timestamp.now(),
-//        "date" to "${Calendar.getInstance().get(Calendar.YEAR)}-${Calendar.getInstance().get(Calendar.MONTH)}-${Calendar.getInstance().get(Calendar.DAY_OF_MONTH)}",
-//        "time" to "${Calendar.getInstance().get(Calendar.HOUR_OF_DAY)}:${Calendar.getInstance().get(Calendar.MINUTE)}",
-//
-//    )
-//    Firebase.firestore.collection("journal").document(jid).set(journal).addOnSuccessListener {
-//        startActivity(Intent(this, journal::class.java))
-//        finish()
-//
-//
-//
-//}.addOnFailureListener {
-//    exception ->
-//    Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG)
-//        .show()
-//}
-//}
+
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -139,10 +54,15 @@ data class note(
 //    val status: String = "",
 //    val date: String = "",
 val title:String=""
+
+
+//val dateTime:String="",
+//val title: String="",
+//val description:String=""
 )
 class JournalAddEditNoteActivity : AppCompatActivity() {
     lateinit var backButton: FloatingActionButton
-    lateinit var formatButton: FloatingActionButton
+//    lateinit var formatButton: FloatingActionButton
     lateinit var editTitle: EditText
     lateinit var editDesc: EditText
     lateinit var saveButton: FloatingActionButton
@@ -167,7 +87,7 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
         saveButton = findViewById(R.id.jourSaveButton)
         backButton = findViewById(R.id.backButton)
         addImageButton = findViewById(R.id.jourAddImgButton)
-        formatButton = findViewById(R.id.jourFormatButton)
+       // formatButton = findViewById(R.id.jourFormatButton)
         theimage = findViewById(R.id.imageView1)
 
 //        viewModel= ViewModelProvider(
@@ -221,7 +141,7 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
 
             val journal = hashMapOf(
                 "user" to FirebaseAuth.getInstance().currentUser?.uid,
-//                "prescription" to prescriptionURL,
+
 
                 "title" to editTitle.text.toString(),
                 "description" to editDesc.text.toString(),
@@ -233,9 +153,7 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
                 "time" to "${
                     Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
                 }:${Calendar.getInstance().get(Calendar.MINUTE)}",
-//                "status" to "Pending",
-//                "amount" to "",
-//                "paid" to false,
+
             )
             Firebase.firestore.collection("journal").add(journal).addOnSuccessListener {
                 startActivity(Intent(this, JournalMainActivity::class.java))
@@ -283,13 +201,13 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
             this.finish()
         }
 
-        formatButton.setOnClickListener{
-            val intent = Intent(this@JournalAddEditNoteActivity,JournalTextFormatter::class.java)
-            intent.putExtra("title", editTitle.text.toString())
-            intent.putExtra("description", editDesc.text.toString())
-            startActivity(intent)
-            this.finish()
-        }
+//        formatButton.setOnClickListener{
+//            val intent = Intent(this@JournalAddEditNoteActivity,JournalTextFormatter::class.java)
+//            intent.putExtra("title", editTitle.text.toString())
+//            intent.putExtra("description", editDesc.text.toString())
+//            startActivity(intent)
+//            this.finish()
+//        }
 
 
         addImageButton.setOnClickListener{
@@ -328,5 +246,9 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
         }
 
     }
-
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, JournalMainActivity::class.java))
+        finish()
+    }
 }

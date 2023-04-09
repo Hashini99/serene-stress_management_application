@@ -356,7 +356,7 @@ class MeditationSecond : AppCompatActivity() { //Timer variables
 
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
 
-        savedCurrentLevelText = sharedPreferences.getString("CURRENT_LEVEL_TEXT", "Distracted Baby").toString()
+        savedCurrentLevelText = sharedPreferences.getString("CURRENT_LEVEL_TEXT", "LEVEL 01").toString()
         AspiringMonk.text = savedCurrentLevelText
 
         savedCurrentLevel = sharedPreferences.getInt("CURRENT_LEVEL", 1)

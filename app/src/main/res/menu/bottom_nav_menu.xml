@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home_graph"
+        android:contentDescription="Home"
+        android:icon="@drawable/home"
+        android:title="Home"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/main_graph"
+        android:contentDescription="Tasks"
+        android:icon="@drawable/main_tasks"
+        android:title="Tasks"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/charts_graph"
+        android:contentDescription="Charts"
+        android:icon="@drawable/charts"
+        android:title="Charts"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/expert_graph"
+        android:contentDescription="Expert"
+        android:icon="@drawable/profile"
+        android:title="Expert"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/settings_graph"
+        android:contentDescription="setting"
+        android:icon="@drawable/setting"
+        android:title="Settings"
+        app:showAsAction="never" />
+</menu>

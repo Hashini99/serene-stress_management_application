@@ -33,7 +33,7 @@ import kotlinx.android.synthetic.main.activity_journal_main.*
         val title: String="",
       // val minutesFocus:Int,
         val startTime:String="",
-        //val minutesFocus:String,
+       // val minutesFocus:String,
 
         )
 
@@ -81,13 +81,13 @@ class DailyHabitsMain : AppCompatActivity() {
 
 
                 override fun onBindViewHolder(holder: DailyHabitViewHolder, position: Int, model: DailyHabit) {
-             //       val tvMinutesFocus: TextView = holder.itemView.findViewById(R.id.item_priority_level)
+                 //   val tvMinutesFocus: TextView = holder.itemView.findViewById(R.id.item_priority_level)
                     val tvTitle: TextView = holder.itemView.findViewById(R.id.item_tv_title)
                     val tvStartTime: TextView = holder.itemView.findViewById(R.id.item_tv_start_time)
                     //val tvDate: TextView = holder.itemView.findViewById(android.R.id.text2)
                     //val tvTitle: TextView = holder.itemView.findViewById(android.R.id.text2)
                     // tvDate.text = model.datetime.toString()
-                   // tvMinutesFocus.text = model.minutesFocus.toString()
+                  //  tvMinutesFocus.text = model.minutesFocus.toString()
                     tvTitle.text = model.title
                     tvStartTime.text = model.startTime
 

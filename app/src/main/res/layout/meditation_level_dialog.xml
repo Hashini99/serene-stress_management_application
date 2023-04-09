@@ -26,7 +26,12 @@
         tools:visibility="visible"
         android:layout_width="wrap_content"
         android:layout_height="4dp"
-        android:background="#085B56"
+        android:background="@color/blue3"
+
+
+
+
+
         app:layout_constraintRight_toRightOf="parent"
         android:visibility="invisible"
         app:layout_constraintTop_toBottomOf="@id/distractedBabyImage"
@@ -40,8 +45,8 @@
         android:fontFamily="@font/montserratbold"
         android:layout_marginTop="13dp"
         app:layout_constraintVertical_bias="1.0"
-        android:text="@string/distracted_baby"
-        android:textColor="#085B56"
+        android:text="@string/level"
+        android:textColor="@color/blue3"
         android:textSize="24sp"
         android:visibility="invisible"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -273,7 +278,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/montserratbold"
-        android:textColor="#085B56"
+        android:textColor="@color/blue3"
         android:textSize="19sp"
         android:text="@string/next_level_up_in_10_mins"
         android:visibility="invisible"

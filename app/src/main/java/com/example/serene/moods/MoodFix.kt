@@ -4,9 +4,11 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.serene.CreateAccount
 import com.example.serene.Login
 
 import com.example.serene.R
+//import com.example.serene.habits.AddHabits
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -53,7 +55,7 @@ class MoodFix : AppCompatActivity() {
         //logout
         logout_cardtired.setOnClickListener{
             FirebaseAuth.getInstance().signOut()
-            startActivity(Intent(this,Login::class.java))
+            startActivity(Intent(this,CreateAccount::class.java))
             finish()
         }
     }

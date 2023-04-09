@@ -6,26 +6,19 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Color
 import android.graphics.Typeface
+import android.graphics.drawable.ColorDrawable
 import android.icu.text.CaseMap
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.Toast
-import androidx.core.graphics.createBitmap
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
+
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-//import com.example.jour.MVVM.JourViewModel
-//import com.example.jour.MVVM.Note
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
-import java.io.FileOutputStream
 
-import android.provider.ContactsContract
+import com.google.firebase.auth.FirebaseAuth
+
+
+
 import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -41,27 +34,120 @@ import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_journal_add_edit_note.*
 import kotlinx.android.synthetic.main.journal_note_card.*
 import kotlinx.android.synthetic.main.activity_create_account.*
-//import kotlinx.android.synthetic.main.activity_journal_main*
-import java.time.chrono.ChronoLocalDateTime
+import kotlinx.android.synthetic.main.activity_journal_main.*
+import kotlinx.android.synthetic.main.journal_note_card.*
+
+import java.util.*
 
 
-//data class Note(
-////    val dateTime:String="",
-//    val title: String="",
-////    val description:String=""
-//)
-//
-//class  JournalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+data class Note(
+   // val datetime:Date,
+    val date: String = "",
+    val title: String="",
+   val description:String="",
+//val date: HijrahDate
+)
 
-class JournalMainActivity: AppCompatActivity()
-//    val db = Firebase.firestore
-////   lateinit var jourRV: RecyclerView
+class  JournalViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+
+class JournalMainActivity: AppCompatActivity() {
+    val db = Firebase.firestore
+
+    ////   lateinit var jourRV: RecyclerView
 ////lateinit var user : String
 ////    lateinit var addButton: FloatingActionButton
 //////    lateinit var viewModel: JourViewModel
-////override fun onCreate(savedInstanceState: Bundle?) {
-////    super.onCreate(savedInstanceState)
-////    setContentView(R.layout.activity_journal_main)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_journal_main)
+//        try {
+//            this.supportActionBar!!.setBackgroundDrawable(
+//                ColorDrawable(
+//                    getResources()
+//                        .getColor(R.color.main)
+//                )
+//            )
+//        } catch (e: NullPointerException) {
+        supportActionBar?.title = getString(R.string.journal_main)
+//        }
+        val query = db.collection("journal")
+            .whereEqualTo("user", FirebaseAuth.getInstance().currentUser!!.uid)
+            .orderBy("datetime", Query.Direction.DESCENDING)
+        val options = FirestoreRecyclerOptions.Builder<Note>().setQuery(query, Note::class.java)
+            .setLifecycleOwner(this).build()
+        val adapter = object : FirestoreRecyclerAdapter<Note, JournalViewHolder>(options) {
+            override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): JournalViewHolder {
+                val view = LayoutInflater.from(this@JournalMainActivity)
+                   // .inflate(android.R.layout.simple_list_item_2, parent, false)
+                    .inflate(R.layout.journal_note_card, parent, false)
+                return JournalViewHolder(view)
+            }
+
+
+
+            override fun onBindViewHolder(holder: JournalViewHolder, position: Int, model: Note) {
+//  correct              val tvDate: TextView = holder.itemView.findViewById(android.R.id.text1)
+//                val tvTitle: TextView = holder.itemView.findViewById(android.R.id.text2)
+//                val tvDescription: TextView = holder.itemView.findViewById(android.R.id.text1)
+//                //val tvDate: TextView = holder.itemView.findViewById(android.R.id.text2)
+//                //val tvTitle: TextView = holder.itemView.findViewById(android.R.id.text2)
+//               // tvDate.text = model.datetime.toString()
+//                tvDate.text = model.date
+//                tvTitle.text = model.title
+//                tvDescription.text = model.description
+//
+//                tvDate.setTextColor(Color.parseColor("#00FF00"))
+//                tvDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
+//
+//                tvTitle.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
+//                tvDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20F)
+
+
+
+                val tvTitle: TextView = holder.itemView.findViewById(R.id.editTitle)
+                val tvDate: TextView = holder.itemView.findViewById(R.id.dateTextView)
+                val tvDescription: TextView = holder.itemView.findViewById(R.id.descTextView)
+
+                tvDate.text = model.date
+                tvTitle.text = model.title
+                tvDescription.text = model.description
+
+                tvDate.setTextColor(Color.parseColor("#FFFFFF"))
+                tvDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12F)
+
+                tvTitle.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
+                tvDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 14F)
+
+
+
+
+
+
+
+                val documentId = snapshots.getSnapshot(position).id
+
+                holder.itemView.setOnClickListener {
+                    changePageToJournalSingleView(documentId)
+                }
+            }
+        }
+        jourRecyclerView.adapter = adapter
+      jourRecyclerView.layoutManager = LinearLayoutManager(this)
+    }
+    fun changePageToJournalSingleView(docID: String){
+        val intent = Intent(this, JournalSingleView::class.java)
+        intent.putExtra("docID", docID)
+        startActivity(intent)
+    }
+    fun addNewJournal(view: View){
+        startActivity(Intent(this, JournalAddEditNoteActivity::class.java))
+        finish()
+    }
+}
+
+
+
+
 ////    jourRV= findViewById(R.id.jourRecyclerView)
 ////    addButton=findViewById(R.id.jourAddButton)
 ////    jourRV.layoutManager=LinearLayoutManager(this)
