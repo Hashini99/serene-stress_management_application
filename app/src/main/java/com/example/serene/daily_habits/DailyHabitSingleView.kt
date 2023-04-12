@@ -5,18 +5,26 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.serene.CreateAccount
 import com.example.serene.JournalMainActivity
 import com.example.serene.R
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_daily_habit_single_view.*
-import kotlinx.android.synthetic.main.activity_journal_single_view.*
+//import kotlinx.android.synthetic.main.activity_daily_habit_single_view.*
 
+
+import kotlinx.android.synthetic.main.dailyhabit_single_view.*
+
+
+lateinit var documentID: String
+lateinit var minutesFocus: String
+lateinit var startTime: String
+lateinit var habittitle: String
 class DailyHabitSingleView : AppCompatActivity() {
 
-    lateinit var documentID: String
-    lateinit var minutesFocus: String
-    lateinit var startTime: String
-    lateinit var habittitle: String
+//    lateinit var documentID: String
+//    lateinit var minutesFocus: String
+//    lateinit var startTime: String
+//    lateinit var habittitle: String
     //var client_id: String = "ARKL7p7RWGWudGaKC4KIjPhAd46IzO8Jl61jfgiEIMKxO3-JirB0te6vR-v_QFk9mYz1bAq00AJ9rqze"
 
 
@@ -28,7 +36,7 @@ class DailyHabitSingleView : AppCompatActivity() {
         } catch (e: NullPointerException) {
         }
 
-        setContentView(R.layout.activity_daily_habit_single_view)
+        setContentView(R.layout.dailyhabit_single_view)
 
         documentID = intent.getStringExtra("docID").toString()
 
@@ -42,10 +50,10 @@ class DailyHabitSingleView : AppCompatActivity() {
                 minutesFocus = it.data!!.getValue("minutesFocus").toString()
 
                 //txt_date.text = it.data!!.getValue("date").toString()
-                txt_habitstart.text = it.data!!.getValue("minutesFocus").toString()
-                txt_habittime.text = it.data!!.getValue("startTime").toString()
+                focustime.text = it.data!!.getValue("minutesFocus").toString()
+                sttime.text = it.data!!.getValue("startTime").toString()
                //txt_habittitle = it.data!!.getValue("title").toString()
-                txt_habittitle.text = it.data!!.getValue("title").toString()
+                habitN.text = it.data!!.getValue("title").toString()
 
                 //descriptionVisibility()
 
@@ -77,10 +85,24 @@ class DailyHabitSingleView : AppCompatActivity() {
                 Toast.makeText(applicationContext, "Cannot Delete the Order", Toast.LENGTH_LONG).show()
             }
     }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        startActivity(Intent(this, DailyHabitsMain::class.java))
+    fun deletehabit(view: View) {
+        FirebaseFirestore.getInstance().collection("habits").document(documentID).delete()
+            .addOnSuccessListener {
+                Toast.makeText(applicationContext, "Habit Deleted Successful", Toast.LENGTH_LONG)
+                    .show()
+                startActivity(Intent(this, DailyHabitsMain::class.java))
+                finish()
+            }.addOnFailureListener {
+                Toast.makeText(applicationContext, "Cannot Delete the Habit", Toast.LENGTH_LONG).show()
+            }
+    }
+    fun op_cd(view: View){
+        startActivity(Intent(this, CountDownActivity::class.java))
         finish()
     }
+//    override fun onBackPressed() {
+//        super.onBackPressed()
+//        startActivity(Intent(this, DailyHabitsMain::class.java))
+//        finish()
+//    }
 }

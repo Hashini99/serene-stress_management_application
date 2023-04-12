@@ -39,6 +39,7 @@ class AddDailyHabits : AppCompatActivity(), TimePickerFragment.DialogTimeListene
 //        val factory = ViewModelFactory.getInstance(this)
 //        viewModel = ViewModelProvider(this, factory)[AddHabitViewModel::class.java]
 
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -95,4 +96,20 @@ class AddDailyHabits : AppCompatActivity(), TimePickerFragment.DialogTimeListene
         val dateFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
         findViewById<TextView>(R.id.add_tv_start_time).text = dateFormat.format(calendar.time)
     }
+
+    fun addCalendarEvent(view: View) {
+        val calendarEvent: Calendar = Calendar.getInstance()
+        val intent = Intent(Intent.ACTION_EDIT)
+        intent.type = "vnd.android.cursor.item/event"
+        intent.putExtra("beginTime", calendarEvent.timeInMillis)
+        intent.putExtra("allDay", true)
+
+
+        intent.putExtra("allDay", true)
+        intent.putExtra("rule", "FREQ=YEARLY")
+        intent.putExtra("endTime", calendarEvent.timeInMillis + 60 * 60 * 1000)
+        intent.putExtra("title", "Calendar Event")
+        startActivity(intent)
+    }
+
 }

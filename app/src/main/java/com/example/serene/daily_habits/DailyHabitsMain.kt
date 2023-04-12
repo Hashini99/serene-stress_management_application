@@ -10,23 +10,27 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.JournalAddEditNoteActivity
+import com.example.serene.JournalMainActivity
 import com.example.serene.JournalSingleView
 import com.example.serene.R
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_daily_habit_list.*
 import kotlinx.android.synthetic.main.activity_journal_main.*
+import java.util.*
 
 
-    data class DailyHabit(
+data class DailyHabit(
       //  // val datetime:Date,
         // //val date: String = "",
 
@@ -65,19 +69,6 @@ class DailyHabitsMain : AppCompatActivity() {
                         .inflate(R.layout.daily_habit_card, parent, false)
                     return DailyHabitViewHolder(view)
                 }
-//
-//            override fun onBindViewHolder(holder: JournalViewHolder, position: Int, model: Note) {
-//                val tvStatus: TextView = holder.itemView.findViewById(android.R.id.text1)
-//                val tvDate: TextView = holder.itemView.findViewById(android.R.id.text2)
-//                tvStatus.text = model.dateTime
-//                tvDate.text = model.title
-//                tvDate.text = model.description
-//
-//                tvDate.setTextColor(Color.parseColor("#000000"))
-//                tvDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
-//
-//                tvStatus.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
-//                tvStatus.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20F)
 
 
                 override fun onBindViewHolder(holder: DailyHabitViewHolder, position: Int, model: DailyHabit) {
@@ -118,7 +109,25 @@ class DailyHabitsMain : AppCompatActivity() {
             intent.putExtra("docID", docID)
             startActivity(intent)
         }
-        fun addNewJournal(view: View){
+
+    fun reminder(view: View) {
+        val calendarEvent: Calendar = Calendar.getInstance()
+        val intent = Intent(Intent.ACTION_EDIT)
+        intent.type = "vnd.android.cursor.item/event"
+        intent.putExtra("beginTime", calendarEvent.timeInMillis)
+        intent.putExtra("allDay", true)
+
+
+        intent.putExtra("allDay", true)
+        intent.putExtra("rule", "FREQ=YEARLY")
+        intent.putExtra("endTime", calendarEvent.timeInMillis + 60 * 60 * 1000)
+        intent.putExtra("title", "Calendar Event")
+        startActivity(intent)
+    }
+
+
+
+    fun addNewJournal(view: View){
             startActivity(Intent(this,AddDailyHabits::class.java))
             finish()
         }
