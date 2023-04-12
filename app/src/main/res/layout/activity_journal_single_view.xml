@@ -31,17 +31,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="68dp">
 
+                <ImageView
+                    android:id="@+id/imageView4"
+
+                    android:layout_width="79dp"
+
+                    android:layout_height="match_parent"
+                    android:layout_gravity="end"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:padding="15dp"
+                    app:srcCompat="@drawable/flower"
+
+                    />
+
                 <TextView
                     style="@style/viewParent.headerText.NoMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginLeft="88dp"
                     android:fontFamily="@font/montserrat_medium"
                     android:text="Journal Summery"
                     android:textColor="@color/blue3"
-                    android:textSize="35sp" />
+                    android:textSize="30sp" />
 
 
             </RelativeLayout>
+
 
             <TextView
                 android:id="@+id/txt_date"
@@ -147,13 +163,14 @@
                 android:id="@+id/txt_description"
                 style="@style/viewParent.headerText.NoMode"
                 android:layout_width="388dp"
-                android:layout_height="303dp"
+                android:layout_height="254dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:fontFamily="@font/montserrat"
+
                 android:text="Loading..."
+                android:fontFamily="@font/montserrat_medium"
                 android:textColor="@color/blue3"
-                android:textSize="25sp" />
+                android:textSize="21sp" />
 
             <Button
                 android:id="@+id/button"
@@ -163,6 +180,15 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:onClick="delete_journal"
                 android:text="Delete"
+                android:textColor="@color/white" />
+            <Button
+                android:id="@+id/button_post"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+
+                android:text="Post"
                 android:textColor="@color/white" />
 
 

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+
     android:id="@+id/relativeLayoutMoodJournal"
     tools:context=".Home">
 
@@ -23,4 +23,65 @@
         app:itemTextColor="@color/blue3"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_nav_menu" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="670dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/hi"
+            android:layout_width="match_parent"
+            android:layout_height="59dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="HI, Welcome To The Serene"
+            android:textColor="@color/blue3"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/display_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:text="Loading"
+            android:textColor="@color/blue3"
+            android:textSize="21sp" />
+
+        <VideoView
+            android:id="@+id/simpleVideoView"
+            android:layout_width="match_parent"
+            android:layout_height="299dp"
+
+            android:text="TextView" />
+
+        <ImageView
+            android:id="@+id/quatoe"
+            android:layout_width="match_parent"
+            android:layout_height="166dp"
+
+            android:background="@drawable/quatoe"
+            android:fontFamily="@font/montserrat"
+            android:text="Loading..."
+            android:textColor="@color/blue3"
+            android:textSize="25sp" />
+
+
+        <Button
+            android:id="@+id/mood_ch"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:text="how was your day"
+            app:srcCompat="@drawable/ic_check" />
+
+        <Button
+            android:id="@+id/qu_ch"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:text="how was your Month"
+            app:srcCompat="@drawable/ic_check" />
+    </LinearLayout>
+
+
 </RelativeLayout>
