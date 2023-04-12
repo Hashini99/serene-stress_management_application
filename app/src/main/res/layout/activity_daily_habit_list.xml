@@ -9,33 +9,34 @@
     android:background="@color/main_2"
     tools:context=".daily_habits.DailyHabitsMain">
 
-    <LinearLayout
-        android:id="@+id/topBar"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--        android:id="@+id/topBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="70dp"-->
+<!--        android:orientation="vertical">-->
 
-        <TextView
-            android:id="@+id/titleJour"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="@color/main_2"
-            android:fontFamily="cursive"
-            android:gravity="center"
-            android:text="Jour"
-            android:textColor="@color/white"
-            android:textSize="30dp" />
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/titleJour"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="60dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="@color/main_2"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:fontFamily="cursive"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="Jour"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textColor="@color/white"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="30dp" />&ndash;&gt;-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dailyhabitsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/topBar"
+
         android:layout_marginTop="0dp"
-        android:background="@color/main_2"
+        android:background="@color/white"
+
         tools:listitem="@layout/daily_habit_card" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

@@ -34,7 +34,7 @@
                     android:layout_marginLeft="8dp"
                     android:fontFamily="@font/montserrat_medium"
                     android:text="Register Now"
-                    android:textColor="@color/main_2" />
+                    android:textColor="@color/blue3" />
 
                 <ImageView
                     android:layout_width="115dp"
@@ -171,7 +171,7 @@
                     android:layout_width="142dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:backgroundTint="@color/main_2"
+                    android:backgroundTint="@color/blue3"
                     android:fontFamily="@font/montserrat_medium"
                     android:onClick="register"
                     android:text="Register" />
@@ -201,7 +201,7 @@
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_medium"
                         android:text="Do you have an account?"
-                        android:textColor="@color/main_2"
+                        android:textColor="@color/blue3"
                         android:textSize="16sp" />
 
                     <TextView
@@ -213,7 +213,7 @@
                         android:fontFamily="@font/montserrat_medium"
                         android:onClick="goToLogin"
                         android:text="Login"
-                        android:textColor="@color/black"
+                        android:textColor="@color/blue3"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
