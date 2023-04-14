@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+
     tools:context=".academic_goal.AddGoal">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -43,7 +44,7 @@
             android:hint="Enter Goal Title"
             android:paddingStart="8dp"
             android:fontFamily="@font/montserrat_medium"
-            android:background="@color/blue2"
+            android:background="@color/white"
             android:inputType="textCapWords"
             android:paddingEnd="8dp"
             android:textSize="18sp" />
@@ -74,7 +75,7 @@
             android:hint="Enter Goal Steps/ Description"
             android:lines="3"
             android:gravity="start"
-            android:background="@color/blue2"
+            android:background="@color/white"
             android:paddingStart="8dp"
             android:fontFamily="@font/montserrat_medium"
             android:paddingEnd="8dp"
@@ -106,7 +107,7 @@
             android:clickable="true"
             android:id="@+id/dateEdt"
             android:cursorVisible="false"
-            android:background="@color/blue2"
+            android:background="@color/white"
             android:drawablePadding="8dp"
             android:drawableEnd="@drawable/ic_date_range_black_24dp"
             android:drawableTint="@color/blue3"
@@ -195,6 +196,13 @@
 
         android:onClick="add_notification"
         android:text="Remind Me" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.2"
+        app:srcCompat="@drawable/study1" />
 
 
 </LinearLayout>

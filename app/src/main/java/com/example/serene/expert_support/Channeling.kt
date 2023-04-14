@@ -1,34 +1,24 @@
-package com.example.serene.academic_goal
+package com.example.serene.expert_support
 
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.serene.CreateAccount
-import com.example.serene.Login
 import com.example.serene.R
-import com.example.serene.daily_habits.TimePickerFragment
-import com.google.android.material.datepicker.MaterialDatePicker
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_acdemic_goal_adding.*
-import kotlinx.android.synthetic.main.activity_update_profile.view.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
+
+import kotlinx.android.synthetic.main.activity_expert_channel.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class AddGoal: AppCompatActivity(), View.OnClickListener {
+class Channeling : AppCompatActivity(), View.OnClickListener {
 
     lateinit var myCalendar: Calendar
 
@@ -43,11 +33,11 @@ class AddGoal: AppCompatActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_acdemic_goal_adding)
+        setContentView(R.layout.activity_expert_channel)
 
-        dateEdt.setOnClickListener(this)
-        timeEdt.setOnClickListener(this)
-        saveBtn.setOnClickListener(this)
+        add_date.setOnClickListener(this)
+       // input_time.setOnClickListener(this)
+        Channel_done.setOnClickListener(this)
 
 
         //setUpSpinner()
@@ -64,13 +54,13 @@ class AddGoal: AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.dateEdt -> {
+            R.id.add_date -> {
                 setListener()
             }
-            R.id.timeEdt -> {
-                setTimeListener()
-            }
-            R.id.saveBtn -> {
+//            R.id.input_time -> {
+//                setTimeListener()
+//            }
+            R.id.Channel_done -> {
                 saveTodo()
             }
         }
@@ -81,29 +71,31 @@ class AddGoal: AppCompatActivity(), View.OnClickListener {
 
 
 
-        val goalname = titleInpLay.editText?.text.toString()
-        val steps = taskInpLay.editText?.text.toString()
-        val duedate = findViewById<TextView>(R.id.dateEdt).text.toString()
 
+        val tel = input_tp.editText?.text.toString()
+        val channelDate = findViewById<TextView>(R.id.add_date).text.toString()
+        val docD = findViewById<Spinner>(R.id.docD).selectedItem.toString()
 
-        if (title.isNotEmpty()) {
-            val goal = hashMapOf(
+        if (docD.isNotEmpty()) {
+            val channel = hashMapOf(
                 "user" to FirebaseAuth.getInstance().currentUser?.uid,
-                "title" to goalname,
-                "tasks" to steps,
-                //"title" to add_ed_title.text.toString(),
-                "startTime" to "${Calendar.getInstance().get(Calendar.HOUR_OF_DAY)}:${Calendar.getInstance().get(Calendar.MINUTE)}",
+                //"doctor" to name,
+                "tel" to tel,
+                "counsellor" to docD,
+
                 "datetime" to Timestamp.now(),
-                "date" to "${Calendar.getInstance().get(Calendar.YEAR)}-${Calendar.getInstance().get(Calendar.MONTH)
+                "date" to "${Calendar.getInstance().get(Calendar.YEAR)}-${
+                    Calendar.getInstance().get(Calendar.MONTH)
                 }-${Calendar.getInstance().get(Calendar.DAY_OF_MONTH)}",
-                "duedate" to duedate,
+
+                "ChannelDate" to channelDate,
 
 
             )
 //                    viewModel.saveHabit(habit)
 //                    finish()
-            Firebase.firestore.collection("goals").add(goal).addOnSuccessListener {
-                startActivity(Intent(this, CreateAccount::class.java))
+            Firebase.firestore.collection("bookings").add(channel).addOnSuccessListener {
+                startActivity(Intent(this,ChannelList::class.java))
                 finish()
             }
         }else {
@@ -111,41 +103,31 @@ class AddGoal: AppCompatActivity(), View.OnClickListener {
                 .show()
         }
     }
+//    private fun setTimeListener() {
+//        myCalendar = Calendar.getInstance()
+//
+//        timeSetListener =
+//            TimePickerDialog.OnTimeSetListener() { _: TimePicker, hourOfDay: Int, min: Int ->
+//                myCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
+//                myCalendar.set(Calendar.MINUTE, min)
+//                updateTime()
+//            }
+//
+//        val timePickerDialog = TimePickerDialog(
+//            this, timeSetListener, myCalendar.get(Calendar.HOUR_OF_DAY),
+//            myCalendar.get(Calendar.MINUTE), false
+//        )
+//        timePickerDialog.show()
+//    }
 
-
-
-
-
-
-
-
-
-
-    private fun setTimeListener() {
-        myCalendar = Calendar.getInstance()
-
-        timeSetListener =
-            TimePickerDialog.OnTimeSetListener() { _: TimePicker, hourOfDay: Int, min: Int ->
-                myCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
-                myCalendar.set(Calendar.MINUTE, min)
-                updateTime()
-            }
-
-        val timePickerDialog = TimePickerDialog(
-            this, timeSetListener, myCalendar.get(Calendar.HOUR_OF_DAY),
-            myCalendar.get(Calendar.MINUTE), false
-        )
-        timePickerDialog.show()
-    }
-
-    private fun updateTime() {
-        //Mon, 5 Jan 2020
-        val myformat = "h:mm a"
-        val sdf = SimpleDateFormat(myformat)
-        finalTime = myCalendar.time.time
-        timeEdt.setText(sdf.format(myCalendar.time))
-
-    }
+//    private fun updateTime() {
+//        //Mon, 5 Jan 2020
+//        val myformat = "h:mm a"
+//        val sdf = SimpleDateFormat(myformat)
+//        finalTime = myCalendar.time.time
+//        .setText(sdf.format(myCalendar.time))
+//
+//    }
 
     private fun setListener() {
         myCalendar = Calendar.getInstance()
@@ -187,10 +169,15 @@ class AddGoal: AppCompatActivity(), View.OnClickListener {
         val myformat = "EEE, d MMM yyyy"
         val sdf = SimpleDateFormat(myformat)
         finalDate = myCalendar.time.time
-        dateEdt.setText(sdf.format(myCalendar.time))
+        add_date.setText(sdf.format(myCalendar.time))
 
-        timeInptLay.visibility = View.VISIBLE
+        //timeInpt.visibility = View.VISIBLE
 
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, ChannelList::class.java))
+        finish()
     }
 
 }

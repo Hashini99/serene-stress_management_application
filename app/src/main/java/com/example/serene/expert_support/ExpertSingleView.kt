@@ -9,7 +9,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.serene.JournalMainActivity
 import com.example.serene.JournalViewHolder
-import com.example.serene.Note
+
 import com.example.serene.R
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
@@ -24,6 +24,7 @@ class ExpertSingleView : AppCompatActivity() {
     lateinit var documentID: String
     lateinit var decription: String
     lateinit var name: String
+    lateinit var available: String
     //var client_id: String = "ARKL7p7RWGWudGaKC4KIjPhAd46IzO8Jl61jfgiEIMKxO3-JirB0te6vR-v_QFk9mYz1bAq00AJ9rqze"
 
 
@@ -46,12 +47,13 @@ class ExpertSingleView : AppCompatActivity() {
 
                 name = it.data!!.getValue("name").toString()
                 decription = it.data!!.getValue("qulification").toString()
-
+               available = it.data!!.getValue("available").toString()
 
 //                txt_date.text = it.data!!.getValue("date").toString()
 //                txt_time.text = it.data!!.getValue("time").toString()
                 txt_name.text = it.data!!.getValue("name").toString()
                 desc.text = it.data!!.getValue("qulification").toString()
+                textView8.text = it.data!!.getValue("available").toString()
 
                 //descriptionVisibility()
 

@@ -10,6 +10,7 @@ import android.widget.Toast
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.serene.expert_support.ExpertSupportMain
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -68,7 +69,7 @@ class Home: AppCompatActivity() {
                     true
                 }
                 R.id.expert_graph -> {
-                    val intent = Intent(this, Profile::class.java)
+                    val intent = Intent(this, ExpertSupportMain::class.java)
                     startActivity(intent)
                     true
                 }

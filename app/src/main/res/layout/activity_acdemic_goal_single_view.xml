@@ -9,7 +9,7 @@
     android:background="@color/white"
     android:focusableInTouchMode="true"
     android:gravity="center"
-    tools:context=".JournalSingleView">
+    tools:context=".academic_goal.AcademicGoalSingleView">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -45,13 +45,14 @@
                     />
 
                 <TextView
+                    android:id="@+id/txt_a_title"
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_marginLeft="88dp"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="Journal Summery"
+                    android:text="Loading"
                     android:textColor="@color/blue3"
                     android:textSize="30sp" />
 
@@ -60,7 +61,7 @@
 
 
             <TextView
-                android:id="@+id/txt_date"
+                android:id="@+id/txt_a_date"
                 style="@style/viewParent.headerText.NoMode"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
@@ -71,7 +72,7 @@
                 android:textColor="@color/blue3" />
 
             <TextView
-                android:id="@+id/txt_time"
+                android:id="@+id/txt_a_time"
                 style="@style/viewParent.headerText.NoMode"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
@@ -93,17 +94,6 @@
                 android:textColor="@color/white"
                 android:textSize="28sp" />
 
-            <TextView
-                android:id="@+id/txt_title"
-                style="@style/viewParent.headerText.NoMode"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:fontFamily="@font/montserrat"
-                android:text="Loading..."
-                android:textColor="@color/blue3"
-                android:textSize="25sp" />
 
             <TextView
                 style="@style/viewParent.headerText.NoMode"
@@ -160,7 +150,7 @@
             <!--                android:textColor="@color/black" />-->
 
             <TextView
-                android:id="@+id/txt_description"
+                android:id="@+id/txt_steps"
                 style="@style/viewParent.headerText.NoMode"
                 android:layout_width="388dp"
                 android:layout_height="254dp"
@@ -178,7 +168,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/montserrat_medium"
-                android:onClick="delete_journal"
+                android:onClick="delete_goal"
                 android:text="Delete"
                 android:textColor="@color/white" />
             <Button
@@ -187,8 +177,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/montserrat_medium"
-
-                android:text="Post"
+                android:onClick="remind_me"
+                android:text="Remind Me"
                 android:textColor="@color/white" />
 
 

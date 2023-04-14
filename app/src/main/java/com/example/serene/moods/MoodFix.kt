@@ -4,10 +4,8 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.serene.CreateAccount
-import com.example.serene.Login
+import com.example.serene.*
 
-import com.example.serene.R
 //import com.example.serene.habits.AddHabits
 import com.google.firebase.auth.FirebaseAuth
 
@@ -58,5 +56,10 @@ class MoodFix : AppCompatActivity() {
             startActivity(Intent(this,CreateAccount::class.java))
             finish()
         }
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, Home::class.java))
+        finish()
     }
 }

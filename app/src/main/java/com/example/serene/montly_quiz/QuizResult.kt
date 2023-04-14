@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.serene.CreateAccount
+import com.example.serene.Home
 import com.example.serene.Login
 import com.example.serene.R
 import com.example.serene.moods.MoodFix
@@ -42,11 +43,15 @@ class QuizResult : AppCompatActivity() {
         )
 
         Firebase.firestore.collection("quiz").add(quizresults).addOnSuccessListener {
-            startActivity(Intent(this, MoodFix::class.java))
+           // startActivity(Intent(this, MoodFix::class.java))
             finish()
         }
 
     }
-
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, Home::class.java))
+        finish()
+    }
 
 }

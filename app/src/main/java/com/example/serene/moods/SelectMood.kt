@@ -130,4 +130,9 @@ class SelectMood : AppCompatActivity() {
 
 
     }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, Home::class.java))
+        finish()
+    }
 }

@@ -11,8 +11,12 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import com.example.serene.JournalMainActivity
 import com.example.serene.Login
 import com.example.serene.R
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
@@ -25,11 +29,107 @@ import java.util.*
 //    val title: String="",
 //    val minit
 //)
+//
+//class AddDailyHabits : AppCompatActivity(), TimePickerFragment.DialogTimeListener {
+//
+//   // private lateinit var viewModel: AddHabitViewModel
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_add_dailyhabit)
+//
+//        supportActionBar?.title = getString(R.string.add_habit)
+//
+////        val factory = ViewModelFactory.getInstance(this)
+////        viewModel = ViewModelProvider(this, factory)[AddHabitViewModel::class.java]
+//
+//
+//    }
+//
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        menuInflater.inflate(R.menu.menu_add, menu)
+//        return true
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return when (item.itemId) {
+//            R.id.action_save -> {
+//                val title = findViewById<EditText>(R.id.add_ed_title).text.toString()
+//
+//                val minutesFocus = findViewById<EditText>(R.id.add_ed_minutes_focus).text.toString().toLong()
+//
+//                val startTime = findViewById<TextView>(R.id.add_tv_start_time).text.toString()
+//
+//                val priorityLevel = findViewById<Spinner>(R.id.sp_priority_level).selectedItem.toString()
+//
+//                if (title.isNotEmpty()) {
+//                    val habit = hashMapOf(
+//                        "user" to FirebaseAuth.getInstance().currentUser?.uid,
+//                        "title" to title,
+//                        //"title" to add_ed_title.text.toString(),
+//                        "minutesFocus" to minutesFocus,
+//                        //"startTime" to "${Calendar.getInstance().get(Calendar.HOUR_OF_DAY)}:${Calendar.getInstance().get(Calendar.MINUTE)}",
+//                        "startTime" to startTime,
+//                        "priorityLevel" to priorityLevel
+//                    )
+////                    viewModel.saveHabit(habit)
+////                    finish()
+//                    Firebase.firestore.collection("habits").add(habit).addOnSuccessListener {
+//                        startActivity(Intent(this, Login::class.java))
+//                        finish()
+//                    }
+//                } else {
+//                    Toast.makeText(this, getString(R.string.empty_message), Toast.LENGTH_SHORT)
+//                        .show()
+//                }
+//                true
+//            }
+//            else -> super.onOptionsItemSelected(item)
+//        }
+//    }
+//
+//    fun showTimePicker(view: View) {
+//        val dialogFragment = TimePickerFragment()
+//        dialogFragment.show(supportFragmentManager, "timePicker")
+//    }
+//
+//    override fun onDialogTimeSet(tag: String?, hourOfDay: Int, minute: Int) {
+//        val calendar = Calendar.getInstance()
+//        calendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
+//        calendar.set(Calendar.MINUTE, minute)
+//        val dateFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+//        findViewById<TextView>(R.id.add_tv_start_time).text = dateFormat.format(calendar.time)
+//    }
+//
+//    fun addCalendarEvent(view: View) {
+//        val calendarEvent: Calendar = Calendar.getInstance()
+//        val intent = Intent(Intent.ACTION_EDIT)
+//        intent.type = "vnd.android.cursor.item/event"
+//        intent.putExtra("beginTime", calendarEvent.timeInMillis)
+//        intent.putExtra("allDay", true)
+//
+//
+//        intent.putExtra("allDay", true)
+//        intent.putExtra("rule", "FREQ=YEARLY")
+//        intent.putExtra("endTime", calendarEvent.timeInMillis + 60 * 60 * 1000)
+//        intent.putExtra("title", "Calendar Event")
+//        startActivity(intent)
+//    }
+//
+//}
+
+
+
+
+
+
+
+
 
 class AddDailyHabits : AppCompatActivity(), TimePickerFragment.DialogTimeListener {
 
-   // private lateinit var viewModel: AddHabitViewModel
-
+    // private lateinit var viewModel: AddHabitViewModel
+    lateinit var saveeButton: MaterialButton
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_dailyhabit)
@@ -39,77 +139,70 @@ class AddDailyHabits : AppCompatActivity(), TimePickerFragment.DialogTimeListene
 //        val factory = ViewModelFactory.getInstance(this)
 //        viewModel = ViewModelProvider(this, factory)[AddHabitViewModel::class.java]
 
+        saveeButton = findViewById(R.id.save_habit)
 
-    }
+        saveeButton.setOnClickListener {
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_add, menu)
-        return true
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_save -> {
-                val title = findViewById<EditText>(R.id.add_ed_title).text.toString()
+            val title = findViewById<EditText>(R.id.add_ed_title).text.toString()
 
-                val minutesFocus = findViewById<EditText>(R.id.add_ed_minutes_focus).text.toString().toLong()
+            val minutesFocus =
+                findViewById<EditText>(R.id.add_ed_minutes_focus).text.toString().toLong()
 
-                val startTime = findViewById<TextView>(R.id.add_tv_start_time).text.toString()
+            val startTime = findViewById<TextView>(R.id.add_tv_start_time).text.toString()
 
-                val priorityLevel = findViewById<Spinner>(R.id.sp_priority_level).selectedItem.toString()
+            val priorityLevel =
+                findViewById<Spinner>(R.id.sp_priority_level).selectedItem.toString()
 
-                if (title.isNotEmpty()) {
-                    val habit = hashMapOf(
-                        "user" to FirebaseAuth.getInstance().currentUser?.uid,
-                        "title" to title,
-                        //"title" to add_ed_title.text.toString(),
-                        "minutesFocus" to minutesFocus,
-                        //"startTime" to "${Calendar.getInstance().get(Calendar.HOUR_OF_DAY)}:${Calendar.getInstance().get(Calendar.MINUTE)}",
-                        "startTime" to startTime,
-                        "priorityLevel" to priorityLevel
-                    )
-//                    viewModel.saveHabit(habit)
-//                    finish()
-                    Firebase.firestore.collection("habits").add(habit).addOnSuccessListener {
-                        startActivity(Intent(this, Login::class.java))
-                        finish()
-                    }
-                } else {
-                    Toast.makeText(this, getString(R.string.empty_message), Toast.LENGTH_SHORT)
-                        .show()
+            if (title.isNotEmpty()) {
+                val habit = hashMapOf(
+                    "user" to FirebaseAuth.getInstance().currentUser?.uid,
+                    "title" to title,
+                    //"title" to add_ed_title.text.toString(),
+                    "minutesFocus" to minutesFocus,
+                    //"startTime" to "${Calendar.getInstance().get(Calendar.HOUR_OF_DAY)}:${Calendar.getInstance().get(Calendar.MINUTE)}",
+                    "startTime" to startTime,
+                    "priorityLevel" to priorityLevel
+                )
+                Firebase.firestore.collection("habits").add(habit).addOnSuccessListener {
+                    startActivity(Intent(this, DailyHabitsMain::class.java))
+                    finish()
                 }
-                true
+
+
             }
-            else -> super.onOptionsItemSelected(item)
+
         }
+
     }
+            fun showTimePicker(view: View) {
+                val dialogFragment = TimePickerFragment()
+                dialogFragment.show(supportFragmentManager, "timePicker")
+            }
 
-    fun showTimePicker(view: View) {
-        val dialogFragment = TimePickerFragment()
-        dialogFragment.show(supportFragmentManager, "timePicker")
-    }
+            override fun onDialogTimeSet(tag: String?, hourOfDay: Int, minute: Int) {
+                val calendar = Calendar.getInstance()
+                calendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
+                calendar.set(Calendar.MINUTE, minute)
+                val dateFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+                findViewById<TextView>(R.id.add_tv_start_time).text =
+                    dateFormat.format(calendar.time)
+            }
 
-    override fun onDialogTimeSet(tag: String?, hourOfDay: Int, minute: Int) {
-        val calendar = Calendar.getInstance()
-        calendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
-        calendar.set(Calendar.MINUTE, minute)
-        val dateFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
-        findViewById<TextView>(R.id.add_tv_start_time).text = dateFormat.format(calendar.time)
-    }
-
-    fun addCalendarEvent(view: View) {
-        val calendarEvent: Calendar = Calendar.getInstance()
-        val intent = Intent(Intent.ACTION_EDIT)
-        intent.type = "vnd.android.cursor.item/event"
-        intent.putExtra("beginTime", calendarEvent.timeInMillis)
-        intent.putExtra("allDay", true)
+            fun addCalendarEvent(view: View) {
+                val calendarEvent: Calendar = Calendar.getInstance()
+                val intent = Intent(Intent.ACTION_EDIT)
+                intent.type = "vnd.android.cursor.item/event"
+                intent.putExtra("beginTime", calendarEvent.timeInMillis)
+                intent.putExtra("allDay", true)
 
 
-        intent.putExtra("allDay", true)
-        intent.putExtra("rule", "FREQ=YEARLY")
-        intent.putExtra("endTime", calendarEvent.timeInMillis + 60 * 60 * 1000)
-        intent.putExtra("title", "Calendar Event")
-        startActivity(intent)
-    }
+                intent.putExtra("allDay", true)
+                intent.putExtra("rule", "FREQ=YEARLY")
+                intent.putExtra("endTime", calendarEvent.timeInMillis + 60 * 60 * 1000)
+                intent.putExtra("title", "Calendar Event")
+                startActivity(intent)
+            }
 
-}
+        }
+

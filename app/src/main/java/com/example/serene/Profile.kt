@@ -36,7 +36,7 @@ class Profile: AppCompatActivity()
         }.addOnFailureListener{
             Toast.makeText(applicationContext,"Cannot Get Data from Server", Toast.LENGTH_LONG).show()
 
-            startActivity(Intent(this, JournalAddEditNoteActivity::class.java))
+            startActivity(Intent(this, Profile::class.java))
             finish()
         }
 
@@ -45,7 +45,7 @@ class Profile: AppCompatActivity()
 
     override fun onBackPressed() {
         super.onBackPressed()
-        startActivity(Intent(this, JournalAddEditNoteActivity::class.java))
+        startActivity(Intent(this,Home::class.java))
         finish()
     }
 

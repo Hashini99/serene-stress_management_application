@@ -32,9 +32,10 @@ import java.util.*
 data class Goal(
     // val datetime:Date,
     val title: String = "",
-    val tasks:String="",
-    //val datetime:String=""
-//val datetime= Date()
+  //  val tasks:String="",
+  val duedate:String="",
+val date:String="",
+       val startTime:String=""
 )
 
 class GoalMainViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView)
@@ -83,18 +84,14 @@ class GoalMain : AppCompatActivity() {
             override fun onBindViewHolder(holder: GoalMainViewHolder, position: Int, model: Goal) {
                 //   val tvMinutesFocus: TextView = holder.itemView.findViewById(R.id.item_priority_level)
                 val tvGTitle: TextView = holder.itemView.findViewById(R.id.txtShowTitle)
-                val tvGTasks: TextView = holder.itemView.findViewById(R.id.txtShowTask)
-               // val tvGStartTime: TextView = holder.itemView.findViewById(R.id.txtShowDate)
-                //val tvDate: TextView = holder.itemView.findViewById(android.R.id.text2)
-                //val tvTitle: TextView = holder.itemView.findViewById(android.R.id.text2)
-                // tvDate.text = model.datetime.toString()
-                //  tvMinutesFocus.text = model.minutesFocus.toString()
-                tvGTitle.text = model.title
-                tvGTasks.text = model.tasks
-               // tvGStartTime.text = model.datetime
+                val tvEndTime: TextView = holder.itemView.findViewById(R.id.txtShowTime)
+               // val tvStartDate: TextView = holder.itemView.findViewById(R.id.txtstartdate)
+                val tvDueDate: TextView = holder.itemView.findViewById(R.id.txtenddate)
 
-//                    tvDate.setTextColor(Color.parseColor("#00FF00"))
-//                    tvDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
+
+                tvGTitle.text = model.title
+               tvDueDate.text=model.duedate
+                tvEndTime.text=model.startTime
 
                 tvGTitle.typeface = Typeface.defaultFromStyle(Typeface.BOLD)
                 //    tvDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20F)
@@ -104,15 +101,15 @@ class GoalMain : AppCompatActivity() {
                 val documentId = snapshots.getSnapshot(position).id
 
                 holder.itemView.setOnClickListener {
-                    changePageToHabitSingleView(documentId)
+                    changePageToGoalSingleView(documentId)
                 }
             }
         }
         goal_recycle_view.adapter = adapter
         goal_recycle_view.layoutManager = LinearLayoutManager(this)
     }
-    fun changePageToHabitSingleView(docID: String){
-        val intent = Intent(this, DailyHabitSingleView::class.java)
+    fun changePageToGoalSingleView(docID: String){
+        val intent = Intent(this, AcademicGoalSingleView::class.java)
         intent.putExtra("docID", docID)
         startActivity(intent)
     }

@@ -27,17 +27,18 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_daily_habit_list.*
 import kotlinx.android.synthetic.main.activity_journal_main.*
+import kotlinx.android.synthetic.main.daily_habit_card.*
 import java.util.*
 
 
 data class DailyHabit(
-      //  // val datetime:Date,
-        // //val date: String = "",
+
 
         val title: String="",
-      // val minutesFocus:Int,
+
         val startTime:String="",
-       // val minutesFocus:String,
+    val priorityLevel:String=""
+
 
         )
 
@@ -72,13 +73,13 @@ class DailyHabitsMain : AppCompatActivity() {
 
 
                 override fun onBindViewHolder(holder: DailyHabitViewHolder, position: Int, model: DailyHabit) {
-                 //   val tvMinutesFocus: TextView = holder.itemView.findViewById(R.id.item_priority_level)
+                    val tvPL: TextView = holder.itemView.findViewById(R.id.pri)
                     val tvTitle: TextView = holder.itemView.findViewById(R.id.item_tv_title)
                     val tvStartTime: TextView = holder.itemView.findViewById(R.id.item_tv_start_time)
                     //val tvDate: TextView = holder.itemView.findViewById(android.R.id.text2)
                     //val tvTitle: TextView = holder.itemView.findViewById(android.R.id.text2)
                     // tvDate.text = model.datetime.toString()
-                  //  tvMinutesFocus.text = model.minutesFocus.toString()
+                    tvPL.text = model.priorityLevel
                     tvTitle.text = model.title
                     tvStartTime.text = model.startTime
 
@@ -89,7 +90,19 @@ class DailyHabitsMain : AppCompatActivity() {
                 //    tvDescription.setTextSize(TypedValue.COMPLEX_UNIT_SP, 20F)
 
 
+                    if(model.priorityLevel == "High"){
+                        tvPL.setTextColor(Color.parseColor("#dbba00"))
+                    }
+                    else if(model.priorityLevel == "Medium"){
+                        tvPL.setTextColor(Color.parseColor("#ffaa00"))
+                    }
+                    else{
+                        tvPL.setTextColor(Color.parseColor("#0091ff"))
+                    }
 
+//                    else {
+//                        item_tv_title.setTextColor(Color.parseColor("#ff0000"))
+//                    }
 
 
 

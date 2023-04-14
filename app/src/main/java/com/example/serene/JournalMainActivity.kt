@@ -143,6 +143,12 @@ class JournalMainActivity: AppCompatActivity() {
         startActivity(Intent(this, JournalAddEditNoteActivity::class.java))
         finish()
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, MainTasks::class.java))
+        finish()
+    }
 }
 
 

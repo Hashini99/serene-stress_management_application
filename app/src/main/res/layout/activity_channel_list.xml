@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_2"
+    tools:context=".daily_habits.DailyHabitsMain">
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/topBar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="70dp"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:id="@+id/titleJour"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:layout_height="60dp"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:background="@color/main_2"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:fontFamily="cursive"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:text="Jour"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:textColor="@color/white"&ndash;&gt;-->
+    <!--&lt;!&ndash;            android:textSize="30dp" />&ndash;&gt;-->
+
+    <!--    </LinearLayout>-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/channellistRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="0dp"
+        android:background="@color/white"
+
+        tools:listitem="@layout/channel_list_card" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/jourAddButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/white"
+        android:clickable="true"
+        android:onClick="addNewChannel"
+        android:src="@drawable/journal_add_icon" />
+</RelativeLayout>
