@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    tools:context=".expert_support.ChannelSingleView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="2dp"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="185dp"
+                android:src="@drawable/cou"
+                android:alpha="0.2"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp">
+
+
+                <TextView
+                    style="@style/viewParent.headerText.NoMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Appointment Summery"
+                    android:textColor="@color/blue3"
+                    android:textSize="25sp" />
+
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_d_name"
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat"
+                android:text="Loading..."
+                android:textColor="@color/blue3" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_a_date"
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="159dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat"
+                android:text="Loading..."
+                android:textColor="@color/blue3"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txt_a_time"
+
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="159dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Time"
+                android:textColor="@color/blue3"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txt_title"
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat"
+                android:text="Loading..."
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp">
+
+
+                <TextView
+                    style="@style/viewParent.headerText.NoMode"
+                    android:layout_width="247dp"
+                    android:layout_height="52dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="@dimen/viewsMargin"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Meet Your Counsellor"
+                    android:textColor="@color/blue3"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/txt_description"
+                    style="@style/viewParent.headerText.NoMode"
+                    android:layout_width="48dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="end"
+                    android:layout_marginLeft="215dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:gravity="center"
+                    android:src="@drawable/expert_video"
+                    android:text="Loading..."
+                    android:textColor="@color/blue3"
+                    android:textSize="21sp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:onClick="delete_app"
+                android:text="Cancel"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/button_post"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:onClick="reminderr"
+                android:text="Remind Me"
+                android:textColor="@color/white" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_weight="3"
+        android:textColor="@color/blue3" />
+
+</RelativeLayout>

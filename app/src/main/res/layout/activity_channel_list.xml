@@ -35,7 +35,7 @@
         android:layout_height="match_parent"
 
         android:layout_marginTop="0dp"
-        android:background="@color/white"
+        android:background="@color/blue3"
 
         tools:listitem="@layout/channel_list_card" />
 
