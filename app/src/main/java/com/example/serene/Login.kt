@@ -6,9 +6,15 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.example.serene.academic_goal.AddGoal
+import com.example.serene.academic_goal.GoalMain
 import com.example.serene.chatbot.BotActivity
 import com.example.serene.daily_habits.AddDailyHabits
 import com.example.serene.daily_habits.DailyHabitsMain
+import com.example.serene.expert_support.ChannelList
+import com.example.serene.expert_support.Channeling
+//import com.example.serene.daily_habits.Habit
+import com.example.serene.expert_support.VideoChat
+import com.example.serene.history.MoodHistory
 import com.example.serene.meditation.MeditationMain
 import com.example.serene.montly_quiz.Quiz
 import com.example.serene.moods.SelectMood

@@ -6,12 +6,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
 
+import com.example.serene.Home;
 import com.example.serene.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -96,5 +98,17 @@ public class BotActivity extends AppCompatActivity {
             }
         });
 
+    }
+//@Override
+//    public void onBackPressed()
+//{
+//    super.onBackPressed();
+//}
+
+    @Override
+    public void onBackPressed() {
+        Intent myIntent = new Intent(BotActivity.this, Home.class);
+        //myIntent.putExtra("key", value); //Optional parameters
+        BotActivity.this.startActivity(myIntent);
     }
 }

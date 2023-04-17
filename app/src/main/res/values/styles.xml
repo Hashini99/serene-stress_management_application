@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorPrimary">@color/main_2</item>
-        <item name="colorPrimaryDark">@color/main_2</item>
-        <item name="colorAccent">@color/main_2</item>
+        <item name="colorPrimary">@color/blue3</item>
+        <item name="colorPrimaryDark">@color/blue3</item>
+        <item name="colorAccent">@color/blue3</item>
     </style>
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
@@ -27,7 +27,7 @@
     </style>
     <style name="modifiedEditText" parent="parent">
         <item name="android:textSize">@dimen/newsMoreTextSize</item>
-        <item name="android:backgroundTint">@color/main_2</item>
+        <item name="android:backgroundTint">@color/blue4</item>
     </style>
     <style name="loginButton" parent="viewParent">
 
@@ -39,6 +39,8 @@
         <item name="android:textColor">@color/white</item>
         <item name="android:paddingLeft">5dp</item>
     </style>
+<!--habit-->
+    <style name="Theme.AppCompat.Dialog" parent="Base.Theme.AppCompat.Dialog"/>
 <!--quiz function style-->
 <!--    <style name="optionRadioButton">-->
 <!--        <item name="android:layout_marginTop">14dp</item>-->
@@ -59,4 +61,10 @@
 <!--        <item name="android:paddingTop">14dp</item>-->
 <!--        <item name="android:paddingBottom">14dp</item>-->
 <!--    </style>-->
+
+
+
+<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.MaterialComponents.Dark.ActionBar" />
+
+<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
 </resources>

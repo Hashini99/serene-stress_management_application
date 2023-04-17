@@ -74,17 +74,17 @@ class DailyHabitSingleView : AppCompatActivity() {
 //        }
 //    }
 
-    fun deleteOrder(view: View) {
-        FirebaseFirestore.getInstance().collection("habits").document(documentID).delete()
-            .addOnSuccessListener {
-                Toast.makeText(applicationContext, "Order Deleted Successful", Toast.LENGTH_LONG)
-                    .show()
-                startActivity(Intent(this, JournalMainActivity::class.java))
-                finish()
-            }.addOnFailureListener {
-                Toast.makeText(applicationContext, "Cannot Delete the Order", Toast.LENGTH_LONG).show()
-            }
-    }
+//    fun deleteOrder(view: View) {
+//        FirebaseFirestore.getInstance().collection("habits").document(documentID).delete()
+//            .addOnSuccessListener {
+//                Toast.makeText(applicationContext, "Order Deleted Successful", Toast.LENGTH_LONG)
+//                    .show()
+//                startActivity(Intent(this, JournalMainActivity::class.java))
+//                finish()
+//            }.addOnFailureListener {
+//                Toast.makeText(applicationContext, "Cannot Delete the Order", Toast.LENGTH_LONG).show()
+//            }
+//    }
     fun deletehabit(view: View) {
         FirebaseFirestore.getInstance().collection("habits").document(documentID).delete()
             .addOnSuccessListener {

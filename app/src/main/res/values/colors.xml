@@ -12,6 +12,116 @@
     <color name="colorGreen">#4BB543</color>
     <color name="colorBlack">#000</color>
     <color name="colorWhite">#FFFFFF</color>
+
+<!--    mood-->
     <color name="Happy">#FFFF00</color>
 
+
+<!--    habit-->
+
+    <color name="forAllTexts">#231E32</color>
+    <color name="grey">#F4F3F4</color>
+    <color name="tab_text_color">#A7A5AD</color>
+    <color name="tab_indicator">#396270</color>
+    <color name="mini_habits">#073B4C</color>
+    <color name="cardColor">#E8BEA4</color>
+    <color name="cyan">#C4C4C4</color>
+    <color name="dark_blue_grey">#0E2751</color>
+
+    <color name="readPageHabit">#E8BEA4</color>
+    <color name="readCategory">#DC9D76</color>
+    <color name="cardThirthColor">#A8D9D2</color>
+    <color name="thirdColorCaterory">#7CC7BB</color>
+    <color name="fourthCard">#9CB1B7</color>
+    <color name="fourthCardCategory">#6A8994</color>
+    <color name="cardSecondColor">#B0DADF</color>
+    <color name="secondCategory">#88C7CE</color>
+    <color name="fifthColor">#A8D9D2</color>
+    <color name="fifthColorCategory">#7CC7BB</color>
+    <color name="otherCard">#D1A99B</color>
+    <color name="otherCategory">#B97E68</color>
+
+    <color name="back_color">#13253D</color>
+    <color name="bot_back_color">#283757</color>
+    <color name="use_back_color">#6965FF</color>
+    <color name="fab_color">#6B6AFF</color>
+
+
+<!--daily habits-->
+
+    <color name="orange_200">#ffcc80</color>
+    <color name="orange_500">#ff9800</color>
+    <color name="orange_700">#f57c00</color>
+
+    <color name="red">#ff1744</color>
+    <color name="yellow">#ffc400</color>
+    <color name="green">#00e676</color>
+
+
+
+    green pallet
+    <color name="button">#41c1dd</color>
+    <color name="text_fields">#b3f3f4</color>
+    <color name="cards">#61d1db</color>
+
+
+    blue pallet
+
+    <color name="blue1">#72b7e3</color>
+    <color name="blue2">#c9e1f4</color>
+    <color name="blue3">#092a44</color>
+    <color name="blue4">#a7cde9</color>
+    <color name="blue5">#87cdf6</color>
+
+
+
+
+<!--academic goal-->
+
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <color name="colorAccent">#ff7058</color>
+    <color name="litherGray">#a1a1a1</color>
+
+
+
+
+<!--    academic goal-->
+
+
+    <color name="buttonsColor">#7E64FF</color>
+    <color name="primaryColor">#2B1C48</color>
+    <color name="secondaryColor">#0E061D</color>
+    <color name="accentColor">#D55562</color>
+    <color name="textfield_bg_color">#CCC2FE</color>
+    <color name="hint_color">#828282</color>
+    <color name="schedule_underline_on">#C68AFF</color>
+    <color name="schedule_underline_off">#3C1F7B</color>
+    <color name="schedule_background_off">#241641</color>
+    <color name="schedule_background_on">#35215C</color>
+    <color name="schedule_text_off">#BDBDBD</color>
+    <color name="schedule_text_on">@color/white</color>
+
+
+
+    <array name="random_color">
+    <item name="red_400" type="color">#e84e40</item>
+    <item name="pink_400" type="color">#ec407a</item>
+    <item name="purple_400" type="color">#ab47bc</item>
+    <item name="deep_purple_400" type="color">#7e57c2</item>
+    <item name="indigo_400" type="color">#5c6bc0</item>
+    <item name="blue_400" type="color">#738ffe</item>
+    <item name="light_blue_400" type="color">#29b6f6</item>
+    <item name="cyan_400" type="color">#26c6da</item>
+    <item name="teal_400" type="color">#26a69a</item>
+    <item name="green_400" type="color">#2baf2b</item>
+    <item name="light_green_400" type="color">#9ccc65</item>
+    <item name="lime_400" type="color">#d4e157</item>
+    <item name="yellow_400" type="color">#ffee58</item>
+    <item name="orange_400" type="color">#ffa726</item>
+    <item name="deep_orange_400" type="color">#ff7043</item>
+    <item name="brown_400" type="color">#8d6e63</item>
+    <item name="grey_400" type="color">#bdbdbd</item>
+    <item name="blue_grey_400" type="color">#78909c</item>
+    </array>
 </resources>

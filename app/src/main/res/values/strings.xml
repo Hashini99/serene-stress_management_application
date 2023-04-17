@@ -33,7 +33,7 @@
     <string name="_00_00">00:00</string>
     <string name="stop">Stop</string>
     <string name="distracted_baby_description">You have very low attention span and you are easily distracted like a baby. But you know the potential of the human mind and you are ready to work to achieve it</string>
-    <string name="distracted_baby">Distracted Baby</string>
+
     <string name="testing">Testing</string>
     <string name="_24">24</string>
     <string name="min_left">Min Left</string>
@@ -83,6 +83,7 @@
     <string name="congratulations_on_level_up">Congratulations on Level Up</string>
     <string name="confirm">Confirm</string>
     <string name="next_level_up_in_10_mins">Next level up in 40 mins</string>
+    <string name="level">LEVEL 01</string>
 
 
 <!--mood select-->
@@ -115,6 +116,124 @@
     <string name="or">or</string>
     <string name="new_user_register">New User? Register</string>
     <string name="or_signup_using">or SignUp Using</string>
+
+<!--daily habits-->
+
+    <string name="action_settings">Settings</string>
+    <string name="action_random">Random</string>
+    <string name="title_hint">Activity Name</string>
+    <string name="focus_time_duration_hint">Focus Time Duration (in minutes)</string>
+    <string name="action_save">Save</string>
+    <string name="add_habit">Add Habit</string>
+    <string name="start_time">Start Time</string>
+    <string name="habit_deleted">Habit has been deleted</string>
+    <string name="priority_level">Priority Level</string>
+    <string name="minutes">minutes</string>
+
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_detail_habit">ScrollingActivity</string>
+    <string name="title_activity_random">Random Habit</string>
+
+    <!-- habit Snackbar -->
+    <string name="empty_message">Habit cannot be empty</string>
+
+    <!--  habit Night Mode Preferences -->
+    <string name="pref_dark_title">Dark mode</string>
+    <string name="pref_key_dark" translatable="false">key_dark_mode</string>
+    <string name="pref_dark_auto" translatable="false">auto</string>
+    <string name="pref_dark_on" translatable="false">on</string>
+    <string name="pref_dark_off" translatable="false">off</string>
+    <string name="dark_mode_auto">Automatic</string>
+    <string name="dark_mode_on">Dark mode</string>
+    <string name="dark_mode_off">Light mode</string>
+
+    <!--  habit Notification -->
+    <string name="pref_key_notify">key_notification</string>
+    <string name="pref_notify_name">Notification</string>
+    <string name="pref_notify_summary">Reminder when countdown has finished.</string>
+    <string name="notify_channel_name">Habit Reminder</string>
+    <string name="notify_content">Time Up!</string>
+
+    <!--  habit Filter -->
+    <string name="action_sort">sort</string>
+    <string name="filter_start_time">By Start Time</string>
+    <string name="filter_minutes_focus">By Minutes Focus</string>
+    <string name="filter_title_name">By Title Name</string>
+
+    <!--  habit Priority Level-->
+    <string name="high">High</string>
+    <string name="medium">Medium</string>
+    <string name="low">Low</string>
+
+    <!--  habit Count Down-->
+    <string name="start">Start</string>
+
+    <string name="open_count_down">Open Count Down</string>
+
+
+
+
+<!--   monthly quiz-->
+
+    <string name="question_one">1/10</string>
+    <string name="question_two">2/10</string>
+    <string name="question_three">3/10</string>
+    <string name="question_four">4/10</string>
+    <string name="question_five">5/10</string>
+    <string name="question_six">6/10</string>
+    <string name="question_seven">7/10</string>
+    <string name="question_eight">8/10</string>
+    <string name="question_nine">9/10</string>
+    <string name="question_ten">10/10</string>
+
+journal
+
+    <string name="journal_main">journal</string>
+    <string name="journal_second">add journal</string>
+    <string name="journal_third">summary</string>
+
+//video call
+    <string name="app_id">bc2dee0ada4f4c27b6ebd503c1b79161</string>
+    <string name="agora_token">007eJxTYCiuf/HvwcOeM5eeJG7Y8pvXr57DPrZ+nv0O72/8J9wP1vIoMCQlG6WkphokpiSapJkkG5knmaUmpZgaGCcbJplbGpoZXllgmNIQyMjw9IcNMyMDBIL4bAypFQWpRSUMDACdXSO8</string>
+
+<!--    <string name="app_id">APP_ID</string>-->
+<!--    <string name="agora_token">AGORA_TOKEN</string>-->
+
+    //acdemic goal
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="start_up_message">Make yourself\nmore on time</string>
+
+    <string name="notification">Notification</string>
+    <string name="schedule">Schedule</string>
+    <string name="note">Note</string>
+    <string name="search_notes">Search Notes</string>
+    <string name="pin">Pin</string>
+    <string name="note_settings">Note Settings</string>
+    <string name="title">Title</string>
+    <string name="text">Your text</string>
+    <string name="enter_title">Title</string>
+    <string name="save_schedule">save schedule</string>
+    <string name="full_day">Full Day</string>
+    <string name="start_from">Start from</string>
+    <string name="finish">Finish</string>
+    <string name="repeat">Repeat</string>
+    <string name="reminder">Reminder</string>
+    <string name="place">Place</string>
+
+    <string name="pick_date">Pick a Date</string>
+    <string name="time">Time</string>
+    <string name="date">Date</string>
+    <string name="empty_notifications_list">No Upcoming Schedules</string>
+    <string name="empty_schedule_list">You have nothing schedule</string>
+
+    <string-array name="reminders">
+        <item>On Time</item>
+        <item>Before 5 Minutes</item>
+        <item>Before 10 Minutes</item>
+    </string-array>
 
 
 

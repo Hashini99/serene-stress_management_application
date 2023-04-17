@@ -20,7 +20,7 @@ class MoodFix : AppCompatActivity() {
         //music
         music_card.setOnClickListener {
             val openURL = Intent(Intent.ACTION_VIEW)
-            openURL.data = Uri.parse("https://open.spotify.com/playlist/0fjFCCGiRYPcDLHrfqthcT")
+            openURL.data = Uri.parse("https://soundcloud.com/soothingrelaxation/beautiful-relaxing-music-for-stress-relief-sleep-meditation-study-planet-earth?in=soothingrelaxation/sets/long-relaxing-music-extended")
             startActivity(openURL)
         }
 //        movie_card.setOnClickListener { startActivity(Intent(this, movietired::class.java)) }
@@ -33,7 +33,7 @@ class MoodFix : AppCompatActivity() {
         //nature
         nature_card.setOnClickListener {
             val openURL = Intent(Intent.ACTION_VIEW)
-            openURL.data = Uri.parse("https://open.spotify.com/playlist/0fjFCCGiRYPcDLHrfqthcT")
+            openURL.data = Uri.parse("https://soundcloud.com/soothingrelaxation/beautiful-relaxing-music-for-stress-relief-sleep-meditation-study-planet-earth?in=soothingrelaxation/sets/long-relaxing-music-extended")
             startActivity(openURL)
         }
 
@@ -51,11 +51,11 @@ class MoodFix : AppCompatActivity() {
             startActivity(openURL)
         }
         //logout
-        logout_cardtired.setOnClickListener{
-            FirebaseAuth.getInstance().signOut()
-            startActivity(Intent(this,CreateAccount::class.java))
-            finish()
-        }
+//        logout_cardtired.setOnClickListener{
+//            FirebaseAuth.getInstance().signOut()
+//            startActivity(Intent(this,CreateAccount::class.java))
+//            finish()
+//        }
     }
     override fun onBackPressed() {
         super.onBackPressed()
