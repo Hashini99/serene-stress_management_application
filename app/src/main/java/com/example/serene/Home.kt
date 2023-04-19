@@ -10,13 +10,20 @@ import android.widget.Toast
 import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.serene.academic_goal.AddGoal
+import com.example.serene.chatbot.BotActivity
 import com.example.serene.expert_support.ExpertSupportMain
+import com.example.serene.history.HistoryMain
+import com.example.serene.meditation.MeditationMain
+import com.example.serene.montly_quiz.Quiz
+import com.example.serene.moods.SelectMood
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_main_task.*
 import kotlinx.android.synthetic.main.activity_profile.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -25,10 +32,10 @@ import kotlinx.coroutines.withContext
 class Home: AppCompatActivity() {
     val db = Firebase.firestore
     // declaring a null variable for VideoView
-    var simpleVideoView: VideoView? = null
+   // var simpleVideoView: VideoView? = null
 
     // declaring a null variable for MediaController
-    var mediaControls: MediaController? = null
+   // var mediaControls: MediaController? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,7 +71,7 @@ class Home: AppCompatActivity() {
                     true
                 }
                 R.id.charts_graph -> {
-                    val intent = Intent(this, Login::class.java)
+                    val intent = Intent(this, HistoryMain::class.java)
                     startActivity(intent)
                     true
                 }
@@ -83,6 +90,15 @@ class Home: AppCompatActivity() {
 
         }
 
+        mood_card.setOnClickListener {
+            startActivity(Intent(this,SelectMood::class.java))
+            finish()
+        }
+        //med
+        mq_card.setOnClickListener {
+            startActivity(Intent(this, Quiz::class.java))
+            finish()
+        }
 
 //        btnSave.setOnClickListener {
 //            lifecycleScope.launch {
@@ -98,27 +114,27 @@ class Home: AppCompatActivity() {
 
 
 
-        simpleVideoView = findViewById<View>(R.id.simpleVideoView) as VideoView
-
-        if (mediaControls == null) {
-            // creating an object of media controller class
-            mediaControls = MediaController(this)
-
-            // set the anchor view for the video view
-            mediaControls!!.setAnchorView(this.simpleVideoView)
-        }
-
-        // set the media controller for video view
-        simpleVideoView!!.setMediaController(mediaControls)
-
-        // set the absolute path of the video file which is going to be played
-        simpleVideoView!!.setVideoURI(Uri.parse("android.resource://$packageName/${R.raw.blue_sky}"))
-        // ("android.resource://$packageName/${R.raw.gfgvideo}")
-
-        simpleVideoView!!.requestFocus()
-
-        // starting the video
-        simpleVideoView!!.start()
+//        simpleVideoView = findViewById<View>(R.id.simpleVideoView) as VideoView
+//
+//        if (mediaControls == null) {
+//            // creating an object of media controller class
+//            mediaControls = MediaController(this)
+//
+//            // set the anchor view for the video view
+//            mediaControls!!.setAnchorView(this.simpleVideoView)
+//        }
+//
+//        // set the media controller for video view
+//        simpleVideoView!!.setMediaController(mediaControls)
+//
+//        // set the absolute path of the video file which is going to be played
+//        simpleVideoView!!.setVideoURI(Uri.parse("android.resource://$packageName/${R.raw.blue_sky}"))
+//        // ("android.resource://$packageName/${R.raw.gfgvideo}")
+//
+//        simpleVideoView!!.requestFocus()
+//
+//        // starting the video
+//        simpleVideoView!!.start()
 
         // display a toast message
         // after the video is completed
@@ -140,4 +156,8 @@ class Home: AppCompatActivity() {
 
 
             }
+    fun chat(view: View){
+        startActivity(Intent(this,BotActivity ::class.java))
+        finish()
+    }
 }

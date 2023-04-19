@@ -11,6 +11,7 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.example.serene.CreateAccount
 import com.example.serene.Login
+import com.example.serene.MainTasks
 import com.example.serene.R
 import com.example.serene.daily_habits.TimePickerFragment
 import com.google.android.material.datepicker.MaterialDatePicker
@@ -103,7 +104,7 @@ class AddGoal: AppCompatActivity(), View.OnClickListener {
 //                    viewModel.saveHabit(habit)
 //                    finish()
             Firebase.firestore.collection("goals").add(goal).addOnSuccessListener {
-                startActivity(Intent(this, CreateAccount::class.java))
+                startActivity(Intent(this, GoalMain::class.java))
                 finish()
             }
         }else {
@@ -192,5 +193,9 @@ class AddGoal: AppCompatActivity(), View.OnClickListener {
         timeInptLay.visibility = View.VISIBLE
 
     }
-
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, GoalMain::class.java))
+        finish()
+    }
 }

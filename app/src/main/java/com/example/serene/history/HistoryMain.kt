@@ -1,31 +1,41 @@
-package com.example.serene
+package com.example.serene.history
 
 import android.content.Intent
-import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.serene.Home
+import com.example.serene.MainTasks
+import com.example.serene.Profile
+
+import com.example.serene.R
 import com.example.serene.academic_goal.GoalMain
 import com.example.serene.daily_habits.DailyHabitsMain
 import com.example.serene.expert_support.ExpertSupportMain
-import com.example.serene.history.HistoryMain
-import com.example.serene.meditation.MeditationMain
-import com.example.serene.moods.MoodFix
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kotlinx.android.synthetic.main.activity_main_task.*
-import kotlinx.android.synthetic.main.activity_mood_fix.*
 
-class MainTasks: AppCompatActivity() {
+import kotlinx.android.synthetic.main.activity_history_main.*
+
+
+class HistoryMain  : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_history_main)
 
-        try {
-            this.supportActionBar!!.hide()
-        } catch (e: NullPointerException) {
+
+        mj_card.setOnClickListener {
+            startActivity(Intent(this, MoodHistory::class.java))
+            finish()
         }
-        setContentView(R.layout.activity_main_task)
+
+        //goal
+        qu_card.setOnClickListener {
+            startActivity(Intent(this, StressTrackerOverview::class.java))
+            finish()
+        }
 
 
+        //nav bar
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
@@ -56,27 +66,8 @@ class MainTasks: AppCompatActivity() {
                 }
                 else -> false
             }
-        }
-        //habit
-        habit_card.setOnClickListener {
-            startActivity(Intent(this,DailyHabitsMain::class.java))
-            finish()
+
         }
 
-        //goal
-        goal_card.setOnClickListener {
-            startActivity(Intent(this,GoalMain::class.java))
-            finish()
-        }
-        //journal
-        journal_card.setOnClickListener {
-            startActivity(Intent(this,JournalMainActivity::class.java))
-            finish()
-        }
-        //med
-        med_card.setOnClickListener {
-            startActivity(Intent(this,MeditationMain::class.java))
-            finish()
-        }
     }
 }

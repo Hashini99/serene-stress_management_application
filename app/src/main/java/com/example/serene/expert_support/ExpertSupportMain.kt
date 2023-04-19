@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.serene.*
 import com.example.serene.daily_habits.DailyHabitsMain
+import com.example.serene.history.HistoryMain
 import com.example.serene.meditation.MeditationMain
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main_task.*
@@ -37,7 +38,7 @@ class ExpertSupportMain : AppCompatActivity() {
                     true
                 }
                 R.id.charts_graph -> {
-                    val intent = Intent(this, Login::class.java)
+                    val intent = Intent(this, HistoryMain::class.java)
                     startActivity(intent)
                     true
                 }
@@ -70,10 +71,10 @@ class ExpertSupportMain : AppCompatActivity() {
             startActivity(Intent(this, JourneyMain::class.java))
             finish()
         }
-        //med
-        med_card.setOnClickListener {
-            startActivity(Intent(this, MeditationMain::class.java))
-            finish()
-        }
+//        //med
+//        med_card.setOnClickListener {
+//            startActivity(Intent(this, MeditationMain::class.java))
+//            finish()
+//        }
     }
 }

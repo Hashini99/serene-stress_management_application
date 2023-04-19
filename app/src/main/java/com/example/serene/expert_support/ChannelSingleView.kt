@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.serene.CreateAccount
 import com.example.serene.JournalMainActivity
 import com.example.serene.R
 import com.google.firebase.firestore.FirebaseFirestore
@@ -92,6 +93,10 @@ class ChannelSingleView: AppCompatActivity() {
         intent.putExtra("endTime", calendarEvent.timeInMillis + 60 * 60 * 1000)
         intent.putExtra("title", "Calendar Event")
         startActivity(intent)
+    }
+    fun meetExpert(view: View){
+        startActivity(Intent(this,VideoChat ::class.java))
+        finish()
     }
     override fun onBackPressed() {
         super.onBackPressed()

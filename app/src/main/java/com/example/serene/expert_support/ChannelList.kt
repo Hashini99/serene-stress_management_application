@@ -30,9 +30,9 @@ data class ExpertChannel(
     //  // val datetime:Date,
     // //val date: String = "",
 
-    val name: String="",
+    val counsellor: String="",
     // val minutesFocus:Int,
-    val ChannelD:String="",
+    val date:String="",
     // val minutesFocus:String,
 
 )
@@ -74,8 +74,8 @@ class ChannelList : AppCompatActivity() {
                 //val tvTitle: TextView = holder.itemView.findViewById(android.R.id.text2)
                 // tvDate.text = model.datetime.toString()
                 //  tvMinutesFocus.text = model.minutesFocus.toString()
-                tvDname.text = model.name
-                tvStartD.text = model.ChannelD
+                tvDname.text = model.counsellor
+                tvStartD.text = model.date
 
 //                    tvDate.setTextColor(Color.parseColor("#00FF00"))
 //                    tvDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, 16F)
@@ -92,15 +92,15 @@ class ChannelList : AppCompatActivity() {
                 val documentId = snapshots.getSnapshot(position).id
 
                 holder.itemView.setOnClickListener {
-                    changePageToHabitSingleView(documentId)
+                    changePageToBookingSingleView(documentId)
                 }
             }
         }
         channellistRecyclerView.adapter = adapter
         channellistRecyclerView.layoutManager = LinearLayoutManager(this)
     }
-    fun changePageToHabitSingleView(docID: String){
-        val intent = Intent(this, DailyHabitSingleView::class.java)
+    fun changePageToBookingSingleView(docID: String){
+        val intent = Intent(this, ChannelSingleView::class.java)
         intent.putExtra("docID", docID)
         startActivity(intent)
     }

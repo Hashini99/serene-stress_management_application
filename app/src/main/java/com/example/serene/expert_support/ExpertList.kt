@@ -77,6 +77,11 @@ class ExpertList: AppCompatActivity() {
         intent.putExtra("docID", docID)
         startActivity(intent)
     }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this,ExpertSupportMain::class.java))
+        finish()
+    }
 //    fun addNewJournal(view: View){
 //        startActivity(Intent(this, JournalAddEditNoteActivity::class.java))
 //        finish()

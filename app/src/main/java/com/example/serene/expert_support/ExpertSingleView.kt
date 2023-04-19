@@ -11,6 +11,7 @@ import com.example.serene.JournalMainActivity
 import com.example.serene.JournalViewHolder
 
 import com.example.serene.R
+import com.example.serene.UpdateProfile
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.firestore.FirebaseFirestore
@@ -79,6 +80,10 @@ class ExpertSingleView : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(this, ExpertList::class.java))
+        finish()
+    }
+    fun booking(view: View){
+        startActivity(Intent(this, Channeling::class.java))
         finish()
     }
 }

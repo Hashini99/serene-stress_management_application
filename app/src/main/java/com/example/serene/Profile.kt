@@ -1,16 +1,15 @@
 package com.example.serene
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.view.View
-import android.widget.EditText
 import android.widget.Toast
-import com.google.firebase.auth.EmailAuthCredential
+import androidx.appcompat.app.AppCompatActivity
+import com.example.serene.daily_habits.documentID
+import com.example.serene.expert_support.ExpertSupportMain
+import com.example.serene.history.HistoryMain
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_create_account.*
 import kotlinx.android.synthetic.main.activity_profile.*
 
@@ -26,6 +25,8 @@ class Profile: AppCompatActivity()
 
         setContentView(R.layout.activity_profile)
 
+
+
         FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().currentUser!!.uid).get().addOnSuccessListener {
 
             txt_name.text = it.data!!.getValue("name").toString()
@@ -39,7 +40,46 @@ class Profile: AppCompatActivity()
             startActivity(Intent(this, Profile::class.java))
             finish()
         }
+        signout.setOnClickListener(View.OnClickListener {
+//            firebaseAuth.getInstance().signOut()
+            FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().signOut()
+                .toString())
+            val intent = Intent(this, Login::class.java)
+            startActivity(intent)
+        })
 
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        bottomNavigationView.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.home_graph -> {
+                    val intent = Intent(this, Home::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.main_graph -> {
+                    val intent = Intent(this, MainTasks::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.charts_graph -> {
+                    val intent = Intent(this, HistoryMain::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.expert_graph -> {
+                    val intent = Intent(this, ExpertSupportMain::class.java)
+                    startActivity(intent)
+                    true
+                }
+                R.id.settings_graph -> {
+                    val intent = Intent(this, Profile::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+            }
+        }
     }
 
 
@@ -53,4 +93,21 @@ class Profile: AppCompatActivity()
         startActivity(Intent(this, UpdateProfile::class.java))
         finish()
     }
-}
+    fun DeleteAccount(view: View) {
+        FirebaseFirestore.getInstance().collection("users").document(documentID).delete()
+            .addOnSuccessListener {
+                Toast.makeText(applicationContext, "Account Deleted Successful", Toast.LENGTH_LONG)
+                    .show()
+                startActivity(Intent(this, CreateAccount::class.java))
+                finish()
+            }.addOnFailureListener {
+                Toast.makeText(applicationContext, "Cannot Delete the Account", Toast.LENGTH_LONG).show()
+            }
+    }
+    }
+//    fun goTosignout(view: View){
+//        FirebaseAuth.getInstance().signOut();
+//
+//    }
+
+

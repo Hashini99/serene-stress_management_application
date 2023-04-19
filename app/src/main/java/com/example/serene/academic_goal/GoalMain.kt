@@ -11,11 +11,13 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.serene.MainTasks
 import com.example.serene.R
 import com.example.serene.daily_habits.AddDailyHabits
 import com.example.serene.daily_habits.DailyHabit
 import com.example.serene.daily_habits.DailyHabitSingleView
 import com.example.serene.daily_habits.DailyHabitViewHolder
+import com.example.serene.expert_support.ChannelList
 import com.example.serene.expert_support.Expert
 import com.example.serene.expert_support.ExpertSingleView
 import com.example.serene.expert_support.ExpertViewHolder
@@ -115,6 +117,11 @@ class GoalMain : AppCompatActivity() {
     }
     fun openNewGoal(view: View){
         startActivity(Intent(this, AddGoal::class.java))
+        finish()
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, MainTasks::class.java))
         finish()
     }
 }

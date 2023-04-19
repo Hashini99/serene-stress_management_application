@@ -12,15 +12,19 @@ import kotlinx.android.synthetic.main.activity_select_mood.*
 import java.util.*
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import androidx.databinding.adapters.ViewGroupBindingAdapter.setListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
 import com.example.serene.*
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
+
 //import com.example.serene.habits.AddHabits
 
-import kotlinx.android.synthetic.main.activity_login.*
-
-
-
+import java.util.Objects.toString
+import kotlin.Unit.toString
 
 
 //
@@ -96,6 +100,46 @@ import kotlinx.android.synthetic.main.activity_login.*
 
 
 
+//////correctt
+//class SelectMood : AppCompatActivity() {
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_select_mood)
+//
+//        val sad = button3.text.toString()
+//        val angry = button4.text.toString()
+//        val happy = button2.text.toString()
+//
+//        val moods = hashMapOf(
+//            "user" to FirebaseAuth.getInstance().currentUser?.uid,
+//            "mood" to angry,
+//            "mood" to happy,
+//            "mood" to sad,
+//
+//
+//            "date" to "${Calendar.getInstance().get(Calendar.YEAR)}-${
+//                Calendar.getInstance().get(Calendar.MONTH)
+//            }-${Calendar.getInstance().get(Calendar.DAY_OF_MONTH)}",
+//            "time" to "${
+//                Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
+//            }:${Calendar.getInstance().get(Calendar.MINUTE)}"
+//        )
+//
+//        Firebase.firestore.collection("mood").add(moods).addOnSuccessListener {
+//            startActivity(Intent(this,MoodFix::class.java))
+//            finish()
+//        }
+//
+//
+//    }
+//    override fun onBackPressed() {
+//        super.onBackPressed()
+//        startActivity(Intent(this, Home::class.java))
+//        finish()
+//    }
+//}
 
 class SelectMood : AppCompatActivity() {
 
@@ -104,15 +148,61 @@ class SelectMood : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_select_mood)
 
-        val sad = button3.text.toString()
-        val angry = button4.text.toString()
-        val happy = button2.text.toString()
+
+    }
+
+        fun Addmood(view: View) {
+            when (view.id) {
+                R.id.button1 -> {
+                    Addmood()
+                }
+                R.id.button2 -> {
+                    Addmood()
+                }
+                R.id.button3 -> {
+                     Addmood()
+                }
+                R.id.button4 -> {
+                    Addmood()
+                }
+                R.id.button5 -> {
+                    Addmood()
+                }
+            }
+
+        }
+
+    private fun Addmood() {
+//        val sad = button3.text.toString()
+//        val angry = button5.text.toString()
+//        val happy = button1.text.toString()
+//        val neutral = button2.text.toString()
+//        val contempt = button4.text.toString()
+
+
+        val happy = findViewById<Button>(R.id.button1).toString()
+        val contempt = findViewById<Button>(R.id.button4).text.toString()
+        val sad = findViewById<Button>(R.id.button3).text.toString()
+        val neutral = findViewById<Button>(R.id.button3).text.toString()
+        val angry = findViewById<Button>(R.id.button3).text.toString()
+
+//
+//        val test=Button.toString()
+//        if(test== happy)
+//        {
+//            val happy = findViewById<Button>(R.id.button1).text.toString()
+//        }
 
         val moods = hashMapOf(
             "user" to FirebaseAuth.getInstance().currentUser?.uid,
-            "mood" to angry,
+
             "mood" to happy,
+            "mood" to contempt,
             "mood" to sad,
+//            "mood" to sad,
+           "mood" to neutral,
+//            "mood" to contempt,
+            "mood" to angry,
 
 
             "date" to "${Calendar.getInstance().get(Calendar.YEAR)}-${

@@ -13,11 +13,14 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.serene.MainTasks
 import com.example.serene.R
 import com.example.serene.daily_habits.AddDailyHabits
 import com.example.serene.daily_habits.DailyHabit
 import com.example.serene.daily_habits.DailyHabitSingleView
 import com.example.serene.daily_habits.DailyHabitViewHolder
+import com.example.serene.databinding.TimelineDayFragmentBinding
+import com.example.serene.expert_support.TimelineDayFragment
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -47,7 +50,25 @@ class  MoodHistoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 class MoodHistory : AppCompatActivity() {
     val db = Firebase.firestore
 
+    companion object {
+        private const val BUNDLE_POSITION_KEY = "POSITION"
+        fun instantiate(pos: Int) = TimelineDayFragment().apply {
+            arguments = Bundle().apply { putInt(BUNDLE_POSITION_KEY, pos) }
+        }
+    }
+
+    private lateinit var binding: TimelineDayFragmentBinding
+    private var position = 0
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
+
+
+
+
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mood_history)
         try {
@@ -145,6 +166,12 @@ class MoodHistory : AppCompatActivity() {
 
     fun addNewJournal(view: View){
         startActivity(Intent(this, AddDailyHabits::class.java))
+        finish()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, HistoryMain::class.java))
         finish()
     }
 }

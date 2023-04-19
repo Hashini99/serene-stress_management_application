@@ -19,6 +19,7 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.serene.MainTasks
 import com.example.serene.R
 import com.google.firebase.analytics.ktx.analytics
 import com.google.firebase.analytics.ktx.logEvent
@@ -1011,6 +1012,11 @@ class MeditationSecond : AppCompatActivity() { //Timer variables
 //}
 fun congratsDialog() {
 }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, MainTasks::class.java))
+        finish()
+    }
 }
 //
 //    val mDialogView = LayoutInflater.from(this).inflate(R.layout.meditation_congrats_dialog, null)
