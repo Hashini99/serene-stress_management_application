@@ -17,19 +17,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/logout_cardtired"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintHorizontal_bias="1"
-        android:src="@drawable/jouranl_back_icon"
-        android:clickable="true"
-        android:focusable="true"
-        android:layout_margin="10dp"
-        />
+
 
     <TextView
         android:textColor="#0D3DCD"
@@ -95,21 +83,26 @@
             android:layout_margin="10dp"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true"
-            android:backgroundTint="@color/white">
+            android:backgroundTint="@color/white"
+
+            >
 
 
             <ImageView
-                android:layout_width="91dp"
 
-                android:layout_height="match_parent"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="240dp"
+
                 android:padding="5dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/headphones" />
+                android:src="@drawable/yh"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="240dp"
+                android:layout_width="34dp"
+                android:layout_height="40dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -118,12 +111,12 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_gravity="end"
+                android:layout_gravity="center"
                 android:padding="12dp"
                 android:fontFamily="@font/montserrat_medium"
                 android:text="Music"
                 android:textColor="@color/black"
-                android:textSize="30sp" />
+                android:textSize="24sp" />
 
 
 
@@ -144,32 +137,35 @@
 
             <ImageView
                 android:id="@+id/vid_icon"
-                android:layout_width="76dp"
-                android:layout_height="match_parent"
+
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="240dp"
+
                 android:padding="5dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/nature" />
+                android:src="@drawable/gh"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="240dp"
+
+                android:layout_width="34dp"
+                android:layout_height="40dp"/>
 
             <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="end"
-                    android:padding="12dp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="Nature Scenary"
-                    android:textColor="@color/black"
-                    android:textSize="30sp" />
-
-
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:padding="12dp"
+                android:text="Nature Scenary"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
 
 
         </androidx.cardview.widget.CardView>
@@ -196,32 +192,33 @@
 
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="240dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="10dp"
+                android:layout_width="34dp"
+                android:layout_height="40dp"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:src="@drawable/lol"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="240dp"
+                android:src="@drawable/oh"
+                android:padding="5dp"
 
                 />
 
-                <TextView
+            <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_gravity="end"
+                    android:layout_gravity="center"
                     android:padding="12dp"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="@string/jokes"
+                    android:text="Jokes"
                     android:textColor="@color/black"
-                    android:textSize="30sp" />
+                    android:textSize="24sp" />
 
 
 
@@ -238,19 +235,21 @@
             android:backgroundTint="@color/white">
 
             <ImageView
-                android:layout_width="89dp"
 
-
-                android:layout_height="87dp"
 
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginEnd="240dp"
+
                 android:padding="5dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/writing" />
+                android:src="@drawable/bh"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="240dp"
+                android:layout_width="34dp"
+                android:layout_height="40dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -259,12 +258,12 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_gravity="end"
+                    android:layout_gravity="center"
                     android:padding="12dp"
                     android:fontFamily="@font/montserrat_medium"
                     android:text="Poems"
                     android:textColor="@color/black"
-                    android:textSize="30sp" />
+                    android:textSize="24sp" />
 
 
 

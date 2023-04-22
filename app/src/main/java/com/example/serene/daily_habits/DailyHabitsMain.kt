@@ -14,10 +14,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.serene.JournalAddEditNoteActivity
-import com.example.serene.JournalMainActivity
-import com.example.serene.JournalSingleView
-import com.example.serene.R
+import com.example.serene.*
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -144,6 +141,11 @@ class DailyHabitsMain : AppCompatActivity() {
             startActivity(Intent(this,AddDailyHabits::class.java))
             finish()
         }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, MainTasks::class.java))
+        finish()
+    }
     }
 
 

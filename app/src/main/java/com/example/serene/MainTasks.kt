@@ -19,10 +19,7 @@ class MainTasks: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        try {
-            this.supportActionBar!!.hide()
-        } catch (e: NullPointerException) {
-        }
+        supportActionBar?.title = getString(R.string.m_t)
         setContentView(R.layout.activity_main_task)
 
 

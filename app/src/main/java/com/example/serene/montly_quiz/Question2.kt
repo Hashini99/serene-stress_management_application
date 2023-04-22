@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.serene.CreateAccount
+import com.example.serene.Home
 import com.example.serene.R
 import kotlinx.android.synthetic.main.activity_question_one.*
 import kotlinx.android.synthetic.main.activity_question_two.*
@@ -22,8 +23,11 @@ class Question2: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question_two)
 
-        supportActionBar?.title = getString(R.string.question_two)
+     //   supportActionBar?.title = getString(R.string.question_two)
 
+        try {
+            this.supportActionBar!!.hide()
+        } catch (e: NullPointerException) {}
 
 
         q2_option_one.setOnClickListener {
@@ -52,5 +56,13 @@ class Question2: AppCompatActivity() {
         startActivity(Intent(this, Question3::class.java))
         finish()
     }
-
+    fun previous(view: View){
+        startActivity(Intent(this, Quiz::class.java))
+        finish()
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, Quiz::class.java))
+        finish()
+    }
 }

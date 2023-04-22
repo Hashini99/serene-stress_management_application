@@ -15,7 +15,40 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="16dp">
+        <LinearLayout
+            android:layout_width="415dp"
+            android:layout_height="41dp"
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:layout_marginVertical="16dp"
+            android:orientation="horizontal">
 
+
+            <ImageButton
+                android:id="@+id/backButton"
+                android:layout_width="100dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="20dp"
+
+                android:onClick="previous"
+                android:src="@drawable/jouranl_back_icon"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:textSize="28sp" />
+            <TextView
+                android:id="@+id/q_n"
+                android:layout_width="250dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:layout_marginVertical="20dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="5/10"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+        </LinearLayout>
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"

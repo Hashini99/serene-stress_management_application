@@ -24,6 +24,8 @@ import android.widget.ImageView
 
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 
 
 import java.math.BigDecimal
@@ -98,6 +100,42 @@ class JournalSingleView: AppCompatActivity() {
         }
     }
 
+//    fun validate():Boolean{
+//        if (txt_description.text.toString().equals("")) {
+//            txt_description.setError("Description Cannot be Empty")
+//            return false
+////        }else if (etAddress.text.toString().equals("")) {
+////            etAddress.setError("Address Cannot be Empty")
+////            return false
+////        }else if (etPhoneNumber.text.toString().equals("")) {
+////            etPhoneNumber.setError("Phone Number Cannot be Empty")
+////            return false
+//        }else{
+//            return true
+//        }
+//    }
+//    fun update_journal(view: View){
+//        if(validate()){
+//            val description = txt_description.text.toString()
+////            val address = etAddress.text.toString()
+////            val mobile = etPhoneNumber.text.toString()
+//
+//            val user = hashMapOf(
+//                "description" to description,
+////                "address" to address,
+////                "mobile" to mobile,
+//                "email" to FirebaseAuth.getInstance().currentUser!!.email
+//            )
+//
+//            Firebase.firestore.collection("journal").document(FirebaseAuth.getInstance().currentUser!!.uid).set(user).addOnSuccessListener {
+//                Toast.makeText(applicationContext,"Updated Successful", Toast.LENGTH_LONG).show()
+//                startActivity(Intent(this, Home::class.java))
+//                finish()
+//            }.addOnFailureListener{
+//                Toast.makeText(applicationContext,"Cannot Update", Toast.LENGTH_LONG).show()
+//            }
+//        }
+//    }
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(this, JournalMainActivity::class.java))

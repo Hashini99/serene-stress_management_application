@@ -17,14 +17,14 @@ class JourneyMain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_journey_main)
-
+        supportActionBar?.title = getString(R.string.m_mj)
         binding.pager.adapter = object: FragmentStateAdapter(this) {
             override fun getItemCount() = 3
             override fun createFragment(position: Int) = TimelineDayFragment.instantiate(position)
         }
 
         TabLayoutMediator(binding.tabLayout, binding.pager) { tab, position ->
-            tab.text = "Day ${(position + 1)}"
+            tab.text = "Session ${(position + 1)}"
         }.attach()
 
     }

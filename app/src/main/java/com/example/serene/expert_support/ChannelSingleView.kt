@@ -74,7 +74,7 @@ class ChannelSingleView: AppCompatActivity() {
             .addOnSuccessListener {
                 Toast.makeText(applicationContext, "Appointment cancel Successful", Toast.LENGTH_LONG)
                     .show()
-                startActivity(Intent(this, JournalMainActivity::class.java))
+                startActivity(Intent(this, ChannelList::class.java))
                 finish()
             }.addOnFailureListener {
                 Toast.makeText(applicationContext, "Cannot Delete the Appointment", Toast.LENGTH_LONG).show()

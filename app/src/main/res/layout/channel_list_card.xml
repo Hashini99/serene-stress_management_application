@@ -55,22 +55,6 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:text="22:22" />
 
-        <ImageButton
-            android:id="@+id/cancel"
-            android:layout_width="125dp"
-            android:layout_height="45dp"
-            android:layout_gravity="end"
-            android:layout_marginEnd="17dp"
-            android:layout_marginBottom="4dp"
-            android:background="@color/white"
-
-            android:fontFamily="@font/montserrat"
-            android:onClick="reminder"
-            android:padding="8dp"
-            android:src="@drawable/journal_delete"
-            android:text="Cancel"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
 
         <ImageButton
             android:id="@+id/reminder"
@@ -78,7 +62,7 @@
             android:layout_width="125dp"
             android:layout_height="45dp"
             android:layout_gravity="end"
-            android:layout_marginEnd="156dp"
+            android:layout_marginEnd="68dp"
             android:layout_marginBottom="4dp"
             android:background="@color/white"
             android:fontFamily="@font/montserrat"

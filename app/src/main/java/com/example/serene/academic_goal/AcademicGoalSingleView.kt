@@ -16,7 +16,7 @@ class AcademicGoalSingleView : AppCompatActivity() {
 
     lateinit var documentID: String
     lateinit var tasks: String
-    lateinit var a_title: String
+    lateinit var title: String
     lateinit var d_date: String
     //var client_id: String = "ARKL7p7RWGWudGaKC4KIjPhAd46IzO8Jl61jfgiEIMKxO3-JirB0te6vR-v_QFk9mYz1bAq00AJ9rqze"
 
@@ -37,12 +37,12 @@ class AcademicGoalSingleView : AppCompatActivity() {
             .addOnSuccessListener {
 
 
-                a_title = it.data!!.getValue("title").toString()
+                title = it.data!!.getValue("title").toString()
                 tasks = it.data!!.getValue("tasks").toString()
                // d_date = it.data!!.getValue("tasks").toString()
 
 
-                txt_a_date.text = it.data!!.getValue("date").toString()
+               // txt_a_date.text = it.data!!.getValue("date").toString()
 //                txt_a_time.text = it.data!!.getValue("time").toString()
                 txt_a_title.text = it.data!!.getValue("title").toString()
                 txt_steps.text = it.data!!.getValue("tasks").toString()
@@ -72,7 +72,7 @@ class AcademicGoalSingleView : AppCompatActivity() {
             .addOnSuccessListener {
                 Toast.makeText(applicationContext, "Goal Deleted Successful", Toast.LENGTH_LONG)
                     .show()
-                startActivity(Intent(this, JournalMainActivity::class.java))
+                startActivity(Intent(this, GoalMain::class.java))
                 finish()
             }.addOnFailureListener {
                 Toast.makeText(applicationContext, "Cannot Delete the Goal", Toast.LENGTH_LONG)

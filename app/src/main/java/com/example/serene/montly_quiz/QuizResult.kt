@@ -1,16 +1,15 @@
 package com.example.serene.montly_quiz
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.provider.SyncStateContract
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.serene.CreateAccount
-import com.example.serene.Home
-import com.example.serene.Login
-import com.example.serene.R
+import com.example.serene.*
+import com.example.serene.history.StressTrackerOverview
 import com.example.serene.moods.MoodFix
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
@@ -27,23 +26,49 @@ class QuizResult : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.quiz_result)
+        try {
+            this.supportActionBar!!.hide()
+        } catch (e: NullPointerException) {}
 
 
         val name : TextView = findViewById(R.id.name)
         val score : TextView = findViewById(R.id.score)
         val button : Button = findViewById(R.id.finish_btn)
         score.text = "Your Score is ${tot} out of 40"
+       // val statement:TextView=findViewById(R.id.level_says)
+
+
+//        if(tot<=13)
+//        {
+//            level_says.setText("You are facing low stress")
+//        }
+//        if(14<tot<=26)
+//        {
+//            level_says.setText("You are facing moderate stress")
+//        }
+//        else {
+//            level_says.setText("You are facing high perceived stress")
+//        }
+
+        if (tot <= 13) {
+            level_says.setText("You are facing low stress")
+        } else if (tot >= 14 && tot <= 26) {
+            level_says.setText("You are facing moderate stress")
+        } else {
+            level_says.setText("You are facing high perceived stress")
+        }
 
         val quizresults = hashMapOf(
             "user" to FirebaseAuth.getInstance().currentUser?.uid,
             "score" to tot,
             "datetime" to Timestamp.now(),
-            "date" to "${Calendar.getInstance().get(Calendar.YEAR)}-${Calendar.getInstance().get(Calendar.MONTH)}-${Calendar.getInstance().get(Calendar.DAY_OF_MONTH)}",
+            "date" to "${Calendar.getInstance().get(Calendar.YEAR)}-${Calendar.getInstance().get(Calendar.MONTH)+1}-${Calendar.getInstance().get(Calendar.DAY_OF_MONTH)}",
             "time" to "${Calendar.getInstance().get(Calendar.HOUR_OF_DAY)}:${Calendar.getInstance().get(Calendar.MINUTE)}",
+            //"statement" to statement
         )
 
         Firebase.firestore.collection("quiz").add(quizresults).addOnSuccessListener {
-           // startActivity(Intent(this, MoodFix::class.java))
+           startActivity(Intent(this,MainTasks::class.java))
             finish()
         }
 
@@ -51,6 +76,10 @@ class QuizResult : AppCompatActivity() {
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(this, Home::class.java))
+        finish()
+    }
+    fun end(view: View){
+        startActivity(Intent(this, MainTasks::class.java))
         finish()
     }
 

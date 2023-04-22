@@ -18,10 +18,7 @@ class Profile: AppCompatActivity()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        try {
-            this.supportActionBar!!.hide()
-        } catch (e: NullPointerException) {}
+        supportActionBar?.title = getString(R.string.pr)
 
         setContentView(R.layout.activity_profile)
 

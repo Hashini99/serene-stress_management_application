@@ -31,7 +31,7 @@ class ExpertList: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_expert_list_view)
-        supportActionBar?.title = getString(R.string.journal_main)
+        supportActionBar?.title = getString(R.string.m_e)
 
         val query = db.collection("expert")
         val options = FirestoreRecyclerOptions.Builder<Expert>().setQuery(query, Expert::class.java)

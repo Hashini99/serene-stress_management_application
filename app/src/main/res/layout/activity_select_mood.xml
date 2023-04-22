@@ -68,21 +68,22 @@
 
                     />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button1"
-
                     android:clickable="true"
-
                     android:text="happy"
                     android:layout_width="206dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:fontFamily="@font/montserrat_medium"
                     android:padding="12dp"
-
                     android:backgroundTint="@color/white"
                     android:textColor="@color/black"
-                    android:textSize="20sp"/>
+                    android:textSize="20sp"
+
+
+                    android:onClick="Addmood"
+                    />
 
                 <!--                <ImageButton-->
 <!--                    android:id="@+id/imageButton"-->
@@ -115,11 +116,9 @@
 
                     />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button2"
-
                     android:clickable="true"
-
                     android:text="neutral"
                     android:layout_width="206dp"
                     android:layout_height="wrap_content"
@@ -128,8 +127,10 @@
                     android:padding="12dp"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/black"
+                    android:textSize="20sp"
 
-                    android:textSize="20sp"/>
+
+                    android:onClick="Addmood"/>
 
                 <!--                <ImageButton-->
                 <!--                    android:id="@+id/imageButton"-->
@@ -167,12 +168,9 @@
 
 
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button3"
-
                     android:text="sad"
-
-
                     android:layout_width="206dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -180,8 +178,10 @@
                     android:padding="12dp"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/black"
+                    android:textSize="20sp"
 
-                    android:textSize="20sp"/>
+
+                    android:onClick="Addmood"/>
 
 
             </androidx.cardview.widget.CardView>
@@ -218,11 +218,9 @@
                     android:scaleType="centerCrop"
                      />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button4"
-
                     android:text="contempt"
-
                     android:layout_width="206dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -230,8 +228,9 @@
                     android:padding="12dp"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/black"
+                    android:textSize="20sp"
 
-                    android:textSize="20sp"/>
+                    android:onClick="Addmood"/>
 
 
             </androidx.cardview.widget.CardView>
@@ -274,11 +273,9 @@
 
                     />
 
-                <Button
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/button5"
-
                     android:text="angry"
-
                     android:layout_width="206dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
@@ -286,8 +283,10 @@
                     android:padding="12dp"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/black"
+                    android:textSize="20sp"
 
-                    android:textSize="20sp"/>
+
+                    android:onClick="Addmood"/>
 
 
             </androidx.cardview.widget.CardView>

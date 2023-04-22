@@ -108,6 +108,13 @@
         android:onClick="addCalendarEvent"
         android:text="Save" />
 
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="304dp"
+        app:srcCompat="@drawable/yoga3"
+        android:alpha="0.2"/>
+
     <!--    <ImageView-->
 <!--        android:id="@+id/imageView5"-->
 <!--        android:layout_width="wrap_content"-->

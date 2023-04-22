@@ -34,9 +34,9 @@ class Channeling : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_expert_channel)
-
+        supportActionBar?.title = getString(R.string.a_b)
         add_date.setOnClickListener(this)
-       // input_time.setOnClickListener(this)
+        add_time.setOnClickListener(this)
         Channel_done.setOnClickListener(this)
 
 
@@ -57,9 +57,9 @@ class Channeling : AppCompatActivity(), View.OnClickListener {
             R.id.add_date -> {
                 setListener()
             }
-//            R.id.input_time -> {
-//                setTimeListener()
-//            }
+            R.id.add_time -> {
+                setTimeListener()
+            }
             R.id.Channel_done -> {
                 saveTodo()
             }
@@ -75,6 +75,7 @@ class Channeling : AppCompatActivity(), View.OnClickListener {
         val tel = input_tp.editText?.text.toString()
         val channelDate = findViewById<TextView>(R.id.add_date).text.toString()
         val docD = findViewById<Spinner>(R.id.docD).selectedItem.toString()
+        val time = findViewById<TextView>(R.id.add_time).text.toString()
 
         if (docD.isNotEmpty()) {
             val channel = hashMapOf(
@@ -89,6 +90,7 @@ class Channeling : AppCompatActivity(), View.OnClickListener {
                 }-${Calendar.getInstance().get(Calendar.DAY_OF_MONTH)}",
 
                 "ChannelDate" to channelDate,
+                "time" to time,
 
 
             )
@@ -103,31 +105,31 @@ class Channeling : AppCompatActivity(), View.OnClickListener {
                 .show()
         }
     }
-//    private fun setTimeListener() {
-//        myCalendar = Calendar.getInstance()
-//
-//        timeSetListener =
-//            TimePickerDialog.OnTimeSetListener() { _: TimePicker, hourOfDay: Int, min: Int ->
-//                myCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
-//                myCalendar.set(Calendar.MINUTE, min)
-//                updateTime()
-//            }
-//
-//        val timePickerDialog = TimePickerDialog(
-//            this, timeSetListener, myCalendar.get(Calendar.HOUR_OF_DAY),
-//            myCalendar.get(Calendar.MINUTE), false
-//        )
-//        timePickerDialog.show()
-//    }
+    private fun setTimeListener() {
+        myCalendar = Calendar.getInstance()
 
-//    private fun updateTime() {
-//        //Mon, 5 Jan 2020
-//        val myformat = "h:mm a"
-//        val sdf = SimpleDateFormat(myformat)
-//        finalTime = myCalendar.time.time
-//        .setText(sdf.format(myCalendar.time))
-//
-//    }
+        timeSetListener =
+            TimePickerDialog.OnTimeSetListener() { _: TimePicker, hourOfDay: Int, min: Int ->
+                myCalendar.set(Calendar.HOUR_OF_DAY, hourOfDay)
+                myCalendar.set(Calendar.MINUTE, min)
+                updateTime()
+            }
+
+        val timePickerDialog = TimePickerDialog(
+            this, timeSetListener, myCalendar.get(Calendar.HOUR_OF_DAY),
+            myCalendar.get(Calendar.MINUTE), false
+        )
+        timePickerDialog.show()
+    }
+
+    private fun updateTime() {
+        //Mon, 5 Jan 2020
+        val myformat = "h:mm a"
+        val sdf = SimpleDateFormat(myformat)
+        finalTime = myCalendar.time.time
+        add_time.setText(sdf.format(myCalendar.time))
+
+    }
 
     private fun setListener() {
         myCalendar = Calendar.getInstance()

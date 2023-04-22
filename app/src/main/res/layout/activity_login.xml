@@ -29,7 +29,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="76dp">
 
                 <TextView
                     style="@style/viewParent.headerText.NoMode"
@@ -39,6 +39,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="31dp"
                     android:layout_marginTop="16dp"
+                    android:fontFamily="@font/montserrat_medium"
                     android:text="LOGIN"
                     android:textColor="@color/blue3" />
 
@@ -92,6 +93,7 @@
                 style="@style/viewParent"
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat"
                 android:onClick="goToForgetPassword"
                 android:text="Forgot Password?"
                 android:textColor="@color/blue3"
@@ -135,6 +137,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="60dp"
                     android:layout_weight="1"
+                    android:fontFamily="@font/montserrat"
                     android:text="Don't have an account?"
                     android:textColor="@color/blue3"
                     android:textSize="18sp" />
@@ -144,9 +147,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="2.1"
+                    android:fontFamily="@font/montserrat"
                     android:onClick="goToRegister"
                     android:text="Register"
-                    android:textColor="@color/black"
+                    android:textColor="@color/blue3"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 

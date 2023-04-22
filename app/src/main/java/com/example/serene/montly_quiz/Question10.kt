@@ -17,7 +17,10 @@ class Question10: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question_ten)
 
-        supportActionBar?.title = getString(R.string.question_ten)
+      //  supportActionBar?.title = getString(R.string.question_ten)
+        try {
+            this.supportActionBar!!.hide()
+        } catch (e: NullPointerException) {}
 
 
         q10_option_one.setOnClickListener {
@@ -44,6 +47,15 @@ class Question10: AppCompatActivity() {
     }
     fun go_to_re(view: View) {
         startActivity(Intent(this,  QuizResult::class.java))
+        finish()
+    }
+    fun previous(view: View){
+        startActivity(Intent(this, Qusetion9::class.java))
+        finish()
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, Qusetion9::class.java))
         finish()
     }
 }

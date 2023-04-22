@@ -21,7 +21,7 @@ class HistoryMain  : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history_main)
-
+        supportActionBar?.title = getString(R.string.h_m)
 
         mj_card.setOnClickListener {
             startActivity(Intent(this, MoodHistory::class.java))

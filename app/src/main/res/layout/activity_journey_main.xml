@@ -13,18 +13,18 @@
         android:layout_height="match_parent"
         android:background="@color/blue3">
 
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="40dp"
-            android:text="My Journey"
-            android:textSize="28sp"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <TextView-->
+<!--            android:id="@+id/textView16"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:text="My Journey"-->
+<!--            android:textSize="28sp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
@@ -38,7 +38,7 @@
             app:tabBackground="@color/white"
             app:tabGravity="center"
             android:fontFamily="@font/montserrat_medium"
-            app:tabMaxWidth="75dp"
+            app:tabMaxWidth="95dp"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <androidx.viewpager2.widget.ViewPager2

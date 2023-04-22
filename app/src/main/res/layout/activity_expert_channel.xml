@@ -134,6 +134,37 @@
             android:paddingEnd="8dp"
             android:textSize="15sp" />
     </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:hintTextColor="@color/blue3"
+        app:boxStrokeColor="@color/blue3"
+
+        android:id="@+id/timeInptLay"
+        android:fontFamily="@font/montserrat_medium"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Set Time"
+            android:clickable="true"
+            android:id="@+id/add_time"
+            android:cursorVisible="false"
+            android:drawablePadding="8dp"
+            android:background="@color/white"
+            android:drawableEnd="@drawable/ic_access_time_black_24dp"
+            android:drawableTint="@color/blue3"
+            android:focusable="false"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 <!--    <com.google.android.material.textfield.TextInputLayout-->
 <!--        android:layout_width="match_parent"-->
 <!--        android:layout_height="wrap_content"-->

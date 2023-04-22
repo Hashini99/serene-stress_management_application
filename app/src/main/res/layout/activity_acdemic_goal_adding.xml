@@ -138,7 +138,7 @@
             android:id="@+id/timeEdt"
             android:cursorVisible="false"
             android:drawablePadding="8dp"
-            android:background="@color/blue2"
+            android:background="@color/white"
             android:drawableEnd="@drawable/ic_access_time_black_24dp"
             android:drawableTint="@color/blue3"
             android:focusable="false"

@@ -44,15 +44,7 @@ class ChannelList : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_channel_list)
-        try {
-            this.supportActionBar!!.setBackgroundDrawable(
-                ColorDrawable(
-                    getResources()
-                        .getColor(R.color.dark_blue_grey)
-                )
-            )
-        } catch (e: NullPointerException) {
-        }
+        supportActionBar?.title = getString(R.string.a_h)
         val query = db.collection("bookings")
             .whereEqualTo("user", FirebaseAuth.getInstance().currentUser!!.uid)
         //.orderBy("datetime", Query.Direction.DESCENDING)

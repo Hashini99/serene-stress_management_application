@@ -19,14 +19,16 @@ import com.example.serene.daily_habits.AddDailyHabits
 import com.example.serene.daily_habits.DailyHabit
 import com.example.serene.daily_habits.DailyHabitSingleView
 import com.example.serene.daily_habits.DailyHabitViewHolder
-import com.example.serene.databinding.TimelineDayFragmentBinding
+//import com.example.serene.databinding.TimelineDayFragmentBinding
 import com.example.serene.expert_support.TimelineDayFragment
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.activity_daily_habit_list.*
+import kotlinx.android.synthetic.main.activity_mood_history.*
 //import kotlinx.android.synthetic.main.activity_update_profile.view.*
 import kotlinx.android.synthetic.main.mood_history_card.*
 import java.util.*
@@ -57,8 +59,8 @@ class MoodHistory : AppCompatActivity() {
         }
     }
 
-    private lateinit var binding: TimelineDayFragmentBinding
-    private var position = 0
+//    private lateinit var binding: TimelineDayFragmentBinding
+//    private var position = 0
 
 
 
@@ -71,18 +73,13 @@ class MoodHistory : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mood_history)
-        try {
-            this.supportActionBar!!.setBackgroundDrawable(
-                ColorDrawable(
-                    getResources()
-                        .getColor(R.color.dark_blue_grey)
-                )
-            )
-        } catch (e: NullPointerException) {
-        }
+
+        supportActionBar?.title = getString(R.string.m_j)
+
         val query = db.collection("mood")
             .whereEqualTo("user", FirebaseAuth.getInstance().currentUser!!.uid)
-        //.orderBy("datetime", Query.Direction.DESCENDING)
+        .orderBy("date", Query.Direction.DESCENDING)
+
         val options = FirestoreRecyclerOptions.Builder<Moods>().setQuery(query, Moods::class.java)
             .setLifecycleOwner(this).build()
         val adapter = object : FirestoreRecyclerAdapter<Moods, MoodHistoryViewHolder>(options) {
@@ -147,18 +144,18 @@ class MoodHistory : AppCompatActivity() {
                 val documentId = snapshots.getSnapshot(position).id
 
                 holder.itemView.setOnClickListener {
-                    changePageToHabitSingleView(documentId)
+                  //  changePageToHabitSingleView(documentId)
                 }
             }
         }
-        dailyhabitsRecyclerView.adapter = adapter
-        dailyhabitsRecyclerView.layoutManager = LinearLayoutManager(this)
+        moodRecyclerView.adapter = adapter
+        moodRecyclerView.layoutManager = LinearLayoutManager(this)
     }
-    fun changePageToHabitSingleView(docID: String){
-        val intent = Intent(this, DailyHabitSingleView::class.java)
-        intent.putExtra("docID", docID)
-        startActivity(intent)
-    }
+//    fun changePageToHabitSingleView(docID: String){
+//        val intent = Intent(this, DailyHabitSingleView::class.java)
+//        intent.putExtra("docID", docID)
+//        startActivity(intent)
+//    }
 
 
 

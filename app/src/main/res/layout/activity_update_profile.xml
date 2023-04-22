@@ -16,10 +16,10 @@
     android:gravity="center"
     tools:context=".UpdateProfile">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentTop="true">
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_alignParentTop="true">-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,17 +38,27 @@
                     android:layout_height="74dp"
                     android:layout_alignParentLeft="true"
                     android:layout_marginLeft="8dp"
-                    android:text="Update Profile"
-                    android:textColor="@color/main_2" />
+                    android:text="Update Name"
+                    android:textColor="@color/blue3" />
 
                 <ImageView
-                    android:layout_width="153dp"
-                    android:layout_height="164dp"
+
+
+                    android:layout_width="77dp"
+                    android:layout_height="109dp"
+                    android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginRight="-6dp"
-                    android:src="@mipmap/ic_launcher_round" />
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="256dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="59dp"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/theme1" />
             </RelativeLayout>
 
             <LinearLayout
@@ -74,37 +84,37 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/layout_address"
-                    style="@style/parent"
-                    android:layout_marginTop="@dimen/viewsMargin">
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/layout_address"-->
+<!--                    style="@style/parent"-->
+<!--                    android:layout_marginTop="@dimen/viewsMargin">-->
 
-                    <EditText
-                        android:id="@+id/et_address"
-                        style="@style/modifiedEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Address"
-                        android:inputType="textPersonName"
-                        android:maxLines="3" />
-                </com.google.android.material.textfield.TextInputLayout>
+<!--                    <EditText-->
+<!--                        android:id="@+id/et_address"-->
+<!--                        style="@style/modifiedEditText"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:hint="Address"-->
+<!--                        android:inputType="textPersonName"-->
+<!--                        android:maxLines="3" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
 
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/layout_phone"
-                    style="@style/parent"
-                    android:layout_marginTop="@dimen/viewsMargin">
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/layout_phone"-->
+<!--                    style="@style/parent"-->
+<!--                    android:layout_marginTop="@dimen/viewsMargin">-->
 
-                    <EditText
-                        android:id="@+id/et_phone"
-                        style="@style/modifiedEditText"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Mobile Number"
+<!--                    <EditText-->
+<!--                        android:id="@+id/et_phone"-->
+<!--                        style="@style/modifiedEditText"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="match_parent"-->
+<!--                        android:hint="Mobile Number"-->
 
-                        android:inputType="phone"
-                        android:maxLines="1" />
-                </com.google.android.material.textfield.TextInputLayout>
+<!--                        android:inputType="phone"-->
+<!--                        android:maxLines="1" />-->
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/text"
@@ -117,7 +127,8 @@
                     android:layout_width="182dp"
                     android:layout_height="79dp"
                     android:layout_gravity="center"
-                    android:backgroundTint="@color/main_2"
+                    android:onClick="updateUserData"
+                    android:backgroundTint="@color/blue3"
                     android:text="CONFIRM" />
 
             </LinearLayout>
@@ -132,6 +143,6 @@
 
 
         </LinearLayout>
-    </ScrollView>
+<!--    </ScrollView>-->
 
 </RelativeLayout>

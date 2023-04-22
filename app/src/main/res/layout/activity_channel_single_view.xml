@@ -141,7 +141,7 @@
                     android:textColor="@color/blue3"
                     android:textSize="18sp" />
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/txt_description"
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_width="48dp"
@@ -154,6 +154,7 @@
                     android:gravity="center"
                     android:src="@drawable/expert_video"
                     android:text="Loading..."
+                    android:onClick="meetExpert"
                     android:textColor="@color/blue3"
                     android:textSize="21sp" />
             </RelativeLayout>

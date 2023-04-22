@@ -17,10 +17,7 @@ class ExpertSupportMain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        try {
-            this.supportActionBar!!.hide()
-        } catch (e: NullPointerException) {
-        }
+        supportActionBar?.title = getString(R.string.e_m)
         setContentView(R.layout.expert_support_main)
 
 

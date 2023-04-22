@@ -50,10 +50,11 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentLeft="true"
                     android:layout_marginLeft="88dp"
-                    android:fontFamily="@font/montserrat_medium"
+
+                    android:fontFamily="@font/montserrat_italic_variablefont_wght"
                     android:text="Journal Summery"
                     android:textColor="@color/blue3"
-                    android:textSize="30sp" />
+                    android:textSize="25sp" />
 
 
             </RelativeLayout>
@@ -66,8 +67,9 @@
                 android:layout_height="44dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:fontFamily="@font/montserrat"
+                android:fontFamily="@font/montserrat_variablefont_wght"
                 android:text="Loading..."
+                android:textSize="20sp"
                 android:textColor="@color/blue3" />
 
             <TextView
@@ -77,10 +79,10 @@
                 android:layout_height="44dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:fontFamily="@font/montserrat"
+                android:fontFamily="@font/montserrat_variablefont_wght"
                 android:text="Loading..."
                 android:textColor="@color/blue3"
-                android:textSize="25sp" />
+                android:textSize="20sp" />
 
             <TextView
                 style="@style/viewParent.headerText.NoMode"
@@ -100,10 +102,10 @@
                 android:layout_height="44dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:fontFamily="@font/montserrat"
+                android:fontFamily="@font/montserrat_variablefont_wght"
                 android:text="Loading..."
                 android:textColor="@color/blue3"
-                android:textSize="25sp" />
+                android:textSize="23sp" />
 
             <TextView
                 style="@style/viewParent.headerText.NoMode"
@@ -168,9 +170,9 @@
                 android:layout_centerVertical="true"
 
                 android:text="Loading..."
-                android:fontFamily="@font/montserrat_medium"
+                android:fontFamily="@font/montserrat_variablefont_wght"
                 android:textColor="@color/blue3"
-                android:textSize="21sp" />
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/button"
@@ -180,6 +182,15 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:onClick="delete_journal"
                 android:text="Delete"
+                android:textColor="@color/white" />
+            <Button
+                android:id="@+id/button_update"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:onClick="update_journal"
+                android:text="Update"
                 android:textColor="@color/white" />
             <Button
                 android:id="@+id/button_post"

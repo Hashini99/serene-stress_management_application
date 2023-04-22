@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -35,18 +35,28 @@
                     style="@style/viewParent.headerText.NoMode"
                     android:layout_alignParentLeft="true"
                     android:layout_marginLeft="8dp"
-                    android:text="Profile"
                     android:fontFamily="@font/montserrat_medium"
+                    android:text="Profile"
                     android:textColor="@color/blue3" />
 
                 <ImageView
-                    android:layout_width="115dp"
-                    android:layout_height="match_parent"
+
+
+                    android:layout_width="96dp"
+                    android:layout_height="62dp"
+                    android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="0dp"
-                    android:layout_marginRight="-6dp"
-                    android:src="@mipmap/ic_launcher_round" />
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="237dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/theme1" />
             </RelativeLayout>
 
             <TextView
@@ -55,8 +65,8 @@
                 android:layout_height="35dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:text="Name"
                 android:fontFamily="@font/montserrat_medium"
+                android:text="Name"
                 android:textColor="@color/blue3"
                 android:textSize="18sp" />
 
@@ -67,9 +77,10 @@
                 android:layout_height="44dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:text="Loading..."
                 android:fontFamily="@font/montserrat_medium"
-                android:textColor="@color/black" />
+                android:text="Loading..."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
             <TextView
                 style="@style/viewParent.headerText.NoMode"
@@ -78,9 +89,9 @@
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
                 android:layout_marginTop="@dimen/viewsMargin"
+                android:fontFamily="@font/montserrat_medium"
                 android:text="Email"
                 android:textColor="@color/blue3"
-                android:fontFamily="@font/montserrat_medium"
                 android:textSize="18sp" />
 
             <TextView
@@ -90,9 +101,10 @@
                 android:layout_height="44dp"
                 android:layout_alignParentLeft="true"
                 android:layout_centerVertical="true"
-                android:text="Loading..."
                 android:fontFamily="@font/montserrat_medium"
-                android:textColor="@color/black" />
+                android:text="Loading..."
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
             <!--            <TextView-->
             <!--                style="@style/viewParent.headerText.NoMode"-->
@@ -141,8 +153,86 @@
                 android:layout_width="215dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Update Profile"
                 android:fontFamily="@font/montserrat_medium"
+                android:onClick="goToUpdateProfile"
+                android:text="Update Profile"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/set"
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="68dp">
+
+                <TextView
+                    style="@style/viewParent.headerText.NoMode"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Settings"
+                    android:textColor="@color/blue3" />
+
+                <ImageView
+
+
+                    android:layout_width="47dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="286dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="38dp"
+                    android:layout_marginBottom="25dp"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/setting" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/sett3"
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/montserrat_medium"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/signout"
+                android:layout_width="218dp"
+                android:layout_height="49dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:onClick="goTosignout"
+                android:text="signout"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/deleteA"
+                android:layout_width="218dp"
+                android:layout_height="49dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:onClick="DeleteAccount"
+                android:text="Delete Account"
                 android:textColor="@color/white" />
 
 
@@ -150,10 +240,29 @@
 
     </ScrollView>
 
-    <View
+<!--    <View-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_weight="3"-->
+<!--        android:textColor="@color/blue3" />-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
         android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_weight="3"
-        android:textColor="@color/blue3" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemIconTint="@color/blue3"
+        app:itemTextColor="@color/blue3"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
 
-</RelativeLayout>
+        app:menu="@menu/bottom_nav_menu"
+        tools:ignore="DuplicateIds" />
+
+
+    <!-- Bottom navigation view -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

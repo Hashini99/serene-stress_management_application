@@ -6,52 +6,105 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_2"
-    tools:context=".daily_habits.DailyHabitsMain">
+    android:background="@color/blue3"
+    tools:context=".expert_support.ChannelList">
 
-    <!--    <LinearLayout-->
-    <!--        android:id="@+id/topBar"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="70dp"-->
-    <!--        android:orientation="vertical">-->
-
-    <!--&lt;!&ndash;        <TextView&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:id="@+id/titleJour"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:layout_height="60dp"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:background="@color/main_2"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:fontFamily="cursive"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:text="Jour"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:textColor="@color/white"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:textSize="30dp" />&ndash;&gt;-->
-
-    <!--    </LinearLayout>-->
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/channellistRecyclerView"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content">
 
-        android:layout_marginTop="0dp"
-        android:background="@color/blue3"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/mood_card"
 
-        tools:listitem="@layout/channel_list_card" />
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_margin="10dp"
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/jourAddButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="30dp"
-        android:backgroundTint="@color/white"
-        android:clickable="true"
-        android:onClick="addNewChannel"
-        android:src="@drawable/journal_add_icon" />
+            app:cardCornerRadius="10dp"
+            app:cardElevation="20dp"
+            app:cardMaxElevation="15dp"
+            app:cardPreventCornerOverlap="true"
+
+            >
+
+
+            <ImageView
+
+
+
+                android:layout_width="458dp"
+
+                android:layout_height="200dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="240dp"
+                android:alpha="0.3"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/cou"/>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/blue3"
+                android:onClick="addNewChannel"
+
+                android:text="Channel Your Counsellor" />
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="250dp"
+        android:layout_height="wrap_content">
+        <TextView
+            style="@style/viewParent.headerText.NoMode"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Appointment History"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/channellistRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginTop="320dp"
+            android:background="@color/blue3"
+
+            tools:listitem="@layout/channel_list_card" />
+    </LinearLayout>
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/jourAddButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentEnd="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:layout_marginEnd="30dp"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        android:clickable="true"-->
+<!--        android:onClick="addNewChannel"-->
+<!--        android:src="@drawable/journal_add_icon" />-->
 </RelativeLayout>

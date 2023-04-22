@@ -6,8 +6,10 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.serene.CreateAccount
+import com.example.serene.Home
 import com.example.serene.Login
 import com.example.serene.R
+import com.example.serene.academic_goal.GoalMain
 import kotlinx.android.synthetic.main.activity_question_one.*
 import kotlinx.android.synthetic.main.activity_select_mood.*
 
@@ -25,7 +27,10 @@ class Quiz:AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_question_one)
 
-        supportActionBar?.title = getString(R.string.question_one)
+      //  supportActionBar?.title = getString(R.string.question_one)
+        try {
+            this.supportActionBar!!.hide()
+        } catch (e: NullPointerException) {}
 
 
         q1_option_one.setOnClickListener {
@@ -50,7 +55,15 @@ class Quiz:AppCompatActivity() {
 private operator fun Int.plus(buttonValue: String): Int {
     return total+ mark1
 }
-
+    fun previous(view: View){
+        startActivity(Intent(this, Home::class.java))
+        finish()
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, Home::class.java))
+        finish()
+    }
     fun go_to_q2(view: View) {
         startActivity(Intent(this, Question2::class.java))
         finish()

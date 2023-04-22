@@ -15,6 +15,7 @@ import com.example.serene.expert_support.Channeling
 //import com.example.serene.daily_habits.Habit
 import com.example.serene.expert_support.VideoChat
 import com.example.serene.history.MoodHistory
+import com.example.serene.history.StressTrackerOverview
 import com.example.serene.meditation.MeditationMain
 import com.example.serene.montly_quiz.Quiz
 import com.example.serene.moods.SelectMood
