@@ -8,6 +8,7 @@
     android:background="@color/white"
     tools:context=".history.StressTrackerOverview">
 
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nestedScrollView"
         android:layout_width="match_parent"
@@ -22,32 +23,62 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tvStressTracker"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="stressTracker"
-                android:textColor="@color/blue3"
-                android:textSize="34sp"
-                android:textStyle="bold" />
+            <!--            <TextView-->
+            <!--                android:id="@+id/tvStressTracker"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:text="stressTracker"-->
+            <!--                android:textColor="@color/blue3"-->
+            <!--                android:textSize="34sp"-->
+            <!--                android:textStyle="bold" />-->
 
-            <com.google.android.material.divider.MaterialDivider
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_margin="10dp"
-                app:dividerColor="@color/blue3"
-                app:dividerThickness="3dp" />
-
+            <!--            <com.google.android.material.divider.MaterialDivider-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:layout_margin="10dp"-->
+            <!--                app:dividerColor="@color/blue3"-->
+            <!--                app:dividerThickness="3dp" />-->
             <TextView
                 android:id="@+id/tvStressLevel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
-                android:text="Stress Level"
-                android:textAlignment="center"
-                android:textSize="20sp" />
+                android:text="What Stress Score Says?"
+                android:textColor="@color/black"
 
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/tvStressLevel1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="Scores ranging from 27-40 would be considered high perceived stress."
+                android:textAlignment="center"
+                android:textColor="@color/red"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvStressLevel2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="Scores ranging from 14-26 would be considered moderate stress"
+                android:textAlignment="center"
+                android:textColor="@color/blue1"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tvStressLevel3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+
+                android:text="Scores ranging from 0-13 would be considered low stress"
+                android:textAlignment="center"
+                android:textColor="@color/green"
+                android:textSize="15sp" />
 
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/lineChart"
@@ -99,7 +130,94 @@
 
         </LinearLayout>
 
+
     </androidx.core.widget.NestedScrollView>
+
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="350dp">-->
+<!--            &lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--            &lt;!&ndash;            style="@style/viewParent.headerText.NoMode"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:layout_height="match_parent"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:layout_alignParentLeft="true"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:layout_marginLeft="8dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:fontFamily="@font/montserrat_medium"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:text="Appointment History"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:textColor="@color/white"&ndash;&gt;-->
+<!--            &lt;!&ndash;            android:textSize="25sp" />&ndash;&gt;-->
+
+<!--            <androidx.cardview.widget.CardView-->
+<!--                android:id="@+id/mood_card"-->
+
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="300dp"-->
+<!--                android:layout_margin="10dp"-->
+<!--                app:cardCornerRadius="10dp"-->
+<!--                app:cardElevation="20dp"-->
+<!--                app:cardMaxElevation="15dp"-->
+<!--                app:cardPreventCornerOverlap="true">-->
+
+
+<!--                &lt;!&ndash;            <ImageView&ndash;&gt;-->
+
+
+<!--                &lt;!&ndash;                android:layout_width="458dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                android:layout_height="200dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                android:layout_alignParentStart="true"&ndash;&gt;-->
+<!--                &lt;!&ndash;                android:layout_alignParentTop="true"&ndash;&gt;-->
+<!--                &lt;!&ndash;                android:layout_alignParentEnd="true"&ndash;&gt;-->
+<!--                &lt;!&ndash;                android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--                &lt;!&ndash;                android:layout_marginStart="5dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                android:layout_marginTop="30dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                android:layout_marginEnd="240dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                android:alpha="0.3"&ndash;&gt;-->
+<!--                &lt;!&ndash;                android:padding="5dp"&ndash;&gt;-->
+<!--                &lt;!&ndash;                android:scaleType="centerCrop"&ndash;&gt;-->
+<!--                &lt;!&ndash;                android:src="@drawable/cou"/>&ndash;&gt;-->
+
+<!--                <TextView-->
+<!--                    style="@style/viewParent.headerText.NoMode"-->
+<!--                    android:layout_width="368dp"-->
+<!--                    android:layout_height="70dp"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:layout_marginLeft="8dp"-->
+<!--                    android:layout_marginTop="100dp"-->
+<!--                    android:fontFamily="@font/montserrat_medium"-->
+<!--                    android:text="you are facing low stress"-->
+<!--                    android:textColor="@color/blue3"-->
+<!--                    android:textSize="25sp" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/viewParent.headerText.NoMode"-->
+<!--                    android:layout_width="368dp"-->
+<!--                    android:layout_height="174dp"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:layout_marginLeft="8dp"-->
+<!--                    android:layout_marginTop="50dp"-->
+<!--                    android:fontFamily="@font/montserrat_medium"-->
+<!--                    android:text="you are facing high stress"-->
+<!--                    android:textColor="@color/blue3"-->
+<!--                    android:textSize="25sp" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/viewParent.headerText.NoMode"-->
+<!--                    android:layout_width="368dp"-->
+<!--                    android:layout_height="174dp"-->
+<!--                    android:layout_alignParentLeft="true"-->
+<!--                    android:layout_marginLeft="8dp"-->
+<!--                    android:layout_marginTop="150dp"-->
+<!--                    android:fontFamily="@font/montserrat_medium"-->
+<!--                    android:text="you are facing moderate stress"-->
+<!--                    android:textColor="@color/blue3"-->
+<!--                    android:textSize="25sp" />-->
+<!--            </androidx.cardview.widget.CardView>-->
+
+
+<!--        </LinearLayout>-->
 
 
     <androidx.recyclerview.widget.RecyclerView
@@ -107,12 +225,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:layout_marginTop="400dp"
+        android:layout_marginTop="550dp"
         android:background="@color/white"
 
         tools:listitem="@layout/stress_card" />
-
-
 
 
 </RelativeLayout>
