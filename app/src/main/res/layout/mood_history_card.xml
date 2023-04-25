@@ -13,8 +13,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="119dp"
+        android:layout_height="100dp"
         android:layout_centerVertical="true"
+
         android:layout_toStartOf="@+id/layout_meta"
         app:layout_constraintBottom_toTopOf="@+id/button6"
         app:layout_constraintTop_toTopOf="@+id/button6">
@@ -32,16 +33,16 @@
 
         <TextView
             android:id="@+id/item_mood"
-            android:layout_width="209dp"
-            android:layout_height="30dp"
+            android:layout_width="206dp"
+            android:layout_height="52dp"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="8dp"
-            android:textSize="24sp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="52dp"
             android:fontFamily="@font/montserrat_medium"
             android:text="Loading"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.361"
@@ -103,12 +104,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="7dp"
-
+            android:backgroundTint="@color/white"
             android:layout_marginBottom="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/item_mood_time"
-            app:srcCompat="@drawable/journal_delete" />
+             />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
