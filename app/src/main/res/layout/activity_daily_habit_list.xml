@@ -6,35 +6,182 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_2"
+    android:background="@color/white"
     tools:context=".daily_habits.DailyHabitsMain">
 
 <!--    <LinearLayout-->
-<!--        android:id="@+id/topBar"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="70dp"-->
-<!--        android:orientation="vertical">-->
+<!--        android:layout_width="398dp"-->
+<!--        android:layout_height="269dp">-->
 
-<!--        <TextView-->
-<!--            android:id="@+id/titleJour"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="60dp"-->
-<!--            android:background="@color/main_2"-->
-<!--            android:fontFamily="cursive"-->
-<!--            android:gravity="center"-->
-<!--            android:text="Jour"-->
-<!--            android:textColor="@color/white"-->
-<!--            android:textSize="30dp" />-->
+<!--        &lt;!&ndash;        <androidx.cardview.widget.CardView&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/mood_card"&ndash;&gt;-->
 
+<!--        &lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="200dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_margin="10dp"&ndash;&gt;-->
+
+<!--        &lt;!&ndash;            app:cardCornerRadius="10dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:cardElevation="20dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:cardMaxElevation="15dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:cardPreventCornerOverlap="true">&ndash;&gt;-->
+
+
+<!--        &lt;!&ndash;            <ImageView&ndash;&gt;-->
+
+
+<!--        &lt;!&ndash;                android:layout_width="458dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_height="200dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_alignParentStart="true"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_alignParentTop="true"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_alignParentEnd="true"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_alignParentBottom="true"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_marginStart="5dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_marginTop="30dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_marginEnd="240dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:alpha="0.3"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:padding="5dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:scaleType="centerCrop"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:src="@drawable/cou"/>&ndash;&gt;-->
+
+<!--        &lt;!&ndash;            <Button&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:id="@+id/button"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_height="65dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:layout_gravity="center"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:backgroundTint="@color/blue3"&ndash;&gt;-->
+<!--        &lt;!&ndash;                android:onClick="addNewChannel"&ndash;&gt;-->
+
+<!--        &lt;!&ndash;                android:text="Channel Your Counsellor" />&ndash;&gt;-->
+
+<!--        &lt;!&ndash;        </androidx.cardview.widget.CardView>&ndash;&gt;-->
+
+<!--        <Button-->
+<!--            android:id="@+id/h3"-->
+<!--            android:layout_width="179dp"-->
+<!--            android:layout_height="73dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:backgroundTint="@color/blue3"-->
+<!--            android:onClick="addNewChannel"-->
+<!--            android:text="Channel Your Counsellor" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/h1"-->
+<!--            android:layout_width="181dp"-->
+<!--            android:layout_height="72dp"-->
+<!--            android:layout_gravity="end"-->
+<!--            android:layout_marginTop="50dp"-->
+<!--            android:backgroundTint="@color/blue3"-->
+<!--            android:onClick="addNewChannel"-->
+<!--            android:text="Channel Your Counsellor" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/h1"-->
+<!--            android:layout_width="181dp"-->
+<!--            android:layout_height="72dp"-->
+
+<!--            android:layout_marginTop="100dp"-->
+<!--            android:backgroundTint="@color/blue3"-->
+<!--            android:onClick="addNewChannel"-->
+<!--            android:text="Channel Your Counsellor" />-->
 <!--    </LinearLayout>-->
 
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="175dp"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginBottom="556dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/h1"
+            android:layout_width="50dp"
+            android:layout_height="155dp"
+            android:backgroundTint="@color/cardSecondColor"
+            android:onClick="h1"
+            android:text="Habit1"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/h2"
+            android:layout_width="50dp"
+            android:layout_height="155dp"
+            android:backgroundTint="@color/orange_200"
+            android:onClick="h2"
+            android:text="Habit 2"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/h3"
+            android:layout_width="50dp"
+            android:layout_height="155dp"
+            android:backgroundTint="@color/cards"
+            android:onClick="h3"
+            android:text="Habit3"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/h4"
+            android:layout_width="50dp"
+            android:layout_height="155dp"
+            android:backgroundTint="@color/blue5"
+            android:onClick="h4"
+            android:text="Habit4"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/h5"
+            android:layout_width="50dp"
+            android:layout_height="155dp"
+            android:backgroundTint="@color/schedule_underline_on"
+            android:onClick="h4"
+            android:text="Habit5"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/h6"
+            android:layout_width="50dp"
+            android:layout_height="155dp"
+            android:backgroundTint="@color/text_fields"
+            android:onClick="h5"
+            android:text="Habit6"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="253dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="250dp"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:text="Create Your Own"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dailyhabitsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="300dp"
         android:background="@color/white"
 
         tools:listitem="@layout/daily_habit_card" />
@@ -54,4 +201,26 @@
         android:clickable="true"
         android:onClick="addNewJournal"
         android:src="@drawable/journal_add_icon" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="253dp"
+        android:layout_height="35dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_medium"
+        android:gravity="center"
+        android:text="Select Random Habit"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+
+    <!--    <Button-->
+<!--        android:id="@+id/button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:backgroundTint="@color/blue3"-->
+<!--        android:onClick="addNewChannel"-->
+
+<!--        android:text="Channel Your Counsellor" />-->
 </RelativeLayout>
