@@ -62,3 +62,75 @@ class Login: AppCompatActivity() {
         finish()
     }
 }
+
+
+
+//package com.example.serene
+//
+//import android.content.Context
+//import android.content.Intent
+//import android.content.SharedPreferences
+//import android.os.Bundle
+//import android.view.View
+//import android.widget.Toast
+//import androidx.appcompat.app.AppCompatActivity
+//import com.google.firebase.auth.FirebaseAuth
+//import kotlinx.android.synthetic.main.activity_login.*
+//
+//class Login : AppCompatActivity() {
+//
+//    private lateinit var auth: FirebaseAuth
+//    private lateinit var sharedPrefs: SharedPreferences
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_login)
+//        title = "Login"
+//        auth = FirebaseAuth.getInstance()
+//        sharedPrefs = getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
+//
+//        try {
+//            this.supportActionBar!!.hide()
+//        } catch (e: NullPointerException) {}
+//
+//        // Check if user is already signed in
+//        if (sharedPrefs.getBoolean("isUserLoggedIn", false)) {
+//            val intent = Intent(this, Home::class.java)
+//            startActivity(intent)
+//            finish()
+//        }
+//    }
+//
+//    fun login(view: View) {
+//        val email = editTextEmail.text.toString()
+//        val password = editTextPassword.text.toString()
+//
+//        auth.signInWithEmailAndPassword(email, password)
+//            .addOnCompleteListener { task ->
+//                if (task.isSuccessful) {
+//                    // Save login status
+//                    val editor = sharedPrefs.edit()
+//                    editor.putBoolean("isUserLoggedIn", true)
+//                    editor.apply()
+//
+//                    // Go to Home activity
+//                    val intent = Intent(this, Home::class.java)
+//                    startActivity(intent)
+//                    finish()
+//                }
+//            }
+//            .addOnFailureListener { exception ->
+//                Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
+//            }
+//    }
+//
+//    fun goToRegister(view: View) {
+//        startActivity(Intent(this, CreateAccount::class.java))
+//        finish()
+//    }
+//
+//    fun goToForgetPassword(view: View) {
+//        startActivity(Intent(this, ForgetPassword::class.java))
+//        finish()
+//    }
+//}

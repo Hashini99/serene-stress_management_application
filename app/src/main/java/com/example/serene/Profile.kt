@@ -101,6 +101,10 @@ class Profile: AppCompatActivity()
                 Toast.makeText(applicationContext, "Cannot Delete the Account", Toast.LENGTH_LONG).show()
             }
     }
+    fun goTosignout(view: View){
+        FirebaseAuth.getInstance().signOut();
+
+    }
     }
 //    fun goTosignout(view: View){
 //        FirebaseAuth.getInstance().signOut();

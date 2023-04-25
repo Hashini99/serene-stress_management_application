@@ -294,7 +294,11 @@ class StressTrackerOverview : AppCompatActivity() {
                     for (doc in documents) {
                         val value = doc.getDouble("score")?.toFloat() ?: 0f
                         val timestamp = doc.getTimestamp("datetime")?.toDate()?.time?.toFloat() ?: 0f
+
                         data.add(Entry(timestamp, value))
+
+
+
 //                val date = doc.getTimestamp("datetime")?.toDate()?.time?.toFloat() ?: 0f
 //                data.add(Entry(date, value))
 
@@ -374,11 +378,11 @@ class StressTrackerOverview : AppCompatActivity() {
 //                    }
 
                     if (model.score <= 13) {
-                        tvSc.setTextColor(Color.parseColor("#dbba00"))
+                        tvSc.setTextColor(Color.parseColor("#00e676"))
                     } else if (model.score >= 14 && model.score <= 26) {
-                        tvSc.setTextColor(Color.parseColor("#0091ff"))
+                        tvSc.setTextColor(Color.parseColor("#72b7e3"))
                     } else {
-                        tvSc.setTextColor(Color.parseColor("#ff0000"))
+                        tvSc.setTextColor(Color.parseColor("#ff1744"))
                     }
 
 

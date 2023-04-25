@@ -16,6 +16,7 @@ import com.example.serene.expert_support.ExpertSupportMain
 import com.example.serene.history.HistoryMain
 import com.example.serene.meditation.MeditationMain
 import com.example.serene.montly_quiz.Quiz
+import com.example.serene.montly_quiz.QuizIntro
 import com.example.serene.moods.SelectMood
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
@@ -96,7 +97,7 @@ class Home: AppCompatActivity() {
         }
         //med
         mq_card.setOnClickListener {
-            startActivity(Intent(this, Quiz::class.java))
+            startActivity(Intent(this, QuizIntro::class.java))
             finish()
         }
 
