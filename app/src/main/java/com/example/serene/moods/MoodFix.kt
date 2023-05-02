@@ -23,31 +23,26 @@ class MoodFix : AppCompatActivity() {
             openURL.data = Uri.parse("https://soundcloud.com/soothingrelaxation/beautiful-relaxing-music-for-stress-relief-sleep-meditation-study-planet-earth?in=soothingrelaxation/sets/long-relaxing-music-extended")
             startActivity(openURL)
         }
-//        movie_card.setOnClickListener { startActivity(Intent(this, movietired::class.java)) }
-//        jokes.setOnClickListener {
-//            val openURL = Intent(Intent.ACTION_VIEW)
-//            openURL.data = Uri.parse("http://www.laughfactory.com/jokes/latest-jokes")
-//            startActivity(openURL)
-//        }
+
 
         //nature
         nature_card.setOnClickListener {
             val openURL = Intent(Intent.ACTION_VIEW)
-            openURL.data = Uri.parse("https://soundcloud.com/soothingrelaxation/beautiful-relaxing-music-for-stress-relief-sleep-meditation-study-planet-earth?in=soothingrelaxation/sets/long-relaxing-music-extended")
+            openURL.data = Uri.parse("https://pixabay.com/images/search/nature/")
             startActivity(openURL)
         }
 
         //jokes
        jokes_card.setOnClickListener {
             val openURL = Intent(Intent.ACTION_VIEW)
-            openURL.data = Uri.parse("https://open.spotify.com/playlist/0fjFCCGiRYPcDLHrfqthcT")
+            openURL.data = Uri.parse("https://www.rd.com/jokes/")
             startActivity(openURL)
         }
 
         //poems
        poem_card.setOnClickListener {
             val openURL = Intent(Intent.ACTION_VIEW)
-            openURL.data = Uri.parse("https://open.spotify.com/playlist/0fjFCCGiRYPcDLHrfqthcT")
+            openURL.data = Uri.parse("https://allpoetry.com/poems/about/relaxing")
             startActivity(openURL)
         }
         //logout

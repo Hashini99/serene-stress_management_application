@@ -83,7 +83,7 @@
             <com.github.mikephil.charting.charts.LineChart
                 android:id="@+id/lineChart"
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="280dp"
                 android:layout_margin="2dp" />
 
             <!--            <TextView-->
@@ -225,7 +225,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="580dp"
         android:background="@color/white"
 
         tools:listitem="@layout/stress_card" />

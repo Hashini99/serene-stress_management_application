@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.serene.*
+import com.example.serene.expert_support.Channeling
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.firebase.auth.FirebaseAuth
@@ -88,13 +89,13 @@ class DailyHabitsMain : AppCompatActivity() {
 
 
                     if(model.priorityLevel == "High"){
-                        tvPL.setTextColor(Color.parseColor("#dbba00"))
+                        tvPL.setTextColor(Color.parseColor("#ff1744"))
                     }
                     else if(model.priorityLevel == "Medium"){
-                        tvPL.setTextColor(Color.parseColor("#ffaa00"))
+                        tvPL.setTextColor(Color.parseColor("#00e676"))
                     }
                     else{
-                        tvPL.setTextColor(Color.parseColor("#0091ff"))
+                        tvPL.setTextColor(Color.parseColor("#ff9800"))
                     }
 
 //                    else {
@@ -141,6 +142,30 @@ class DailyHabitsMain : AppCompatActivity() {
             startActivity(Intent(this,AddDailyHabits::class.java))
             finish()
         }
+    fun h1(view: View){
+        startActivity(Intent(this, RandomHabitOne::class.java))
+        finish()
+    }
+    fun h2(view: View){
+        startActivity(Intent(this, RandomHabitTwo::class.java))
+        finish()
+    }
+    fun h3(view: View){
+        startActivity(Intent(this, RandomHabitThree::class.java))
+        finish()
+    }
+    fun h4(view: View){
+        startActivity(Intent(this, RandomHabitFour::class.java))
+        finish()
+    }
+    fun h5(view: View){
+        startActivity(Intent(this, RandomHabitFive::class.java))
+        finish()
+    }
+    fun h6(view: View){
+        startActivity(Intent(this, RandomHabitSix::class.java))
+        finish()
+    }
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(this, MainTasks::class.java))

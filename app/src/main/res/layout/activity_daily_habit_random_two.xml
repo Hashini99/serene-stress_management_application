@@ -13,8 +13,8 @@
         android:layout_marginBottom="0dp"
 
         android:layout_marginTop="0dp"
-        android:alpha="0.8"
-        app:srcCompat="@drawable/skyng" />
+        android:alpha="0.5"
+        app:srcCompat="@drawable/reading" />
     <TextView
         android:id="@+id/habit_title_textview"
         android:layout_width="match_parent"

@@ -51,192 +51,6 @@ import java.util.*
 
 
 
-//
-
-
-
-
-//////////////woking chart
-//class StresScore {
-//    var score: Double = 0.0
-//    //var score:Int=0
-//    //var timestamp: Long = 0
-//    val date:String=""
-//    constructor() // Add a no-argument constructor
-//}
-//
-//class  StressScoreViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
-//
-//class StressTrackerOverview : AppCompatActivity() {
-//    val db = Firebase.firestore
-//    // declare UI elements
-//    lateinit var lineChart: LineChart
-//    lateinit var newMeasurePSS: Button
-//    lateinit var newMeasureHRV: Button
-//    lateinit var learnMore: Button
-//    lateinit var documentID: String
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_stress_tracker_overview)
-//        supportActionBar?.title = getString(R.string.a_t)
-//        //// initialize UI elements
-//        lineChart = findViewById(R.id.lineChart)
-//        documentID = intent.getStringExtra("docID").toString()
-//        val db = Firebase.firestore
-//        val data = mutableListOf<Entry>()
-//
-//        FirebaseFirestore.getInstance().collection("quiz").document(documentID.toString()).get()
-//            .addOnSuccessListener {
-//
-//
-////                a_title = it.data!!.getValue("title").toString()
-////                tasks = it.data!!.getValue("tasks").toString()
-//
-//
-//
-//
-//
-//        db.collection("quiz").get().addOnSuccessListener { documents ->
-//            for (doc in documents) {
-//                val value = doc.getDouble("score")?.toFloat() ?: 0f
-//
-//
-////                val timestamp = doc.getTimestamp("datetime")?.toDate()?.time?.toFloat() ?: 0f
-////                data.add(Entry(timestamp, value))
-//
-//
-//
-//                val timestamp = doc.getTimestamp("datetime")?.toDate()?.time ?: 0L
-//                val formatter = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-//                val dateString = formatter.format(Date(timestamp))
-//                data.add(Entry(timestamp.toFloat(), value, dateString))
-//
-//
-//
-//
-//                // Create the line chart
-//
-//                //  val lineChart = LineChart(Context)
-//                // val lineChart = LineChart(Context)
-//                val dataSet = LineDataSet(data, "My Data")
-//                lineChart.data = LineData(dataSet)
-//                lineChart.invalidate()
-//
-//                dataSet.color = Color.RED
-//                dataSet.valueTextColor = Color.BLACK
-//                dataSet.valueTextSize = 12f
-//
-//                lineChart.description.isEnabled = false
-//                lineChart.legend.isEnabled = false
-//                lineChart.setTouchEnabled(true)
-//
-//                val xAxis = lineChart.xAxis
-//                xAxis.position = XAxis.XAxisPosition.BOTTOM
-//                xAxis.labelRotationAngle = 45f
-//
-//                val yAxis = lineChart.axisLeft
-//                yAxis.axisMinimum = 0f
-//
-//                lineChart.axisRight.isEnabled = false
-//
-//                //layout.addView(lineChart)
-//
-//                // layout.addView(lineChart)
-//            }
-//
-//        }
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//        val query = db.collection("quiz")
-//            .whereEqualTo("user", FirebaseAuth.getInstance().currentUser!!.uid)
-//            .orderBy("date", Query.Direction.DESCENDING)
-//        //.orderBy("datetime", Query.Direction.DESCENDING)
-//        val options =
-//            FirestoreRecyclerOptions.Builder<StresScore>().setQuery(query, StresScore::class.java)
-//                .setLifecycleOwner(this).build()
-//        val adapter =
-//            object : FirestoreRecyclerAdapter<StresScore, StressScoreViewHolder>(options) {
-//                override fun onCreateViewHolder(
-//                    parent: ViewGroup,
-//                    viewType: Int
-//                ): StressScoreViewHolder {
-//                    val view = LayoutInflater.from(this@StressTrackerOverview)
-//                        .inflate(R.layout.stress_card, parent, false)
-//                    return StressScoreViewHolder(view)
-//                }
-//
-//
-//                override fun onBindViewHolder(
-//                    holder: StressScoreViewHolder,
-//                    position: Int,
-//                    model: StresScore
-//                ) {
-//                    val tvSc: TextView = holder.itemView.findViewById(R.id.item_tv_score)
-//
-//                    val tvST: TextView = holder.itemView.findViewById(R.id. item_tv_start_time_date)
-//
-//                  //  val level:TextView =holder.itemView.findViewById(R.id. level_s)
-//
-//                    tvSc.text= model.score.toString()
-//
-//                    tvST.text = model.date
-//
-//                    //val level: TextView = holder.itemView.findViewById(R.id.level_s)
-//
-//
-//
-//
-//
-////                    if (model.score <= 13) {
-////                        level_s.setText("You are facing low stress")
-////                    } else if (model.score >= 14 && model.score <= 26) {
-////                        level_s.setText("You are facing moderate stress")
-////                    } else {
-////                        level_s.setText("You are facing high perceived stress")
-////                    }
-//
-//                    if (model.score <= 13) {
-//                        tvSc.setTextColor(Color.parseColor("#dbba00"))
-//                    } else if (model.score >= 14 && model.score <= 26) {
-//                        tvSc.setTextColor(Color.parseColor("#0091ff"))
-//                    } else {
-//                        tvSc.setTextColor(Color.parseColor("#ff0000"))
-//                    }
-//
-//
-//                    val documentId = snapshots.getSnapshot(position).id
-//
-//                    holder.itemView.setOnClickListener {
-//                        //changePageToHabitSingleView(documentId)
-//                    }
-//                }
-//            }
-//        ScoreRecyclerView.adapter = adapter
-//        ScoreRecyclerView.layoutManager = LinearLayoutManager(this)
-//    }
-//
-//
-//    }
-//    override fun onBackPressed() {
-//        super.onBackPressed()
-//        startActivity(Intent(this, HistoryMain::class.java))
-//        finish()
-//    }
-//}
-//
-//
-//
-//
 
 
 
@@ -261,15 +75,7 @@ class StressTrackerOverview : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_stress_tracker_overview)
-        try {
-            this.supportActionBar!!.setBackgroundDrawable(
-                ColorDrawable(
-                    getResources()
-                        .getColor(R.color.dark_blue_grey)
-                )
-            )
-        } catch (e: NullPointerException) {
-        }
+        supportActionBar?.title = getString(R.string.s_s)
         //// initialize UI elements
         lineChart = findViewById(R.id.lineChart)
         documentID = intent.getStringExtra("docID").toString()
@@ -293,9 +99,24 @@ class StressTrackerOverview : AppCompatActivity() {
                     .addOnSuccessListener { documents ->
                     for (doc in documents) {
                         val value = doc.getDouble("score")?.toFloat() ?: 0f
-                        val timestamp = doc.getTimestamp("datetime")?.toDate()?.time?.toFloat() ?: 0f
+//                        val timestamp = doc.getTimestamp("datetime")?.toDate()?.time?.toFloat() ?: 0f
+//
+//                        data.add(Entry(timestamp, value))
 
-                        data.add(Entry(timestamp, value))
+
+
+                        val timestamp = doc.getTimestamp("datetime")?.toDate()?.let { date ->
+                            SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.getDefault()).apply {
+                                isLenient = false // enforce strict parsing
+                            }.format(date).let { dateString ->
+                                SimpleDateFormat("EEE MMM dd HH:mm:ss zzz yyyy", Locale.getDefault()).apply {
+                                    isLenient = false // enforce strict parsing
+                                }.parse(dateString)?.time?.div(1000)?.toInt() // convert to integer
+                            }
+                        } ?: 0
+
+                        data.add(Entry(timestamp.toFloat(), value))
+
 
 
 
@@ -321,7 +142,7 @@ class StressTrackerOverview : AppCompatActivity() {
 
                         val xAxis = lineChart.xAxis
                         xAxis.position = XAxis.XAxisPosition.BOTTOM
-                        xAxis.labelRotationAngle = 45f
+                        xAxis.labelRotationAngle = 25f
 
                         val yAxis = lineChart.axisLeft
                         yAxis.axisMinimum = 0f
@@ -397,10 +218,7 @@ class StressTrackerOverview : AppCompatActivity() {
                 ScoreRecyclerView.layoutManager = LinearLayoutManager(this)
             }
 
-//    override fun onBackPressed() {
-//        super.onBackPressed()
-//        startActivity(Intent(this, HistoryMain::class.java))
-//        finish()
+
     }
     override fun onBackPressed() {
         super.onBackPressed()

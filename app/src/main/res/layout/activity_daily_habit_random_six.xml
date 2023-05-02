@@ -10,19 +10,20 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="0dp"
-
         android:layout_marginTop="0dp"
-        android:alpha="0.8"
-        app:srcCompat="@drawable/skyng" />
+
+        android:layout_marginBottom="0dp"
+        android:alpha="0.4"
+        app:srcCompat="@drawable/mindfullness" />
+
     <TextView
         android:id="@+id/habit_title_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Reading Book"
         android:fontFamily="@font/montserrat_medium"
         android:gravity="center_horizontal"
+        android:text="Practice Mindfulness"
         android:textColor="@color/blue3"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -69,5 +70,17 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/learn_more"
+        android:layout_width="369dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="600dp"
+        android:layout_marginRight="26dp"
+        android:layout_marginLeft="26dp"
+        android:text="Learn More about Mindfulness"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

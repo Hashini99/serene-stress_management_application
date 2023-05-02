@@ -36,38 +36,55 @@
         <TextView
             android:id="@+id/item_tv_score"
             android:layout_width="225dp"
-            android:layout_height="33dp"
+            android:layout_height="0dp"
             android:layout_gravity="center_vertical"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="12dp"
 
-            android:layout_marginBottom="33dp"
+            android:layout_marginBottom="17dp"
             android:fontFamily="@font/montserrat_medium"
             android:text="stress score"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
-            android:textSize="18sp"
+            android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/pri"
+            app:layout_constraintBottom_toTopOf="@+id/item_tv_start_time_date"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/item_tv_start_time_date"
-            android:layout_width="164dp"
-            android:layout_height="32dp"
-            android:layout_gravity="fill_vertical"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="73dp"
+            android:textStyle="bold"
             android:layout_marginBottom="4dp"
             android:fontFamily="@font/montserrat_medium"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
             app:layout_constraintBottom_toBottomOf="parent"
-
-
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/level_s"
+            app:layout_constraintTop_toBottomOf="@+id/item_tv_score"
             tools:text="22:22" />
 
         <TextView
             android:id="@+id/level_s"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="4dp"
+            android:fontFamily="@font/montserrat_medium"
+
+            android:text="Check -in"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/item_tv_start_time_date"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/level_s2"
             android:layout_width="153dp"
             android:layout_height="30dp"
             android:layout_marginStart="4dp"
@@ -75,7 +92,7 @@
             android:fontFamily="@font/montserrat_medium"
             android:text="Your Score"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="15sp"
 
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

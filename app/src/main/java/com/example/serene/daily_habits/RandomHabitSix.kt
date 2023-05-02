@@ -48,7 +48,7 @@ class RandomHabitSix : AppCompatActivity() {
     }
 
     private fun startTimer() {
-        timeLeftInMillis = 60000 // 10 minutes in milliseconds
+        timeLeftInMillis =  1200000 // 20 minutes in milliseconds
         countdownTimer = object : CountDownTimer(timeLeftInMillis, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 timeLeftInMillis = millisUntilFinished

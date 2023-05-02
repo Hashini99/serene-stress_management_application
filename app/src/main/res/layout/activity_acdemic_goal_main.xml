@@ -6,13 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".academic_goal.GoalMain">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
-        app:titleTextColor="@android:color/white"
-        app:title="Todo"
-        android:background="?attr/colorPrimary"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+<!--    <com.google.android.material.appbar.MaterialToolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="?attr/colorPrimary"-->
+<!--        app:title="Todo"-->
+<!--        app:titleTextColor="@android:color/white" />-->
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/GoalRecyclerView"
@@ -21,7 +21,8 @@
         android:layout_below="@+id/toolbar"
         android:padding="8dp"
         tools:itemCount="3"
-        tools:listitem="@layout/acedimic_goal_list" />
+        tools:listitem="@layout/acedimic_goal_list"
+        tools:ignore="UnknownId" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"

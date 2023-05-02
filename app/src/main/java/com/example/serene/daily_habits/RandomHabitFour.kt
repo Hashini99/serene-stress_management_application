@@ -25,7 +25,7 @@ class RandomHabitFour : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_daily_habit_random_four)
+        setContentView(R.layout.activity_daily_habit_random_six)
 
         countdownTextView = findViewById(R.id.countdown_textview)
         startButton = findViewById(R.id.start_button)
@@ -48,7 +48,7 @@ class RandomHabitFour : AppCompatActivity() {
     }
 
     private fun startTimer() {
-        timeLeftInMillis = 60000 // 10 minutes in milliseconds
+        timeLeftInMillis = 2400000 // 40 minutes in milliseconds
         countdownTimer = object : CountDownTimer(timeLeftInMillis, 1000) {
             override fun onTick(millisUntilFinished: Long) {
                 timeLeftInMillis = millisUntilFinished

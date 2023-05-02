@@ -910,7 +910,7 @@ class MeditationSecond : AppCompatActivity() { //Timer variables
 
         val nAlertDialog = AlertDialog.Builder(this)
         nAlertDialog.setTitle("Request")
-        nAlertDialog.setMessage("Please Allow app to turn DND mode for better functioning. After Clicking Allow, Select B Monk in Settings")
+        nAlertDialog.setMessage("Please Allow app to turn DND mode for better functioning. After Clicking Allow, Select Serene in Settings")
         nAlertDialog.setPositiveButton("Allow") { dialog: DialogInterface?, which: Int ->
 
             val intent = Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS)

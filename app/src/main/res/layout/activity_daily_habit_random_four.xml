@@ -13,14 +13,14 @@
         android:layout_marginBottom="0dp"
 
         android:layout_marginTop="0dp"
-        android:alpha="0.8"
-        app:srcCompat="@drawable/skyng" />
+        android:alpha="0.5"
+        app:srcCompat="@drawable/workout" />
     <TextView
         android:id="@+id/habit_title_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Reading Book"
+        android:text="Exercise"
         android:fontFamily="@font/montserrat_medium"
         android:gravity="center_horizontal"
         android:textColor="@color/blue3"

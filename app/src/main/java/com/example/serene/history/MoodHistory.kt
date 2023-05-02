@@ -151,11 +151,7 @@ class MoodHistory : AppCompatActivity() {
         moodRecyclerView.adapter = adapter
         moodRecyclerView.layoutManager = LinearLayoutManager(this)
     }
-//    fun changePageToHabitSingleView(docID: String){
-//        val intent = Intent(this, DailyHabitSingleView::class.java)
-//        intent.putExtra("docID", docID)
-//        startActivity(intent)
-//    }
+
 
 
 

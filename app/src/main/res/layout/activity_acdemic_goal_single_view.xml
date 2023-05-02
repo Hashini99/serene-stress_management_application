@@ -103,8 +103,8 @@
                 android:layout_centerVertical="true"
                 android:layout_marginTop="@dimen/viewsMargin"
                 android:fontFamily="@font/montserrat_medium"
-                android:text="Description"
-                android:textColor="@color/white"
+                android:text="Tasks"
+                android:textColor="@color/blue3"
                 android:textSize="28sp" />
 
             <!--            <TextView-->

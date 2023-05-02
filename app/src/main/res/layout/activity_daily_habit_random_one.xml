@@ -14,13 +14,13 @@
 
         android:layout_marginTop="0dp"
         android:alpha="0.8"
-        app:srcCompat="@drawable/skyng" />
+        app:srcCompat="@drawable/yoga3" />
     <TextView
         android:id="@+id/habit_title_textview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Reading Book"
+        android:text="Prcticing Yoga"
         android:fontFamily="@font/montserrat_medium"
         android:gravity="center_horizontal"
         android:textColor="@color/blue3"

@@ -51,17 +51,10 @@ class AddGoal: AppCompatActivity(), View.OnClickListener {
         saveBtn.setOnClickListener(this)
 
 
-        //setUpSpinner()
+
     }
 
-//    private fun setUpSpinner() {
-//        val adapter =
-//            ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, labels)
-//
-//        labels.sort()
-//
-//        spinnerCategory.adapter = adapter
-//    }
+
 
     override fun onClick(v: View) {
         when (v.id) {
@@ -103,7 +96,7 @@ class AddGoal: AppCompatActivity(), View.OnClickListener {
             )
 //                    viewModel.saveHabit(habit)
 //                    finish()
-            Firebase.firestore.collection("goals").add(goal).addOnSuccessListener {
+            Firebase.firestore.collection("goal").add(goal).addOnSuccessListener {
                 startActivity(Intent(this, GoalMain::class.java))
                 finish()
             }

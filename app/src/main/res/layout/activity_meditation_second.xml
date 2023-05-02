@@ -14,37 +14,38 @@
 
         tools:ignore="ContentDescription" />
 
-    <ImageView
-        android:id="@+id/bMonkImage"
-        android:layout_width="74dp"
-        android:layout_height="65dp"
-        android:layout_margin="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/meditation_transparent"
-        tools:ignore="ContentDescription" />
+<!--    <ImageView-->
+<!--        android:id="@+id/bMonkImage"-->
+<!--        android:layout_width="74dp"-->
+<!--        android:layout_height="65dp"-->
+<!--        android:layout_margin="5dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        app:srcCompat="@drawable/theme1"-->
+<!--        tools:ignore="ContentDescription" />-->
 
-    <TextView
-        android:id="@+id/bMonkText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SERENE"
-        android:textSize="18sp"
-        android:fontFamily="@font/montserratbold"
-        android:textColor="@color/blue3"
-        android:layout_marginStart="7dp"
-        app:layout_constraintLeft_toRightOf="@id/bMonkImage"
-        app:layout_constraintTop_toTopOf="@id/bMonkImage"
-        app:layout_constraintBottom_toBottomOf="@id/bMonkImage"
-        tools:ignore="RtlSymmetry"
-        android:layout_marginLeft="7dp" />
+<!--    <TextView-->
+<!--        android:id="@+id/bMonkText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="SERENE"-->
+<!--        android:textSize="18sp"-->
+<!--        android:fontFamily="@font/montserratbold"-->
+<!--        android:textColor="@color/blue3"-->
+<!--        android:layout_marginStart="7dp"-->
+<!--        app:layout_constraintLeft_toRightOf="@id/bMonkImage"-->
+<!--        app:layout_constraintTop_toTopOf="@id/bMonkImage"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/bMonkImage"-->
+<!--        tools:ignore="RtlSymmetry"-->
+<!--        android:layout_marginLeft="7dp" />-->
 
     <ImageButton
         android:id="@+id/settingButton"
         android:layout_width="46dp"
         android:layout_height="56dp"
+        android:backgroundTint="@color/white"
         android:layout_marginLeft="312dp"
         android:layout_marginTop="11dp"
         android:layout_marginRight="6dp"
@@ -104,7 +105,7 @@
         android:textAllCaps="false"
         android:onClick="currentLevelButton" />
 
-    <ImageButton
+    <Button
         android:id="@+id/startButton"
         android:layout_width="262dp"
         android:layout_height="160dp"
@@ -113,7 +114,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/AspiringMonk"
-
+        android:text="start"
+        android:fontFamily="@font/montserrat"
+        android:textSize="65sp"
         app:srcCompat="@drawable/tulippp"
         tools:ignore="ContentDescription,OnClick" />
 
@@ -322,7 +325,8 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/flower_button"
+            android:backgroundTint="@color/white"
+
             tools:ignore="ContentDescription,OnClick,RtlHardcoded" />
 
     <TextView

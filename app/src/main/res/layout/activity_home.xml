@@ -19,22 +19,7 @@
         android:alpha="0.8"
         app:srcCompat="@drawable/skyng" />
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/logout_cardtired"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="0dp"-->
-<!--        android:layout_marginTop="0dp"-->
-<!--        android:layout_marginEnd="0dp"-->
-<!--        android:layout_marginBottom="0dp"-->
-<!--        android:backgroundTint="@color/white"-->
-<!--        android:clickable="true"-->
-<!--        android:focusable="true"-->
-<!--        android:src="@drawable/theme1"-->
-<!--        app:layout_constraintHorizontal_bias="1"-->
-<!--        app:layout_constraintLeft_toLeftOf="parent"-->
-<!--        app:layout_constraintRight_toRightOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
 
     <!-- Bottom navigation view -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -62,45 +47,7 @@
             android:layout_height="670dp"
             android:orientation="vertical">
 
-            <!--        <VideoView-->
-            <!--            android:id="@+id/simpleVideoView"-->
-            <!--            android:layout_width="match_parent"-->
-            <!--            android:layout_height="299dp"-->
 
-            <!--            android:text="TextView" />-->
-<!--            <RelativeLayout-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="68dp">-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/hi"-->
-<!--                    android:layout_width="178dp"-->
-<!--                    android:layout_height="58dp"-->
-<!--                    android:layout_marginStart="50dp"-->
-<!--                    android:layout_marginTop="50dp"-->
-<!--                    android:layout_marginEnd="50dp"-->
-<!--                    android:layout_marginBottom="50dp"-->
-<!--                    android:fontFamily="@font/montserrat_medium"-->
-<!--                    android:gravity="center"-->
-<!--                    android:text="Welcome"-->
-<!--                    android:textColor="@color/blue3"-->
-<!--                    android:textSize="18sp" />-->
-
-<!--                <TextView-->
-<!--                    android:id="@+id/display_name"-->
-<!--                    android:layout_width="178dp"-->
-<!--                    android:layout_height="58dp"-->
-<!--                    android:layout_marginStart="50dp"-->
-<!--                    android:layout_marginTop="50dp"-->
-<!--                    android:layout_marginEnd="50dp"-->
-<!--                    android:layout_marginBottom="50dp"-->
-<!--                    android:fontFamily="@font/montserrat_medium"-->
-<!--                    android:gravity="end"-->
-<!--                    android:text="Welcome"-->
-<!--                    android:textColor="@color/blue3"-->
-<!--                    android:textSize="18sp" />-->
-
-<!--            </RelativeLayout>-->
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -322,4 +269,29 @@
         app:layout_constraintTop_toTopOf="parent"
 
         />
+
+
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/time_text"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:textSize="24sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:layout_centerHorizontal="true" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/schedule_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Schedule Notification"-->
+<!--        android:textSize="18sp"-->
+<!--        android:layout_below="@+id/time_text"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="32dp"/>-->
+
+
+
 </RelativeLayout>
