@@ -69,10 +69,10 @@ public class BotActivity extends AppCompatActivity {
         chatsModelArrayList.add(new ChatsModel(message, USER_KEY));
         chatAdaptor.notifyDataSetChanged();
 
-        // String url="http://api.brainshop.ai/get?bid=173963&key=Lejk0Em2XNYkeR4O&uid=[uid]&msg="+message;
-      //  String url = "http://api.brainshop.ai/get?bid=161286&key=GVNLpbjWlpqyAz6Q&uid=[uid]&msg="+message;
+         String url="http://api.brainshop.ai/get?bid=173963&key=Lejk0Em2XNYkeR4O&uid=[uid]&msg="+message;
+       // String url = "http://api.brainshop.ai/get?bid=161286&key=GVNLpbjWlpqyAz6Q&uid=[uid]&msg="+message;
 
-       String url = "http://api.brainshop.ai/get?bid=173963&key=Lejk0Em2XNYkeR4O&uid=[uid]&msg="+message;
+      // String url = "http://api.brainshop.ai/get?bid=173963&key=Lejk0Em2XNYkeR4O&uid=[uid]&msg="+message;
         String baseurl = "http://api.brainshop.ai/";
 
         Retrofit retrofit = new Retrofit.Builder()

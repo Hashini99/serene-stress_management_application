@@ -113,7 +113,7 @@ class CreateAccount : AppCompatActivity(){
                     )
 
                     Firebase.firestore.collection("users").document(uid).set(user).addOnSuccessListener {
-                        startActivity(Intent(this,JournalAddEditNoteActivity::class.java))
+                        startActivity(Intent(this,Login::class.java))
                         finish()
                     }
 

@@ -18,7 +18,9 @@ class CountDownViewModel: ViewModel() {
     val currentTimeString = Transformations.map(currentTime) { time ->
         DateUtils.formatElapsedTime(time / 1000)
     }
-
+//    val currentTimeString = Transformations.map(currentTime) { time ->
+//        DateUtils.formatElapsedTime(time / 1000)
+//    }
     // Event which triggers the end of count down
     private val _eventCountDownFinish = MutableLiveData<Boolean>()
     val eventCountDownFinish: LiveData<Boolean> = _eventCountDownFinish

@@ -41,16 +41,9 @@ class JournalMainActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_journal_main)
-//        try {
-//            this.supportActionBar!!.setBackgroundDrawable(
-//                ColorDrawable(
-//                    getResources()
-//                        .getColor(R.color.main)
-//                )
-//            )
-//        } catch (e: NullPointerException) {
+
         supportActionBar?.title = getString(R.string.journal_main)
-//        }
+
         val query = db.collection("journal")
             .whereEqualTo("user", FirebaseAuth.getInstance().currentUser!!.uid)
             .orderBy("datetime", Query.Direction.DESCENDING)

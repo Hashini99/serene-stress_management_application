@@ -31,20 +31,6 @@
             android:padding="5dp">
 
 
-            <TextView
-                android:id="@+id/txtShowTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_marginEnd="5dp"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:textColor="#303030"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                tools:text="Task Title" />
-
-
             <!--            <TextView-->
             <!--                android:id="@+id/txtShowTask"-->
             <!--                android:layout_width="wrap_content"-->
@@ -59,19 +45,47 @@
             <!--                tools:text="Task Subtitle" />-->
 
 
-<!--            <TextView-->
-<!--                android:id="@+id/txtShowTitle2"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_alignParentStart="true"-->
-<!--                android:layout_marginStart="186dp"-->
-<!--                android:layout_marginEnd="5dp"-->
-<!--                android:ellipsize="end"-->
-<!--                android:maxLines="1"-->
-<!--                android:textColor="#303030"-->
-<!--                android:textSize="20sp"-->
-<!--                android:textStyle="bold"-->
-<!--                tools:text="Task Title" />-->
+            <!--            <TextView-->
+            <!--                android:id="@+id/txtShowTitle2"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_alignParentStart="true"-->
+            <!--                android:layout_marginStart="186dp"-->
+            <!--                android:layout_marginEnd="5dp"-->
+            <!--                android:ellipsize="end"-->
+            <!--                android:maxLines="1"-->
+            <!--                android:textColor="#303030"-->
+            <!--                android:textSize="20sp"-->
+            <!--                android:textStyle="bold"-->
+            <!--                tools:text="Task Title" />-->
+
+            <TextView
+                android:id="@+id/txtShowTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="#303030"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                tools:text="Task Title" />
+
+            <TextView
+                android:id="@+id/txtShowTitle2"
+                android:layout_width="65dp"
+                android:layout_height="25dp"
+
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="35dp"
+                android:layout_marginEnd="5dp"
+
+                android:textColor="@color/black"
+                android:textSize="15sp"
+
+                tools:text="Deadline" />
 
             <TextView
                 android:id="@+id/txtenddate"
@@ -79,9 +93,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textDate"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="11dp"
-                android:textColor="@android:color/black"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="35dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 android:visibility="visible"
                 tools:text="22-12-2017" />
 
@@ -100,14 +115,14 @@
 
             <TextView
                 android:id="@+id/item_to_do"
-                android:layout_width="205dp"
-                android:layout_height="161dp"
+                android:layout_width="210dp"
+                android:layout_height="159dp"
                 android:layout_below="@+id/textDate"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="190dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginStart="192dp"
+                android:layout_marginTop="-7dp"
                 android:maxLines="10"
-                android:textColor="@android:color/black"
+                android:textColor="@color/black"
                 android:visibility="visible"
                 tools:text="loading" />
 
@@ -130,11 +145,22 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textTime"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="41dp"
-                android:layout_marginEnd="313dp"
-                android:textColor="@android:color/black"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="53dp"
+                android:layout_marginEnd="331dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
                 android:visibility="visible"
                 tools:text="22:12 AM" />
+
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="27dp"
+                android:layout_height="22dp"
+                android:layout_marginStart="320dp"
+                android:backgroundTint="@color/white"
+                android:onClick="remind_me"
+                app:srcCompat="@drawable/ic_notifications" />
 
         </RelativeLayout>
 

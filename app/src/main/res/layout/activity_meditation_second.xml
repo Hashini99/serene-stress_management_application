@@ -7,6 +7,16 @@
     tools:context=".meditation.MeditationSecond">
 
     <ImageView
+        android:id="@+id/imageView_m"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+
+        android:layout_marginBottom="0dp"
+        android:alpha="0.5"
+        app:srcCompat="@drawable/na6" />
+
+    <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -100,6 +110,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         android:text="@string/level"
         android:textColor="#FFFFFF"
+        android:backgroundTint="@android:color/transparent"
         android:background="#0CBFB4"
         android:textSize="20sp"
         android:textAllCaps="false"
@@ -115,9 +126,11 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/AspiringMonk"
         android:text="start"
+        android:textColor="@color/blue3"
         android:fontFamily="@font/montserrat"
+        android:backgroundTint="@android:color/transparent"
         android:textSize="65sp"
-        app:srcCompat="@drawable/tulippp"
+
         tools:ignore="ContentDescription,OnClick" />
 
     <TextView
@@ -146,7 +159,7 @@
         android:text="@string/pause"
         android:layout_marginStart="20dp"
         android:visibility="invisible"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/blue3"
         android:textSize="36sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/cancelButton"
@@ -162,7 +175,8 @@
         android:fontFamily="@font/lilitaone"
         android:onClick="cancelButton"
         android:text="@string/stop"
-        android:textColor="#FFFFFF"
+
+        android:textColor="@color/blue3"
         android:textSize="36sp"
         android:layout_marginEnd="20dp"
         android:visibility="invisible"
@@ -325,7 +339,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="1.0"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@android:color/transparent"
 
             tools:ignore="ContentDescription,OnClick,RtlHardcoded" />
 

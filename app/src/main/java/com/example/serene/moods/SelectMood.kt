@@ -162,6 +162,7 @@ class SelectMood : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.title = getString(R.string.s_m)
         setContentView(R.layout.activity_select_mood)
 
         // Find all mood buttons

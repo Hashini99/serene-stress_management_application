@@ -15,6 +15,7 @@ import kotlinx.android.synthetic.main.activity_mood_fix.*
 class MoodFix : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.title = getString(R.string.g_l)
         setContentView(R.layout.activity_mood_fix)
 
         //music

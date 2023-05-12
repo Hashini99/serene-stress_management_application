@@ -6,7 +6,9 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
 import com.example.serene.CreateAccount
+import com.example.serene.Home
 import com.example.serene.R
+import com.example.serene.history.HistoryMain
 import com.google.firebase.auth.FirebaseAuth
 
 class QuizIntro: AppCompatActivity() {
@@ -20,6 +22,12 @@ class QuizIntro: AppCompatActivity() {
 
     fun start(view: View) {
         startActivity(Intent(this, Quiz::class.java))
+        finish()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, Home::class.java))
         finish()
     }
 }

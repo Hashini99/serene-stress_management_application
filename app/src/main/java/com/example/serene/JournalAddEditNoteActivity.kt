@@ -85,6 +85,7 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_journal_add_edit_note)
+        supportActionBar?.title = getString(R.string.a_j)
         editTitle = findViewById(R.id.editNoteTitle)
         editDesc = findViewById(R.id.editNoteDescription)
         saveButton = findViewById(R.id.jourSaveButton)

@@ -48,15 +48,16 @@ class DailyHabitsMain : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_daily_habit_list)
-            try {
-                this.supportActionBar!!.setBackgroundDrawable(
-                    ColorDrawable(
-                        getResources()
-                            .getColor(R.color.dark_blue_grey)
-                    )
-                )
-            } catch (e: NullPointerException) {
-            }
+//            try {
+//                this.supportActionBar!!.setBackgroundDrawable(
+//                    ColorDrawable(
+//                        getResources()
+//                            .getColor(R.color.dark_blue_grey)
+//                    )
+//                )
+//            } catch (e: NullPointerException) {
+//            }
+            supportActionBar?.title = getString(R.string.h_s)
             val query = db.collection("habits")
                 .whereEqualTo("user", FirebaseAuth.getInstance().currentUser!!.uid)
                 //.orderBy("datetime", Query.Direction.DESCENDING)

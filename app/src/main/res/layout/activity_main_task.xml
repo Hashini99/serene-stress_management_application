@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/blue3"
     tools:context=".MainTasks">
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="0dp"-->
+<!--        android:layout_marginTop="0dp"-->
+<!--        android:layout_marginEnd="0dp"-->
+<!--        android:layout_marginBottom="0dp">-->
 <!--    <ImageView-->
 <!--        android:id="@+id/imageView"-->
 <!--        android:layout_width="wrap_content"-->
@@ -31,13 +39,14 @@
 
     <!--        />-->
 
+
     <LinearLayout
 
         android:id="@+id/ll_activity"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="83dp"
-        android:layout_marginBottom="114dp"
+        android:layout_marginBottom="14dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
         app:layout_constraintHorizontal_bias="0.0"
@@ -49,9 +58,9 @@
             android:id="@+id/habit_card"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:backgroundTint="@color/white"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true">
@@ -97,9 +106,9 @@
             android:id="@+id/goal_card"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:backgroundTint="@color/white"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true">
@@ -146,9 +155,9 @@
             android:id="@+id/journal_card"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:backgroundTint="@color/white"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true">
@@ -210,9 +219,9 @@
             android:id="@+id/med_card"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             android:backgroundTint="@color/white"
-            app:cardCornerRadius="10dp"
+            app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true">
@@ -273,5 +282,5 @@
 
 
     <!-- Bottom navigation view -->
-
+<!--    </ScrollView>-->
 </androidx.constraintlayout.widget.ConstraintLayout>

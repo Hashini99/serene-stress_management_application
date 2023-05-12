@@ -9,24 +9,6 @@
     android:background="@color/main_2"
     tools:context=".history.MoodHistory">
 
-    <!--    <LinearLayout-->
-    <!--        android:id="@+id/topBar"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="70dp"-->
-    <!--        android:orientation="vertical">-->
-
-    <!--&lt;!&ndash;        <TextView&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:id="@+id/titleJour"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:layout_height="60dp"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:background="@color/main_2"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:fontFamily="cursive"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:gravity="center"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:text="Jour"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:textColor="@color/white"&ndash;&gt;-->
-    <!--&lt;!&ndash;            android:textSize="30dp" />&ndash;&gt;-->
-
-    <!--    </LinearLayout>-->
 
 
     <androidx.recyclerview.widget.RecyclerView

@@ -10,10 +10,12 @@ import android.media.MediaPlayer.OnCompletionListener
 import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.os.Handler
 import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.CompoundButton
+import android.widget.ImageView
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -97,6 +99,14 @@ class MeditationSecond : AppCompatActivity() { //Timer variables
     var afterBreak = 0L
     var afterSession = 0
 
+//image loop
+    lateinit var imageView: ImageView
+    //val images = listOf(R.drawable.na, R.drawable.lake, R.drawable.pinktree)
+    val images = listOf(R.drawable.na6, R.drawable.na8, R.drawable.na9,R.drawable.na10)
+    var currentIndex = 0
+    val handler = Handler()
+
+
     @RequiresApi(Build.VERSION_CODES.M)
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -111,6 +121,21 @@ class MeditationSecond : AppCompatActivity() { //Timer variables
         if (!mNotificationManager.isNotificationPolicyAccessGranted) {
             showDNDDialog()
         }
+// bg images
+
+        imageView = findViewById(R.id.imageView_m)
+        handler.postDelayed(object : Runnable {
+            override fun run() {
+                currentIndex++
+                if (currentIndex >= images.size) {
+                    currentIndex = 0
+                }
+                imageView.setImageResource(images[currentIndex])
+                handler.postDelayed(this, 20000) // 1 minute delay
+            }
+        }, 20000) // 20 second delay for first image
+
+
 
         //PomodoroDialog
         pomodoroDialog()

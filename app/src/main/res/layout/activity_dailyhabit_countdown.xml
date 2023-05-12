@@ -34,11 +34,12 @@
         android:gravity="center"
         android:textSize="64sp"
         android:textStyle="bold"
+        android:textColor="@color/blue3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="22:22:22" />
+        android:text="22:22:22" />
 
     <Button
         android:id="@+id/btn_start"

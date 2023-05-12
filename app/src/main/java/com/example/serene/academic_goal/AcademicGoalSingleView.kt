@@ -17,32 +17,32 @@ class AcademicGoalSingleView : AppCompatActivity() {
     lateinit var documentID: String
     lateinit var tasks: String
     lateinit var title: String
-    lateinit var d_date: String
-    //var client_id: String = "ARKL7p7RWGWudGaKC4KIjPhAd46IzO8Jl61jfgiEIMKxO3-JirB0te6vR-v_QFk9mYz1bAq00AJ9rqze"
+    lateinit var duedate: String
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        try {
-            this.supportActionBar!!.hide()
-        } catch (e: NullPointerException) {
-        }
+//        try {
+//            this.supportActionBar!!.hide()
+//        } catch (e: NullPointerException) {
+//        }
 
         setContentView(R.layout.activity_acdemic_goal_single_view)
 
         documentID = intent.getStringExtra("docID").toString()
 
-        FirebaseFirestore.getInstance().collection("goals").document(documentID.toString()).get()
+        FirebaseFirestore.getInstance().collection("goal").document(documentID.toString()).get()
             .addOnSuccessListener {
 
 
                 title = it.data!!.getValue("title").toString()
                 tasks = it.data!!.getValue("tasks").toString()
-               // d_date = it.data!!.getValue("tasks").toString()
+                duedate = it.data!!.getValue("duedate").toString()
 
 
-               // txt_a_date.text = it.data!!.getValue("date").toString()
+                txt_a_date.text = it.data!!.getValue("duedate").toString()
 //                txt_a_time.text = it.data!!.getValue("time").toString()
                 txt_a_title.text = it.data!!.getValue("title").toString()
                 txt_steps.text = it.data!!.getValue("tasks").toString()
@@ -56,19 +56,10 @@ class AcademicGoalSingleView : AppCompatActivity() {
 
     }
 
-    override fun onDestroy() {
-        //stopService(Intent(this, PayPalService::class.java))
-        super.onDestroy()
-    }
-//    fun descriptionVisibility(){
-//        if(decription == "" || decription == null){
-//            txt_description.setVisibility(View.GONE)
-//            lbl_description.setVisibility(View.GONE)
-//        }
-//    }
+
 
     fun delete_goal(view: View) {
-        FirebaseFirestore.getInstance().collection("goals").document(documentID).delete()
+        FirebaseFirestore.getInstance().collection("goal").document(documentID).delete()
             .addOnSuccessListener {
                 Toast.makeText(applicationContext, "Goal Deleted Successful", Toast.LENGTH_LONG)
                     .show()

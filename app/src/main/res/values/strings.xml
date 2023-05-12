@@ -124,7 +124,7 @@
     <string name="title_hint">Activity Name</string>
     <string name="focus_time_duration_hint">Focus Time Duration (in minutes)</string>
     <string name="action_save">Save</string>
-    <string name="add_habit">Add Habit</string>
+    <string name="add_habit">Create Your Habit</string>
     <string name="start_time">Start Time</string>
     <string name="habit_deleted">Habit has been deleted</string>
     <string name="priority_level">Priority Level</string>
@@ -186,7 +186,27 @@
     <string name="question_nine">9/10</string>
     <string name="question_ten">10/10</string>
 
-journal
+    <!--  history-->
+
+    <string name="m_j">Mood Journal</string>
+    <string name="a_t">Assessment</string>
+    <string name="h_m">My History</string>
+    <string name="s_s">Stress Tracker</string>
+    <!--  expert-->
+
+    <string name="e_m">Expert Support</string>
+    <string name="m_e">Counsellor Details</string>
+    <string name="a_b">Make Appointments</string>
+    <string name="a_h">Appointments</string>
+    <string name="m_c">Meet Your Counsellor</string>
+    <string name="m_mj">My Journey</string>
+<!--main-->
+
+    <string name="m_t">Tools</string>
+    <string name="pr">Profile</string>
+    <string name="qi">Monthly Assessment</string>
+
+    journal
 
     <string name="journal_main">journal</string>
     <string name="journal_second">add journal</string>
@@ -234,6 +254,21 @@ journal
         <item>Before 5 Minutes</item>
         <item>Before 10 Minutes</item>
     </string-array>
+
+    <string name="do_yoga">Do Yoga</string>
+    <string name="do_meditation">Do Meditation</string>
+    <string name="read_book">Reading</string>
+    <string name="do_walk">Walk</string>
+
+
+
+    <string name="a_g">Create Goal</string>
+    <string name="a_gm">Academic Related Goal</string>
+    <string name="h_s">Habit Setting</string>
+    <string name="g_l">Fix Your Mood</string>
+    <string name="a_j"> Write Your Journal</string>
+    <string name="s_m">Select Your Mood</string>
+
 
 
 

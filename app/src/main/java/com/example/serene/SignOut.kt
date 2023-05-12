@@ -33,4 +33,34 @@ class SignOut: AppCompatActivity() {
 ////Call signOut()
 //        firebaseAuth.signOut()
 //    }
-}
+
+
+
+
+        private lateinit var auth: FirebaseAuth
+
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+
+            try {
+                this.supportActionBar!!.hide()
+            } catch (e: NullPointerException) {
+            }
+
+            auth = FirebaseAuth.getInstance()
+
+            // Call signOut() to sign out the current user
+            auth.signOut()
+
+            // Do anything here which needs to be done after signout is complete
+            signOutComplete()
+
+            // Finish the SignOut activity
+            finish()
+        }
+
+        private fun signOutComplete() {
+            // Add your code here to perform any action after sign out is complete
+        }
+    }
+

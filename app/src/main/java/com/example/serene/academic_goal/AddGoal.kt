@@ -45,7 +45,7 @@ class AddGoal: AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_acdemic_goal_adding)
-
+        supportActionBar?.title = getString(R.string.a_g)
         dateEdt.setOnClickListener(this)
         timeEdt.setOnClickListener(this)
         saveBtn.setOnClickListener(this)

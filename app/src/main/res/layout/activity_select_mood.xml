@@ -15,7 +15,7 @@
         android:layout_width="wrap_content"
         android:fontFamily="@font/montserrat_medium"
         android:layout_height="wrap_content"
-        android:text="@string/choose_your_mood"
+
         android:textColor="@color/black"
         android:textStyle="bold"
         android:padding="10dp"
