@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    app:startDestination="@id/home"
+    android:id="@+id/my_nav">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.serene.mainFragments.HomeFragement"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/task"
+        android:name="com.example.serene.mainFragments.TaskFragement"
+        android:label="fragment_settings"
+        tools:layout="@layout/activity_main_task" />
+    <fragment
+        android:id="@+id/chart"
+        android:name="com.example.serene.mainFragments.ChartFragement"
+        android:label="fragment_statistics"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/expert"
+        android:name="com.example.serene.mainFragments.ExpertFragement"
+        android:label="fragment_appointment"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.example.serene.mainFragments.SettingFragement"
+        android:label="fragment_appointment"
+        tools:layout="@layout/fragment_home" />
+
+
+
+</navigation>

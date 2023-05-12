@@ -1,6 +1,7 @@
 package com.example.serene.expert_support
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.SurfaceView
@@ -9,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.serene.R
 import com.example.serene.databinding.ActivityMainBinding
 import com.example.serene.media.RtcTokenBuilder2
 import io.agora.rtc2.*
@@ -83,6 +85,7 @@ class VideoChat : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.title = getString(R.string.m_c)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -188,6 +191,12 @@ class VideoChat : AppCompatActivity() {
             if (localSurfaceView != null) localSurfaceView!!.visibility = View.GONE
             isJoined = false
         }
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, ChannelList::class.java))
+        finish()
     }
 
 }
