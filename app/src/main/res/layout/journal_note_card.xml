@@ -36,9 +36,10 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="5dp"
+                android:fontFamily="@font/montserrat"
                 android:singleLine="true"
+                android:textColor="@color/blue3"
                 android:text="Title"
-                android:fontFamily="@font/montserrat_medium"
                 android:textSize="20sp" />
 
             <TextView
@@ -47,18 +48,20 @@
                 android:layout_height="60dp"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="45dp"
+                android:fontFamily="@font/montserrat"
                 android:maxLines="2"
-                android:fontFamily="@font/montserrat_medium"
+                android:textColor="@color/blue3"
                 android:text="Description" />
 
-            <ImageView
-                android:id="@+id/deleteImage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                android:src="@drawable/journal_delete" />
+<!--            <ImageButton-->
+<!--                android:id="@+id/deleteImage"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:onClick="delete_j"-->
+<!--                android:src="@drawable/journal_delete" />-->
 
 
         </RelativeLayout>
