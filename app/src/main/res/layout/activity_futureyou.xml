@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+
+    tools:context="com.example.serene.moods.MoodFix">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/sh"-->
+<!--            android:layout_width="170dp"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginTop="116dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            app:cardCornerRadius="25dp"-->
+<!--            app:cardElevation="10dp"-->
+<!--            app:cardMaxElevation="15dp"-->
+<!--            app:cardPreventCornerOverlap="true"-->
+<!--            app:layout_constraintHorizontal_chainStyle="spread"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintWidth_percent="0.5">-->
+
+<!--            <TextView-->
+
+<!--                android:layout_width="199dp"-->
+<!--                android:layout_height="69dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginEnd="240dp"-->
+<!--                android:fontFamily="@font/montserratbold"-->
+<!--                android:padding="5dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:text="Social Relationships"-->
+<!--                android:textColor="@color/black" />-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sh"
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="116dp"
+
+            app:cardCornerRadius="25dp"
+            android:backgroundTint="@color/pastel_yellow"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="15dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Social Relationship"
+                android:textSize="18sp"
+                android:textColor="@color/blue3"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="60dp"
+                android:src="@drawable/icon" />
+
+            <!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Description"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="110dp"/>-->
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/tm"
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="368dp"
+            android:layout_marginEnd="36dp"
+
+            app:cardCornerRadius="25dp"
+            app:cardElevation="10dp"
+            app:cardMaxElevation="15dp"
+            app:cardPreventCornerOverlap="true"
+            android:backgroundTint="@color/pastel_yellow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5" >
+
+<!--            <TextView-->
+
+<!--                android:layout_width="199dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:text="Time Management"-->
+<!--                android:fontFamily="@font/montserratbold"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginEnd="240dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                />-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time Management"
+                android:textSize="18sp"
+                android:textColor="@color/blue3"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/icon"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="60dp"/>
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Description"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="110dp"/>-->
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cd"
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="10dp"
+
+            app:cardCornerRadius="25dp"
+            app:cardElevation="10dp"
+            android:backgroundTint="@color/pastel_yellow"
+            app:cardMaxElevation="15dp"
+            app:cardPreventCornerOverlap="true"
+
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fh"
+            app:layout_constraintWidth_percent="0.5" >
+<!--            <TextView-->
+
+<!--                android:layout_width="199dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:text="Career Development"-->
+<!--                android:fontFamily="@font/montserratbold"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginEnd="240dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                />-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Career Development"
+                android:textSize="18sp"
+                android:textColor="@color/blue3"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/icon"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="60dp"/>
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Description"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="110dp"/>-->
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fh"
+            android:layout_width="170dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="204dp"
+            android:layout_marginTop="116dp"
+            android:background="@drawable/card_background"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="10dp"
+            android:backgroundTint="@color/pastel_yellow"
+            app:cardMaxElevation="15dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5" >
+<!--            <TextView-->
+
+<!--                android:layout_width="199dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:text="Financial Management"-->
+<!--                android:fontFamily="@font/montserratbold"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginEnd="240dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                />-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Financial Management"
+                android:textSize="18sp"
+                android:textColor="@color/blue3"
+                android:gravity="center"
+                android:layout_marginTop="20dp"/>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/icon"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="60dp"/>
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Description"-->
+<!--                android:textSize="14sp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_marginTop="110dp"/>-->
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

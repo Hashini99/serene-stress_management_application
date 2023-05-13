@@ -19,48 +19,22 @@
         android:layout_height="207dp"
         android:layout_marginStart="5dp"
         android:layout_marginBottom="5dp"
-        android:background="@android:color/white"
+        android:background="@color/pastel_green"
         android:paddingBottom="5dp">
 
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginEnd="5dp"
-            android:background="?android:attr/selectableItemBackground"
+
+            android:background="@color/pastel_green"
             android:clickable="true"
             android:padding="5dp">
 
 
-            <!--            <TextView-->
-            <!--                android:id="@+id/txtShowTask"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_below="@+id/txtShowTitle"-->
-            <!--                android:layout_alignParentStart="true"-->
-            <!--                android:layout_marginTop="4dp"-->
-            <!--                android:ellipsize="end"-->
-            <!--                android:maxLines="1"-->
-            <!--                android:textColor="@android:color/black"-->
-            <!--                android:textSize="16sp"-->
-            <!--                tools:text="Task Subtitle" />-->
-
-
-            <!--            <TextView-->
-            <!--                android:id="@+id/txtShowTitle2"-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:layout_alignParentStart="true"-->
-            <!--                android:layout_marginStart="186dp"-->
-            <!--                android:layout_marginEnd="5dp"-->
-            <!--                android:ellipsize="end"-->
-            <!--                android:maxLines="1"-->
-            <!--                android:textColor="#303030"-->
-            <!--                android:textSize="20sp"-->
-            <!--                android:textStyle="bold"-->
-            <!--                tools:text="Task Title" />-->
-
             <TextView
                 android:id="@+id/txtShowTitle"
+                android:textColor="@color/blue3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -68,7 +42,7 @@
                 android:layout_marginEnd="5dp"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:textColor="#303030"
+
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:text="Task Title" />
@@ -82,7 +56,7 @@
                 android:layout_marginTop="35dp"
                 android:layout_marginEnd="5dp"
 
-                android:textColor="@color/black"
+                android:textColor="@color/blue3"
                 android:textSize="15sp"
 
                 tools:text="Deadline" />
@@ -95,8 +69,9 @@
                 android:layout_alignParentStart="true"
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="35dp"
-                android:textColor="@color/black"
+
                 android:textStyle="bold"
+                android:textColor="@color/blue3"
                 android:visibility="visible"
                 tools:text="22-12-2017" />
 
@@ -122,7 +97,7 @@
                 android:layout_marginStart="192dp"
                 android:layout_marginTop="-7dp"
                 android:maxLines="10"
-                android:textColor="@color/black"
+                android:textColor="@color/blue3"
                 android:visibility="visible"
                 tools:text="loading" />
 
@@ -148,8 +123,9 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="53dp"
                 android:layout_marginEnd="331dp"
-                android:textColor="@color/black"
+
                 android:textStyle="bold"
+                android:textColor="@color/blue3"
                 android:visibility="visible"
                 tools:text="22:12 AM" />
 
@@ -170,7 +146,7 @@
         android:id="@+id/AprogressBar"
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="10dp"
 
         android:layout_marginTop="180dp"
         android:progress="0"

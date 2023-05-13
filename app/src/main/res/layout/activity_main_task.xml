@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/blue3"
+    android:background="@color/white"
     tools:context=".MainTasks">
 <!--    <ScrollView-->
 <!--        android:layout_width="match_parent"-->
@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="20dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/pastel_yellow"
             app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
             app:cardMaxElevation="15dp"
@@ -107,7 +107,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="20dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/pastel_green"
             app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
             app:cardMaxElevation="15dp"
@@ -156,7 +156,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="20dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/Purple"
             app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
             app:cardMaxElevation="15dp"

@@ -15,6 +15,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:textColor="@color/blue3"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
@@ -28,26 +29,26 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:text=" "
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="0dp"
         android:fontFamily="@font/montserrat_medium"
         android:textStyle="bold"
         android:textSize="40sp"
         />
     <TextView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="1dp"
         android:id="@+id/tv_whtwnttotry"
-        android:textColor="@color/black"
+        android:textColor="@color/blue3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_heythere"
-        android:text="@string/what_do_you_want_to_try"
+        android:text="Explore Your Options"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
         android:fontFamily="@font/montserrat_medium"
         android:textStyle="bold"
-        android:textSize="30sp"
+        android:textSize="25sp"
         />
 <!--    <ImageView-->
 <!--        android:id="@+id/like_btn"-->
@@ -72,53 +73,48 @@
         app:layout_constraintTop_toBottomOf="@id/tv_whtwnttotry"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="10dp"
         >
         <androidx.cardview.widget.CardView
             android:id="@+id/music_card"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
+            android:backgroundTint="@color/pastel_yellow"
             app:cardElevation="10dp"
             app:cardCornerRadius="10dp"
             android:layout_margin="10dp"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true"
-            android:backgroundTint="@color/white"
+
 
             >
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
 
-            <ImageView
-
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-
-                android:padding="5dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/yh"
-                android:layout_marginStart="25dp"
+                android:gravity="center"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="240dp"
-                android:layout_width="34dp"
-                android:layout_height="40dp"/>
+                android:text="Soothing tunes to ease your mind and lift your spirits."
+                android:textColor="@color/blue3"
+                android:textSize="14sp" />
+
+          /
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_gravity="center"
-                android:padding="12dp"
+                android:textStyle="bold"
                 android:fontFamily="@font/montserrat_medium"
-                android:text="Music"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
-
-
+                android:padding="2dp"
+                android:gravity="center"
+                android:text="Mood Melodies"
+                android:textColor="@color/blue3"
+                android:textSize="20sp" />
 
 
         </androidx.cardview.widget.CardView>
@@ -126,46 +122,55 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/nature_card"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             app:cardElevation="10dp"
             app:cardCornerRadius="10dp"
             android:layout_margin="10dp"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true"
-            android:backgroundTint="@color/white">
+            android:backgroundTint="@color/pastel_green">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
 
-
-            <ImageView
-                android:id="@+id/vid_icon"
-
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-
-                android:padding="5dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/gh"
-                android:layout_marginStart="25dp"
+                android:gravity="center"
                 android:layout_marginTop="30dp"
-                android:layout_marginEnd="240dp"
+                android:text="Find peace and tranquility in the beauty of the natural world"
+                android:textColor="@color/blue3"
+                android:textSize="14sp" />
 
-                android:layout_width="34dp"
-                android:layout_height="40dp"/>
+<!--            <ImageView-->
+<!--                android:id="@+id/vid_icon"-->
+
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+
+<!--                android:padding="5dp"-->
+<!--                android:scaleType="centerInside"-->
+<!--                android:src="@drawable/gh"-->
+<!--                android:layout_marginStart="25dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginEnd="240dp"-->
+
+<!--                android:layout_width="34dp"-->
+<!--                android:layout_height="40dp"/>-->
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_gravity="center"
                 android:fontFamily="@font/montserrat_medium"
-                android:padding="12dp"
-                android:text="Nature Scenary"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:gravity="center"
+                android:padding="0dp"
+                android:text="Nature Nurtures"
+                android:textColor="@color/blue3"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
 
         </androidx.cardview.widget.CardView>
@@ -174,14 +179,22 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/jokes_card"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             app:cardElevation="10dp"
             app:cardCornerRadius="10dp"
             android:layout_margin="10dp"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true"
-            android:backgroundTint="@color/white">
+            android:backgroundTint="@color/orange_200">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
 
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="Hilarious jokes and memes to lighten your mood and reduce stress"
+                android:textColor="@color/blue3"
+                android:textSize="14sp" />
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="100dp"
@@ -191,79 +204,89 @@
                 />
 
 
-            <ImageView
-                android:layout_width="34dp"
-                android:layout_height="40dp"
+<!--            <ImageView-->
+<!--                android:layout_width="34dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginStart="25dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginEnd="240dp"-->
+<!--                android:src="@drawable/oh"-->
+<!--                android:padding="5dp"-->
+
+<!--                />-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="240dp"
-                android:src="@drawable/oh"
-                android:padding="5dp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Laugh Out Loud"
+                android:textColor="@color/blue3"
 
-                />
-
-            <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="center"
-                    android:padding="12dp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="Jokes"
-                    android:textColor="@color/black"
-                    android:textSize="24sp" />
-
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
 
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
             android:id="@+id/poem_card"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="120dp"
             app:cardElevation="10dp"
             app:cardCornerRadius="10dp"
             android:layout_margin="10dp"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true"
-            android:backgroundTint="@color/white">
+            android:backgroundTint="@color/blue2">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="89dp"
 
-            <ImageView
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:text="Inspiring poems and quotes to help you find inner calm and balance"
+                android:textColor="@color/blue3"
+                android:textSize="14sp" />
+<!--            <ImageView-->
 
 
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+
+<!--                android:padding="5dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/bh"-->
+<!--                android:layout_marginStart="25dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginEnd="240dp"-->
+<!--                android:layout_width="34dp"-->
+<!--                android:layout_height="40dp"/>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
-
-                android:padding="5dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/bh"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="240dp"
-                android:layout_width="34dp"
-                android:layout_height="40dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true"
-                    android:layout_gravity="center"
-                    android:padding="12dp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:text="Poems"
-                    android:textColor="@color/black"
-                    android:textSize="24sp" />
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Poetic Reflections "
+                android:textColor="@color/blue3"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
 
 

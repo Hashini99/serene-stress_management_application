@@ -49,9 +49,9 @@ class ExpertList: AppCompatActivity() {
 //                val tvDate: TextView = holder.itemView.findViewById(R.id.dateTextView)
 //                val tvDescription: TextView = holder.itemView.findViewById(R.id.descTextView)
 
-             //   tvDate.text = model.date
+                //   tvDate.text = model.date
                 tvName.text = model.name
-             //   tvDescription.text = model.description
+                //   tvDescription.text = model.description
 
 //                tvDate.setTextColor(Color.parseColor("#FFFFFF"))
 //                tvDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12F)

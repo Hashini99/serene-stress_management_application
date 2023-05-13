@@ -109,7 +109,7 @@ class StatusActivity : AppCompatActivity() {
 
     lateinit var viewPager: ViewPager
     lateinit var adapter: ImagePagerAdapter
-    val images = listOf(R.drawable.na6, R.drawable.na8, R.drawable.na9, R.drawable.na10)
+    val images = listOf(R.drawable.sl1, R.drawable.sl2, R.drawable.sl3, R.drawable.sl4)
     var currentIndex = 0
     val handler = Handler()
     var progress: ProgressBar? = null

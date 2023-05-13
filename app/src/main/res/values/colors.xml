@@ -50,7 +50,7 @@
 <!--daily habits-->
 
     <color name="orange_200">#ffcc80</color>
-    <color name="orange_500">#ff9800</color>
+    <color name="na">#ff9800</color>
     <color name="orange_700">#f57c00</color>
 
     <color name="red">#ff1744</color>
@@ -101,6 +101,14 @@
     <color name="schedule_background_on">#35215C</color>
     <color name="schedule_text_off">#BDBDBD</color>
     <color name="schedule_text_on">@color/white</color>
+
+
+    <color name="pastel_blue">#d4f8ff</color>
+    <color name="Purple">#fbd3ff</color>
+    <color name="pastel_yellow">#fffecf</color>
+    <color name="pastel_green">	#cbffe3</color>
+
+
 
 
 

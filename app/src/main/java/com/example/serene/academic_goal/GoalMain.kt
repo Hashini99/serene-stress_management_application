@@ -245,6 +245,11 @@ class GoalMain : AppCompatActivity() {
 
 
 
+
+
+
+
+
                 val documentId = snapshots.getSnapshot(position).id
 
 

@@ -139,20 +139,24 @@ class DailyHabitsMain : AppCompatActivity() {
 
 
 
-    fun addNewJournal(view: View){
+    fun addNewHabit(view: View){
             startActivity(Intent(this,AddDailyHabits::class.java))
             finish()
         }
     fun h1(view: View){
-        startActivity(Intent(this, RandomHabitOne::class.java))
+        startActivity(Intent(this, SocialHabit::class.java))
         finish()
     }
-    fun h2(view: View){
-        startActivity(Intent(this, RandomHabitTwo::class.java))
-        finish()
-    }
+//    fun h2(view: View){
+//        startActivity(Intent(this, RandomHabitTwo::class.java))
+//        finish()
+//    }
+fun h2(view: View){
+    startActivity(Intent(this, SocialHabitMain::class.java))
+    finish()
+}
     fun h3(view: View){
-        startActivity(Intent(this, RandomHabitThree::class.java))
+        startActivity(Intent(this, FutureYou::class.java))
         finish()
     }
     fun h4(view: View){

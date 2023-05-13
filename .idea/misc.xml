@@ -45,6 +45,7 @@
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable-v24/white_bar.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/bg_iv.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/bg_linear_layout.xml" value="0.1" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/card_background.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/correct_answer_bg.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/home.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/home_smile.xml" value="0.193" />
@@ -59,6 +60,8 @@
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/journal_custom_edit.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/journal_delete.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/journal_imagead_icon.xml" value="0.1" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/list_divider.xml" value="0.1" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/listview_background.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/option_border_bg.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/progress_bar_custom.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/quiz_dash_line.xml" value="0.1" />
@@ -72,7 +75,7 @@
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/selected_optio_border_bg.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/drawable/semi_round_btn.xml" value="0.16" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/font/montserrat.xml" value="0.1" />
-        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/acedimic_goal_list.xml" value="0.3426124197002141" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/acedimic_goal_list.xml" value="0.176" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/acrivity_meditation_main.xml" value="0.18885869565217392" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_acdemic_goal_adding.xml" value="0.2" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_acdemic_goal_main.xml" value="0.4" />
@@ -93,15 +96,18 @@
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_daily_habit_random_two.xml" value="0.25" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_daily_habit_single_view.xml" value="0.2" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_dailyhabit_countdown.xml" value="0.11980749746707194" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_defined_habit_list.xml" value="0.25" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_expert_appoinment_booking.xml" value="0.17937219730941703" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_expert_card.xml" value="0.22916666666666666" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_expert_channel.xml" value="0.25" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_expert_list_view.xml" value="0.22916666666666666" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_expert_main_tasks.xml" value="0.22916666666666666" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_forget_password.xml" value="0.264" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_futureyou.xml" value="0.264" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_goal_coutdown.xml" value="0.14673913043478262" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_goal_note_detail.xml" value="0.12" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_goal_schedule_detail.xml" value="0.10400000000000001" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_habit_devide.xml" value="0.2" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_habit_list.xml" value="0.25" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_history_main.xml" value="0.25" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_home.xml" value="0.239880059970015" />
@@ -118,7 +124,7 @@
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_meditation_main.xml" value="0.17255434782608695" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_meditation_second.xml" value="0.176" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_meditation_second_phase.xml" value="0.16" />
-        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_mood_fix.xml" value="0.264" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_mood_fix.xml" value="0.2" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_mood_history.xml" value="0.2" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_profile.xml" value="0.2" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_question_eight.xml" value="0.16197916666666667" />
@@ -138,7 +144,8 @@
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_quiz_questions.xml" value="0.2" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_quize_main.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_rhabits.xml" value="0.1" />
-        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_select_mood.xml" value="0.176" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_select_mood.xml" value="0.2" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_social_habits.xml" value="0.2" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_status.xml" value="0.176" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_stress_tracker_overview.xml" value="0.13829787234042554" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/activity_test.xml" value="0.264" />
@@ -154,6 +161,8 @@
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/daily_habit_card.xml" value="0.4" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/dailyhabit_pager.xml" value="0.16530797101449277" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/dailyhabit_single_view.xml" value="0.264" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/dialog_edit_goal.xml" value="0.16" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/dialog_habit_rating.xml" value="0.12132725430597771" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/dialogbox_create_habits_layout.xml" value="0.2" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/expert_booking_done.xml" value="0.1956521739130435" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/expert_single_view.xml" value="0.2" />
@@ -172,9 +181,10 @@
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/goal_list_item_schedule.xml" value="0.11574074074074074" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/goal_main.xml" value="0.11574074074074074" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/habit_list.xml" value="0.176" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/habit_list_card.xml" value="0.25" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/habit_success_dialog.xml" value="0.4" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/home_page.xml" value="0.152" />
-        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/journal_note_card.xml" value="0.16" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/journal_note_card.xml" value="0.4" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/main_tasks.xml" value="0.2" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/mediation_level_dialog.xml" value="0.18885869565217392" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/meditaion_usage_statics.xml" value="0.18885869565217392" />
@@ -187,6 +197,8 @@
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/quiz_result.xml" value="0.2" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/sample.xml" value="0.2" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/sampleeee.xml" value="0.1" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/social_habit_history.xml" value="0.14855072463768115" />
+        <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/socil_habit_re_view.xml" value="0.15353260869565216" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/status_bar.xml" value="0.1" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/stress_card.xml" value="0.264" />
         <entry key="..\:/Github/serene-stress_management_application/app/src/main/res/layout/test.xml" value="0.2" />

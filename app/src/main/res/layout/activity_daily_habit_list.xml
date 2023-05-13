@@ -9,6 +9,7 @@
     android:background="@color/white"
     tools:context=".daily_habits.DailyHabitsMain">
 
+
 <!--    <LinearLayout-->
 <!--        android:layout_width="398dp"-->
 <!--        android:layout_height="269dp">-->
@@ -96,6 +97,7 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:padding="16dp">
+
 
         <Button
             android:id="@+id/h1"
@@ -193,13 +195,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         android:backgroundTint="@color/white"
         android:clickable="true"
-        android:onClick="addNewJournal"
+        android:onClick="addNewHabit"
         android:src="@drawable/journal_add_icon" />
 
     <TextView

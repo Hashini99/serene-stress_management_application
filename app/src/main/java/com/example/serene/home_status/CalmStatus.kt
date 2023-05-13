@@ -17,7 +17,7 @@ class CalmStatus : AppCompatActivity() {
 
     lateinit var viewPager: ViewPager
     lateinit var adapter: ImagePagerAdapter
-    val images = listOf(R.drawable.na2, R.drawable.na4, R.drawable.pinktree, R.drawable.na10)
+    val images = listOf(R.drawable.calm1, R.drawable.calm2, R.drawable.calm3)
     var currentIndex = 0
     val handler = Handler()
     var progress: ProgressBar? = null

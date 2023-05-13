@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.serene.academic_goal.GoalMain
 import com.example.serene.daily_habits.DailyHabitsMain
+import com.example.serene.daily_habits.HabitDevide
 import com.example.serene.expert_support.ExpertSupportMain
 import com.example.serene.history.HistoryMain
 import com.example.serene.meditation.MeditationMain
@@ -56,7 +57,7 @@ class MainTasks: AppCompatActivity() {
         }
         //habit
         habit_card.setOnClickListener {
-            startActivity(Intent(this,DailyHabitsMain::class.java))
+            startActivity(Intent(this,HabitDevide::class.java))
             finish()
         }
 

@@ -70,20 +70,19 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button1"
-                    android:clickable="true"
-                    android:text="happy"
-                    android:layout_width="206dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:padding="12dp"
+                    android:layout_gravity="center"
                     android:backgroundTint="@color/white"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:onClick="Addmood"
+                    android:padding="10dp"
+                    android:text="happy"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-
-
-                    android:onClick="Addmood"
-                    />
+                    style="@style/Widget.MaterialComponents.Button.TextButton"/>
 
                 <!--                <ImageButton-->
 <!--                    android:id="@+id/imageButton"-->
@@ -120,16 +119,17 @@
                     android:id="@+id/button2"
                     android:clickable="true"
                     android:text="neutral"
-                    android:layout_width="206dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
+                    android:layout_gravity="center"
                     android:fontFamily="@font/montserrat_medium"
                     android:padding="12dp"
+                    android:textStyle="bold"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/black"
                     android:textSize="20sp"
 
-
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:onClick="Addmood"/>
 
                 <!--                <ImageButton-->
@@ -171,15 +171,16 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button3"
                     android:text="sad"
-                    android:layout_width="206dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
+                    android:layout_gravity="center"
                     android:fontFamily="@font/montserrat_medium"
                     android:padding="12dp"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-
+                    android:textStyle="bold"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
 
                     android:onClick="Addmood"/>
 
@@ -221,15 +222,16 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button4"
                     android:text="contempt"
-                    android:layout_width="206dp"
+                    android:layout_width="160dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
+                    android:layout_gravity="center"
                     android:fontFamily="@font/montserrat_medium"
                     android:padding="12dp"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-
+                    android:textStyle="bold"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:onClick="Addmood"/>
 
 
@@ -276,16 +278,16 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button5"
                     android:text="angry"
-                    android:layout_width="206dp"
+                    android:layout_width="150dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="end"
+                    android:layout_gravity="center"
                     android:fontFamily="@font/montserrat_medium"
                     android:padding="12dp"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/black"
                     android:textSize="20sp"
-
-
+                    android:textStyle="bold"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:onClick="Addmood"/>
 
 

@@ -17,7 +17,7 @@ class Motivational_Status : AppCompatActivity() {
 
     lateinit var viewPager: ViewPager
     lateinit var adapter: ImagePagerAdapter
-    val images = listOf(R.drawable.na6, R.drawable.na8, R.drawable.na9, R.drawable.na10)
+    val images = listOf(R.drawable.mo1, R.drawable.mo2, R.drawable.mo3,)
     var currentIndex = 0
     val handler = Handler()
     var progress: ProgressBar? = null
