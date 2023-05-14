@@ -17,7 +17,7 @@
 
         android:layout_marginBottom="0dp"
         android:alpha="0.3"
-        app:srcCompat="@drawable/na6" />
+        app:srcCompat="@drawable/bbg" />
 
 
 

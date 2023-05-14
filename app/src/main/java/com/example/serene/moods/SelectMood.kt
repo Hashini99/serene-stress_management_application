@@ -174,19 +174,19 @@ class SelectMood : AppCompatActivity() {
 
         // Set click listeners on all mood buttons
         happyButton.setOnClickListener {
-            addMood("happy")
+            addMood("Happy")
         }
         contemptButton.setOnClickListener {
-            addMood("contempt")
+            addMood("Contempt")
         }
         sadButton.setOnClickListener {
-            addMood("sad")
+            addMood("Sad")
         }
         neutralButton.setOnClickListener {
-            addMood("neutral")
+            addMood("Neutral")
         }
         angryButton.setOnClickListener {
-            addMood("angry")
+            addMood("Angry")
         }
     }
 

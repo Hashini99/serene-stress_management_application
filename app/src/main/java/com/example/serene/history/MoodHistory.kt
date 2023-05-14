@@ -1,5 +1,5 @@
-package com.example.serene.history
 
+package com.example.serene.history
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
@@ -47,8 +47,9 @@ data class Moods(
 
 )
 
-class  MoodHistoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
-
+class  MoodHistoryViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    val itemMoodImg: ImageView = itemView.findViewById(R.id.item_mood_img)
+}
 class MoodHistory : AppCompatActivity() {
     val db = Firebase.firestore
 
@@ -59,15 +60,9 @@ class MoodHistory : AppCompatActivity() {
         }
     }
 
-//    private lateinit var binding: TimelineDayFragmentBinding
-//    private var position = 0
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
-
-
-
 
 
 
@@ -78,7 +73,7 @@ class MoodHistory : AppCompatActivity() {
 
         val query = db.collection("mood")
             .whereEqualTo("user", FirebaseAuth.getInstance().currentUser!!.uid)
-        .orderBy("date", Query.Direction.DESCENDING)
+            .orderBy("date", Query.Direction.DESCENDING)
 
         val options = FirestoreRecyclerOptions.Builder<Moods>().setQuery(query, Moods::class.java)
             .setLifecycleOwner(this).build()
@@ -95,47 +90,54 @@ class MoodHistory : AppCompatActivity() {
                 val tv_mood: TextView = holder.itemView.findViewById(R.id.item_mood)
                 val tvSTime: TextView = holder.itemView.findViewById(R.id.item_mood_time)
                 val tvSDate: TextView = holder.itemView.findViewById(R.id.item_mood_date)
-               // val tv_mood_i: ImageView = holder.itemView.findViewById(R.id.item_mood_img)
+                // val tv_mood_i: ImageView = holder.itemView.findViewById(R.id.item_mood_img)
 
                 tv_mood.text = model.selected_mood
                 tvSTime.text = model.time
                 tvSDate.text = model.date
-              // tv_mood_i.imageAlpha = model.img
+                // tv_mood_i.imageAlpha = model.img
 
-
+                // Set card background based on selected mood
+                when (model.selected_mood) {
+                    "Happy" -> holder.itemView.setBackgroundResource(R.drawable.h_bg)
+                    "Sad" -> holder.itemView.setBackgroundResource(R.drawable.s_bg)
+                    "Neutral" -> holder.itemView.setBackgroundResource(R.drawable.n_bg)
+                    "Angry" -> holder.itemView.setBackgroundResource(R.drawable.a_bg)
+                    else -> holder.itemView.setBackgroundResource(R.drawable.c_bg)
+                }
+                // Set img  based on selected mood
+               // val item_mood_img= findViewById<ImageView>(R.id.item_mood_img)
+                val item_mood_img = holder.itemMoodImg
+                if (model.selected_mood == "Happy") {
+                    item_mood_img.setImageResource(R.drawable.h)
+                } else if (model.selected_mood == "Sad") {
+                    item_mood_img.setImageResource(R.drawable.n)
+                }
+                else if(model.selected_mood == "Neutral"){
+                    item_mood_img.setImageResource(R.drawable.s)
+                }
+                else if(model.selected_mood == "Contempt"){
+                    item_mood_img.setImageResource(R.drawable.c)
+                }
+                else {
+                    item_mood_img.setImageResource(R.drawable.a)
+                }
 //change colour
-                if(model.selected_mood == "happy"){
+                if(model.selected_mood == "Happy"){
                     tv_mood.setTextColor(Color.parseColor("#00e676"))
                 }
-                else if(model.selected_mood == "sad"){
+                else if(model.selected_mood == "Sad"){
                     tv_mood.setTextColor(Color.parseColor("#f57c00"))
                 }
-                else if(model.selected_mood == "neutral"){
-                   tv_mood.setTextColor(Color.parseColor("#0091ff"))
-               }
-                else if(model.selected_mood == "angry"){
+                else if(model.selected_mood == "Neutral"){
+                    tv_mood.setTextColor(Color.parseColor("#0091ff"))
+                }
+                else if(model.selected_mood == "Angry"){
                     tv_mood.setTextColor(Color.parseColor("#ff1744"))
                 }
                 else {
                     tv_mood.setTextColor(Color.parseColor("#3C1F7B"))
                 }
-
-// change image
-//                if(model.mood == "sad"){
-//                    item_mood_img.setImageResource(R.drawable.happy);
-//                }
-//                else if(model.mood == "happy"){
-//                    item_mood_img.setImageResource(R.drawable.headphones);
-//                }
-//                else if(model.mood == "moderate"){
-//                    item_mood_img.setImageResource(R.drawable.home);
-//                }
-//                else if(model.mood == "angry"){
-//                    item_mood_img.setImageResource(R.drawable.mic);
-//                }
-//                else {
-//                    item_mood_img.setImageResource(R.drawable.nature);
-//                }
 
 
 
@@ -144,7 +146,7 @@ class MoodHistory : AppCompatActivity() {
                 val documentId = snapshots.getSnapshot(position).id
 
                 holder.itemView.setOnClickListener {
-                  //  changePageToHabitSingleView(documentId)
+                    //  changePageToHabitSingleView(documentId)
                 }
             }
         }
@@ -155,12 +157,6 @@ class MoodHistory : AppCompatActivity() {
 
 
 
-
-
-    fun addNewJournal(view: View){
-        startActivity(Intent(this, AddDailyHabits::class.java))
-        finish()
-    }
 
     override fun onBackPressed() {
         super.onBackPressed()

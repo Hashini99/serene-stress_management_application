@@ -40,6 +40,10 @@
             android:exported="true"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".montly_quiz.MQuiz"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".StatusActivity"
             android:exported="true"
             android:screenOrientation="portrait" />

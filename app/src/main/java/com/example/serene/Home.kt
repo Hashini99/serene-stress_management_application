@@ -294,8 +294,8 @@ class Home: AppCompatActivity() {
 
     private lateinit var calendarView: CalendarView
     lateinit var imageView: ImageView
-    //val images = listOf(R.drawable.na, R.drawable.lake, R.drawable.pinktree)
-    val images = listOf(R.drawable.na6, R.drawable.na8, R.drawable.na9,R.drawable.na10)
+    //val images = listOf(R.drawable.na6, R.drawable.na8, R.drawable.na9,R.drawable.na10)
+    val images = listOf(R.drawable.bbg, R.drawable.pbg, R.drawable.gbg,R.drawable.ybg)
     var currentIndex = 0
     val handler = Handler()
 
@@ -361,9 +361,9 @@ class Home: AppCompatActivity() {
                     currentIndex = 0
                 }
                 imageView.setImageResource(images[currentIndex])
-                handler.postDelayed(this, 20000) // 1 minute delay
+                handler.postDelayed(this, 40000) // 40 seconds delay
             }
-        }, 20000) // 1 minute delay for first image
+        }, 40000) // 40 seconds delay for first image
 
 
 
@@ -415,11 +415,12 @@ class Home: AppCompatActivity() {
             startActivity(Intent(this,SelectMood::class.java))
             finish()
         }
-        //med
+        //que
         mq_card.setOnClickListener {
             startActivity(Intent(this, QuizIntro::class.java))
             finish()
         }
+        /////status
         status.setOnClickListener {
             startActivity(Intent(this,StatusActivity::class.java))
             finish()

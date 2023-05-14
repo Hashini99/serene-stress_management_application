@@ -222,7 +222,7 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button4"
                     android:text="contempt"
-                    android:layout_width="160dp"
+                    android:layout_width="162dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:fontFamily="@font/montserrat_medium"

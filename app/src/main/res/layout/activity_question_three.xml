@@ -117,17 +117,19 @@
                     android:id="@+id/q3_option_one"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/black"
+
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginVertical="5dp"
+                    android:textColor="@color/black"
                     android:fontFamily="@font/montserrat_medium"
                     android:background="@drawable/quiz_option_border"
+                    android:textSize="18sp"
                     android:gravity="center"
                     android:padding="15dp"
                     android:text="Never"
                     android:clickable="true"
 
-                    android:textSize="18sp"/>
+                   />
 
                 <TextView
                     android:id="@+id/q3_option_two"

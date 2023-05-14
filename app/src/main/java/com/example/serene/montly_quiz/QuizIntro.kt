@@ -21,7 +21,7 @@ class QuizIntro: AppCompatActivity() {
     }
 
     fun start(view: View) {
-        startActivity(Intent(this, Quiz::class.java))
+        startActivity(Intent(this, MQuiz::class.java))
         finish()
     }
 

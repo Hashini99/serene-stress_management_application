@@ -10,8 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        android:alpha="0.5"
-        app:srcCompat="@drawable/na6" />
+        android:alpha="0.6"
+        app:srcCompat="@drawable/m1" />
 
     <ImageView
         android:id="@+id/imageView3"

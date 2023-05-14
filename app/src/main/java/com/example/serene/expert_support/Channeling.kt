@@ -40,17 +40,10 @@ class Channeling : AppCompatActivity(), View.OnClickListener {
         Channel_done.setOnClickListener(this)
 
 
-        //setUpSpinner()
+
     }
 
-//    private fun setUpSpinner() {
-//        val adapter =
-//            ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, labels)
-//
-//        labels.sort()
-//
-//        spinnerCategory.adapter = adapter
-//    }
+
 
     override fun onClick(v: View) {
         when (v.id) {
@@ -94,8 +87,7 @@ class Channeling : AppCompatActivity(), View.OnClickListener {
 
 
             )
-//                    viewModel.saveHabit(habit)
-//                    finish()
+
             Firebase.firestore.collection("bookings").add(channel).addOnSuccessListener {
                 startActivity(Intent(this,ChannelList::class.java))
                 finish()
@@ -167,7 +159,7 @@ class Channeling : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun updateDate() {
-        //Mon, 5 Jan 2020
+        //Mon, 5 Jan 2022
         val myformat = "EEE, d MMM yyyy"
         val sdf = SimpleDateFormat(myformat)
         finalDate = myCalendar.time.time

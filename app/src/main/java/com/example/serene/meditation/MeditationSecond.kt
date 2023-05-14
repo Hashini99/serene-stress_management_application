@@ -101,8 +101,8 @@ class MeditationSecond : AppCompatActivity() { //Timer variables
 
 //image loop
     lateinit var imageView: ImageView
-    //val images = listOf(R.drawable.na, R.drawable.lake, R.drawable.pinktree)
-    val images = listOf(R.drawable.na6, R.drawable.na8, R.drawable.na9,R.drawable.na10)
+    val images = listOf(R.drawable.m1, R.drawable.m2, R.drawable.m3,R.drawable.m4)
+    //val images = listOf(R.drawable.na6, R.drawable.na8, R.drawable.na9,R.drawable.na10)
     var currentIndex = 0
     val handler = Handler()
 
