@@ -2,6 +2,7 @@ package com.example.serene.montly_quiz
 
 import android.content.ContentValues.TAG
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -23,6 +24,7 @@ class MQuiz : AppCompatActivity() {
     private lateinit var resultTextView: TextView
     private var questionIndex = 0
     private var answers = IntArray(10)
+    private var allQuestionsAnswered = false
     private val questionList = arrayOf(
         "In the last month, how often have you been upset because of something that happened unexpectedly?",
         "In the last month, how often have you felt that you were unable to control the important things in your life?",
@@ -75,6 +77,8 @@ class MQuiz : AppCompatActivity() {
                 questionIndex++
                 if (questionIndex == questionList.size) {
                     calculateResult()
+                    submitButton.isEnabled = false
+                    allQuestionsAnswered = true
                 } else {
                     setQuestion()
                 }
@@ -82,6 +86,7 @@ class MQuiz : AppCompatActivity() {
                 Toast.makeText(this, "Please select an answer.", Toast.LENGTH_SHORT).show()
             }
         }
+
 
 
     }
@@ -101,8 +106,9 @@ class MQuiz : AppCompatActivity() {
             answerRadioGroup.addView(radioButton)
         }
         // Update progress bar
-        val progressBar = findViewById<ProgressBar>(R.id.progress_bar)
         progressBar.incrementProgressBy(1)
+
+
     }
 
 
@@ -122,22 +128,27 @@ class MQuiz : AppCompatActivity() {
             }
         }
         val interpretation = when (pssScore) {
-            in 0..17 -> "Low"
-            in 18..29 -> "Moderate"
-            in 30..43 -> "High"
+            in 0..17 -> "You are facing Low stress"
+            in 18..29 -> "You are facing Moderate stress"
+            in 30..43 -> "You are facing  High stress"
             else -> "Error"
         }
+//        println("PSS Score: $pssScore")
+//        println("Interpretation: $interpretation")
+//        resultTextView.text = "PSS Score: $pssScore \nInterpretation: $interpretation"
         println("PSS Score: $pssScore")
         println("Interpretation: $interpretation")
-        resultTextView.text = "PSS Score: $pssScore\nInterpretation: $interpretation"
+        resultTextView.text = "PSS Score: $pssScore\n\n $interpretation"
+        resultTextView.setTextColor(Color.BLACK)
 
-// Access Firestore instance
+
+        // Access Firestore instance
         val db = Firebase.firestore
 
-// Create a new document with a generated ID
+        // Create a new document with a generated ID
         val docRef = db.collection("quiz").document()
 
-// Create a map with the PSS score and current timestamp
+        // Create a map with the PSS score and current timestamp
         val data = hashMapOf(
             "user" to FirebaseAuth.getInstance().currentUser?.uid,
             "score" to pssScore,
@@ -147,7 +158,7 @@ class MQuiz : AppCompatActivity() {
             "intro" to interpretation
         )
 
-// Add the data to the document
+        // Add the data to the document
         docRef.set(data)
             .addOnSuccessListener {
                 Log.d(TAG, "DocumentSnapshot added with ID: ${docRef.id}")
@@ -155,9 +166,8 @@ class MQuiz : AppCompatActivity() {
             .addOnFailureListener { e ->
                 Log.w(TAG, "Error adding document", e)
             }
-
-
     }
+
 
     override fun onBackPressed() {
         super.onBackPressed()

@@ -110,6 +110,7 @@
     <color name="pastel_red">#ffcccb</color>
 
 
+    <color name="selected_item_background_color">#e84e40</color>
 
 
     <array name="random_color">

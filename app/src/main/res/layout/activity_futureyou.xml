@@ -57,7 +57,7 @@
             android:layout_marginTop="116dp"
 
             app:cardCornerRadius="25dp"
-            android:backgroundTint="@color/pastel_yellow"
+            android:backgroundTint="@color/white"
             app:cardElevation="10dp"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true"
@@ -76,11 +76,11 @@
                 android:layout_marginTop="20dp"/>
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
+                android:layout_width="128dp"
+                android:layout_height="95dp"
                 android:layout_gravity="center_horizontal|top"
                 android:layout_marginTop="60dp"
-                android:src="@drawable/icon" />
+                android:src="@drawable/sr" />
 
             <!--            <TextView-->
 <!--                android:layout_width="match_parent"-->
@@ -104,7 +104,7 @@
             app:cardElevation="10dp"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true"
-            android:backgroundTint="@color/pastel_yellow"
+            android:backgroundTint="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintTop_toTopOf="parent"
@@ -137,11 +137,11 @@
                 android:layout_marginTop="20dp"/>
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/icon"
+                android:layout_width="125dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center_horizontal|top"
-                android:layout_marginTop="60dp"/>
+                android:layout_marginTop="60dp"
+                android:src="@drawable/cm" />
 
 <!--            <TextView-->
 <!--                android:layout_width="match_parent"-->
@@ -163,7 +163,7 @@
 
             app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
-            android:backgroundTint="@color/pastel_yellow"
+            android:backgroundTint="@color/white"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true"
 
@@ -198,11 +198,11 @@
                 android:layout_marginTop="20dp"/>
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/icon"
+                android:layout_width="122dp"
+                android:layout_height="102dp"
                 android:layout_gravity="center_horizontal|top"
-                android:layout_marginTop="60dp"/>
+                android:layout_marginTop="60dp"
+                android:src="@drawable/fm" />
 
 <!--            <TextView-->
 <!--                android:layout_width="match_parent"-->
@@ -223,7 +223,7 @@
             android:background="@drawable/card_background"
             app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
-            android:backgroundTint="@color/pastel_yellow"
+            android:backgroundTint="@color/white"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true"
             app:layout_constraintHorizontal_chainStyle="spread"
@@ -257,13 +257,13 @@
                 android:layout_marginTop="20dp"/>
 
             <ImageView
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/icon"
+                android:layout_width="108dp"
+                android:layout_height="86dp"
                 android:layout_gravity="center_horizontal|top"
-                android:layout_marginTop="60dp"/>
+                android:layout_marginTop="68dp"
+                android:src="@drawable/tm" />
 
-<!--            <TextView-->
+            <!--            <TextView-->
 <!--                android:layout_width="match_parent"-->
 <!--                android:layout_height="wrap_content"-->
 <!--                android:text="Description"-->

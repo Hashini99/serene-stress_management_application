@@ -46,33 +46,61 @@ class Profile: AppCompatActivity()
         })
 
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navpr)
+
+
+
+//        // Create a ColorStateList object from the selector XML file
+//        val colorStateList = resources.getColorStateList(R.color.bottom_nav_colors, null)
+//
+//// Set the color of the selected item to the ColorStateList
+//        bottomNavigationView.itemTextColor = colorStateList
+//        bottomNavigationView.itemIconTintList = colorStateList
+//
+
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home_graph -> {
                     val intent = Intent(this, Home::class.java)
                     startActivity(intent)
+                  //  bottomNavigationView.selectedItemId = menuItem.itemId
                     true
                 }
                 R.id.main_graph -> {
                     val intent = Intent(this, MainTasks::class.java)
                     startActivity(intent)
+                   // bottomNavigationView.selectedItemId = menuItem.itemId
                     true
                 }
                 R.id.charts_graph -> {
                     val intent = Intent(this, HistoryMain::class.java)
                     startActivity(intent)
+                   // bottomNavigationView.selectedItemId = menuItem.itemId
                     true
                 }
                 R.id.expert_graph -> {
                     val intent = Intent(this, ExpertSupportMain::class.java)
                     startActivity(intent)
+                  //  bottomNavigationView.selectedItemId = menuItem.itemId
                     true
                 }
+//                R.id.settings_graph -> {
+//                    val intent = Intent(this, Profile::class.java)
+//                    startActivity(intent)
+//                 //   bottomNavigationView.selectedItemId = menuItem.itemId
+//                    true
+//                }
+
                 R.id.settings_graph -> {
-                    val intent = Intent(this, Profile::class.java)
-                    startActivity(intent)
-                    true
+                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
+                        // Do nothing if the selected item is already the profile page
+                        return@setOnItemSelectedListener true
+                    } else {
+                        val intent = Intent(this, Profile::class.java)
+                        startActivity(intent)
+                        bottomNavigationView.selectedItemId = menuItem.itemId
+                        true
+                    }
                 }
                 else -> false
             }

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.serene.JournalMainActivity
 import com.example.serene.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -101,5 +102,10 @@ class SocialHabit : AppCompatActivity() {
             builder.setNegativeButton("Cancel", null)
             builder.show()
         }
+    }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, SocialHabitMain::class.java))
+        finish()
     }
 }

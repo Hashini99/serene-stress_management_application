@@ -211,4 +211,9 @@ class SocialHabitMain : AppCompatActivity() {
         startActivity(Intent(this,FutureYou::class.java))
         finish()
     }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, HabitDevide::class.java))
+        finish()
+    }
 }

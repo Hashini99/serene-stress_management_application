@@ -100,4 +100,9 @@ class FinancialHabit : AppCompatActivity() {
             builder.show()
         }
     }
+    override fun onBackPressed() {
+        super.onBackPressed()
+        startActivity(Intent(this, SocialHabitMain::class.java))
+        finish()
+    }
 }

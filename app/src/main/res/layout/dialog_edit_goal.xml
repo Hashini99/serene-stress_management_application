@@ -5,31 +5,48 @@
     android:layout_height="match_parent">
 
 
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/dialog_edit_goal_layout"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="vertical"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/edit_goal_title"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:hint="Goal title" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/edit_goal_description"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:hint="Goal description" />-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/button_update"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Update" />-->
+    <!--    </LinearLayout>-->
     <LinearLayout
-        android:id="@+id/dialog_edit_goal_layout"
+        android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <EditText
-            android:id="@+id/edit_goal_title"
+            android:id="@+id/editTextTasks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Goal title" />
+            android:hint="Enter new tasks" />
 
-        <EditText
-            android:id="@+id/edit_goal_description"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Goal description" />
-
-        <Button
-            android:id="@+id/button_update"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Update" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

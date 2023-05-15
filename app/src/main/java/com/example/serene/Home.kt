@@ -33,262 +33,6 @@ import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_main_task.*
 import kotlinx.android.synthetic.main.activity_profile.*
 
-//import com.prolificinteractive.materialcalendarview.CalendarDay
-//import com.prolificinteractive.materialcalendarview.DayViewFacade
-//
-//
-//import com.prolificinteractive.materialcalendarview.MaterialCalendarView
-//import com.prolificinteractive.materialcalendarview.spans.DotSpan
-//import com.prolificinteractive.materialcalendarview.DayViewDecorator
-
-
-
-
-//class Home: AppCompatActivity() {
-//    val db = Firebase.firestore
-//    // declaring a null variable for VideoView
-//   // var simpleVideoView: VideoView? = null
-//
-//    // declaring a null variable for MediaController
-//   // var mediaControls: MediaController? = null
-//
-//
-//
-//
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
-//        try {
-//            this.supportActionBar!!.hide()
-//        } catch (e: NullPointerException) {
-//        }
-//        setContentView(R.layout.activity_home)
-//        FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().currentUser!!.uid).get().addOnSuccessListener {
-//
-//            display_name.text = it.data!!.getValue("name").toString()
-//
-////            txt_phone.text = it.data!!.getValue("mobile").toString()
-////            txt_address.text = it.data!!.getValue("address").toString()
-//
-//        }.addOnFailureListener {
-//            Toast.makeText(applicationContext, "Cannot Get Data from Server", Toast.LENGTH_LONG)
-//                .show()
-//        }
-////nav bar
-//        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
-//        bottomNavigationView.setOnItemSelectedListener { menuItem ->
-//            when (menuItem.itemId) {
-//                R.id.home_graph -> {
-//                    val intent = Intent(this, Home::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                R.id.main_graph -> {
-//                    val intent = Intent(this, MainTasks::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                R.id.charts_graph -> {
-//                    val intent = Intent(this, HistoryMain::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                R.id.expert_graph -> {
-//                    val intent = Intent(this, ExpertSupportMain::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                R.id.settings_graph -> {
-//                    val intent = Intent(this, Profile::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                else -> false
-//            }
-//
-//        }
-//
-//        mood_card.setOnClickListener {
-//            startActivity(Intent(this,SelectMood::class.java))
-//            finish()
-//        }
-//        //med
-//        mq_card.setOnClickListener {
-//            startActivity(Intent(this, QuizIntro::class.java))
-//            finish()
-//        }
-//
-////        btnSave.setOnClickListener {
-////            lifecycleScope.launch {
-////
-////                val existingEntry = withContext(Dispatchers.IO) {
-////                    GlobalData.userID?.let { userID ->
-////                        GlobalData.dateInCalendar?.let { dateInCalendar ->
-////                            userDao.readMoodOfUser(userID, dateInCalendar)
-////                        }
-////                    }
-////                }
-//
-//
-//
-//
-////        simpleVideoView = findViewById<View>(R.id.simpleVideoView) as VideoView
-////
-////        if (mediaControls == null) {
-////            // creating an object of media controller class
-////            mediaControls = MediaController(this)
-////
-////            // set the anchor view for the video view
-////            mediaControls!!.setAnchorView(this.simpleVideoView)
-////        }
-////
-////        // set the media controller for video view
-////        simpleVideoView!!.setMediaController(mediaControls)
-////
-////        // set the absolute path of the video file which is going to be played
-////        simpleVideoView!!.setVideoURI(Uri.parse("android.resource://$packageName/${R.raw.blue_sky}"))
-////        // ("android.resource://$packageName/${R.raw.gfgvideo}")
-////
-////        simpleVideoView!!.requestFocus()
-////
-////        // starting the video
-////        simpleVideoView!!.start()
-//
-//        // display a toast message
-//        // after the video is completed
-////        simpleVideoView!!.setOnCompletionListener {
-////            Toast.makeText(applicationContext, "Video completed",
-////                Toast.LENGTH_LONG).show()
-////            true
-////        }
-//
-//        // display a toast message if any
-//        // error occurs while playing the video
-////        simpleVideoView!!.setOnErrorListener { mp, what, extra ->
-////            Toast.makeText(applicationContext, "An Error Occurred " +
-////                    "While Playing Video !!!", Toast.LENGTH_LONG).show()
-////            false
-////        }
-//
-//
-//
-//
-//            }
-//    fun chat(view: View){
-//        startActivity(Intent(this,BotActivity ::class.java))
-//        finish()
-//    }
-//}
-
-
-
-
-
-//class Home: AppCompatActivity() {
-//    val db = Firebase.firestore
-//
-//    lateinit var imageView: ImageView
-//    //val images = listOf(R.drawable.na, R.drawable.lake, R.drawable.pinktree)
-//    val images = listOf(R.drawable.na6, R.drawable.na8, R.drawable.na9,R.drawable.na10)
-//    var currentIndex = 0
-//    val handler = Handler()
-//
-//
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
-//        try {
-//            this.supportActionBar!!.hide()
-//        } catch (e: NullPointerException) {
-//        }
-//        setContentView(R.layout.activity_home)
-//
-//
-//        imageView = findViewById(R.id.imageView_h)
-//
-//        handler.postDelayed(object : Runnable {
-//            override fun run() {
-//                currentIndex++
-//                if (currentIndex >= images.size) {
-//                    currentIndex = 0
-//                }
-//                imageView.setImageResource(images[currentIndex])
-//                handler.postDelayed(this, 20000) // 1 minute delay
-//            }
-//        }, 20000) // 1 minute delay for first image
-//
-//
-//
-//
-//    FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().currentUser!!.uid).get().addOnSuccessListener {
-//
-//            display_name.text = it.data!!.getValue("name").toString()
-//
-//
-//        }.addOnFailureListener {
-//            Toast.makeText(applicationContext, "Cannot Get Data from Server", Toast.LENGTH_LONG)
-//                .show()
-//        }
-////nav bar
-//        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
-//        bottomNavigationView.setOnItemSelectedListener { menuItem ->
-//            when (menuItem.itemId) {
-//                R.id.home_graph -> {
-//                    val intent = Intent(this, Home::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                R.id.main_graph -> {
-//                    val intent = Intent(this, MainTasks::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                R.id.charts_graph -> {
-//                    val intent = Intent(this, HistoryMain::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                R.id.expert_graph -> {
-//                    val intent = Intent(this, ExpertSupportMain::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                R.id.settings_graph -> {
-//                    val intent = Intent(this, Profile::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                else -> false
-//            }
-//
-//        }
-//
-//        mood_card.setOnClickListener {
-//            startActivity(Intent(this,SelectMood::class.java))
-//            finish()
-//        }
-//        //med
-//        mq_card.setOnClickListener {
-//            startActivity(Intent(this, QuizIntro::class.java))
-//            finish()
-//        }
-//
-//
-//    }
-//    override fun onDestroy() {
-//        super.onDestroy()
-//        handler.removeCallbacksAndMessages(null)
-//    }
-//    fun chat(view: View){
-//        startActivity(Intent(this,BotActivity ::class.java))
-//        finish()
-//    }
-//}
-
-
-
 class Home: AppCompatActivity() {
     val db = Firebase.firestore
 
@@ -378,38 +122,126 @@ class Home: AppCompatActivity() {
                 .show()
         }
 //nav bar
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_nav)
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navho)
+
+//        // Create a ColorStateList object from the selector XML file
+//        val colorStateList = resources.getColorStateList(R.color.bottom_nav_colors, null)
+//// Set the color of the selected item to the ColorStateList
+//        bottomNavigationView.itemTextColor = colorStateList
+//        bottomNavigationView.itemIconTintList = colorStateList
+//
+
+
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
+//                R.id.home_graph -> {
+//                    val intent = Intent(this, Home::class.java)
+//                    startActivity(intent)
+//                    //bottomNavigationView.selectedItemId = menuItem.itemId
+//                    true
+//                }
                 R.id.home_graph -> {
-                    val intent = Intent(this, Home::class.java)
-                    startActivity(intent)
-                    true
+                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
+                        // Do nothing if the selected item is already the home page
+                        return@setOnItemSelectedListener true
+                    } else {
+                        val intent = Intent(this, Home::class.java)
+                        startActivity(intent)
+                        bottomNavigationView.selectedItemId = menuItem.itemId
+                        true
+                    }
                 }
                 R.id.main_graph -> {
                     val intent = Intent(this, MainTasks::class.java)
                     startActivity(intent)
+                  //  bottomNavigationView.selectedItemId = menuItem.itemId
                     true
                 }
                 R.id.charts_graph -> {
                     val intent = Intent(this, HistoryMain::class.java)
                     startActivity(intent)
+                   // bottomNavigationView.selectedItemId = menuItem.itemId
                     true
                 }
                 R.id.expert_graph -> {
                     val intent = Intent(this, ExpertSupportMain::class.java)
                     startActivity(intent)
+                   // bottomNavigationView.selectedItemId = menuItem.itemId
                     true
                 }
                 R.id.settings_graph -> {
                     val intent = Intent(this, Profile::class.java)
                     startActivity(intent)
+                    //bottomNavigationView.selectedItemId = menuItem.itemId
                     true
                 }
                 else -> false
             }
 
         }
+
+//        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navho)
+//
+//        bottomNavigationView.setOnItemSelectedListener { menuItem ->
+//            when (menuItem.itemId) {
+//                R.id.home_graph -> {
+//                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
+//                        // Do nothing if the selected item is already the home page
+//                        return@setOnItemSelectedListener true
+//                    } else {
+//                        val intent = Intent(this, Home::class.java)
+//                        startActivity(intent)
+//                        bottomNavigationView.selectedItemId = menuItem.itemId
+//                        true
+//                    }
+//                }
+//                R.id.main_graph -> {
+//                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
+//                        // Do nothing if the selected item is already the main tasks page
+//                        return@setOnItemSelectedListener true
+//                    } else {
+//                        val intent = Intent(this, MainTasks::class.java)
+//                        startActivity(intent)
+//                        bottomNavigationView.selectedItemId = menuItem.itemId
+//                        true
+//                    }
+//                }
+//                R.id.charts_graph -> {
+//                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
+//                        // Do nothing if the selected item is already the history page
+//                        return@setOnItemSelectedListener true
+//                    } else {
+//                        val intent = Intent(this, HistoryMain::class.java)
+//                        startActivity(intent)
+//                        bottomNavigationView.selectedItemId = menuItem.itemId
+//                        true
+//                    }
+//                }
+//                R.id.expert_graph -> {
+//                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
+//                        // Do nothing if the selected item is already the expert support page
+//                        return@setOnItemSelectedListener true
+//                    } else {
+//                        val intent = Intent(this, ExpertSupportMain::class.java)
+//                        startActivity(intent)
+//                        bottomNavigationView.selectedItemId = menuItem.itemId
+//                        true
+//                    }
+//                }
+//                R.id.settings_graph -> {
+//                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
+//                        // Do nothing if the selected item is already the profile page
+//                        return@setOnItemSelectedListener true
+//                    } else {
+//                        val intent = Intent(this, Profile::class.java)
+//                        startActivity(intent)
+//                        bottomNavigationView.selectedItemId = menuItem.itemId
+//                        true
+//                    }
+//                }
+//                else -> false
+//            }
+//        }
 
         mood_card.setOnClickListener {
             startActivity(Intent(this,SelectMood::class.java))
