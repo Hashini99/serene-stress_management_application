@@ -17,18 +17,19 @@
     <RelativeLayout
         android:id="@+id/idRLMsg"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
         <EditText
+            android:id="@+id/idEtMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:layout_margin="3dp"
+            android:layout_toLeftOf="@id/idFABsend"
             android:hint="Enter the Message "
             android:singleLine="true"
-            android:layout_margin="3dp"
-            android:id="@+id/idEtMessage"
-            android:layout_toLeftOf="@id/idFABsend"
             android:textColor="@color/white"
             android:textColorHint="@color/white" />
 

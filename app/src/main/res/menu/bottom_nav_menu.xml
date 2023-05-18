@@ -12,14 +12,14 @@
         android:id="@+id/main_graph"
         android:contentDescription="Tasks"
         android:icon="@drawable/main_tasks"
-        android:title="Tasks"
+        android:title="Tools"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/charts_graph"
         android:contentDescription="Charts"
         android:icon="@drawable/charts"
-        android:title="Charts"
+        android:title="History"
         app:showAsAction="never" />
     <item
         android:id="@+id/expert_graph"

@@ -23,7 +23,7 @@ class TimeManagement : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_social_habits)
-
+        supportActionBar?.title = getString(R.string.t_m)
         auth = FirebaseAuth.getInstance()
         firestore = FirebaseFirestore.getInstance()
 
@@ -76,7 +76,7 @@ class TimeManagement : AppCompatActivity() {
 
                     Firebase.firestore.collection("futurehabits").add(socialhabits)
                         .addOnSuccessListener {
-                            startActivity(Intent(this, DailyHabitsMain::class.java))
+                            startActivity(Intent(this, SocialHabitMain::class.java))
                             finish()
                         }
 

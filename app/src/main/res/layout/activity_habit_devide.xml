@@ -4,40 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/pastel_yellow"
 
     tools:context="com.example.serene.moods.MoodFix">
 
-
-    <TextView
-        android:id="@+id/tv_heythere"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/montserrat_medium"
-        android:text=" "
-        android:textColor="#0D3DCD"
-        android:textSize="40sp"
-        android:textStyle="bold"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_whtwnttotry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="67dp"
         android:layout_marginRight="5dp"
+        android:layout_marginBottom="4dp"
         android:fontFamily="@font/montserrat_medium"
         android:text=""
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ll_moods"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_heythere" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
 
@@ -50,7 +38,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_whtwnttotry"
+        app:layout_constraintTop_toBottomOf="@+id/tv_whtwnttotry"
         app:layout_constraintVertical_bias="1.0">
 
         <androidx.cardview.widget.CardView
@@ -58,8 +46,8 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="25dp"
-            android:backgroundTint="@color/pastel_yellow"
 
+            android:background="@drawable/common_card"
             app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
             app:cardMaxElevation="15dp"
@@ -68,22 +56,22 @@
             >
 
 
-            <ImageView
+<!--            <ImageView-->
 
-                android:layout_width="45dp"
-                android:layout_height="42dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
+<!--                android:layout_width="45dp"-->
+<!--                android:layout_height="42dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
 
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="240dp"
-                android:padding="5dp"
-                android:text="Mood Journal"
-                android:scaleType="centerCrop"
-                android:src="@drawable/h" />
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginStart="25dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginEnd="240dp"-->
+<!--                android:padding="5dp"-->
+<!--                android:scaleType="centerCrop"-->
+<!--                android:src="@drawable/h"-->
+<!--                android:text="Mood Journal" />-->
 
             <TextView
 
@@ -91,17 +79,17 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:textColor="@color/blue3"
-                android:text="Future You"
-                android:fontFamily="@font/montserratbold"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="30dp"
+                android:textSize="18sp"
                 android:layout_marginEnd="240dp"
+                android:fontFamily="@font/montserratbold"
                 android:padding="5dp"
                 android:scaleType="centerCrop"
-                />
+                android:text="Future You"
+                android:textColor="@color/blue3" />
 
             <TextView
                 android:layout_width="329dp"
@@ -110,12 +98,13 @@
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
+                android:layout_marginTop="40dp"
                 android:layout_gravity="center"
                 android:fontFamily="@font/montserrat_medium"
                 android:padding="12dp"
                 android:text="Building habits that help you manage your time, money, and social and career goals to become the best version of yourself"
                 android:textColor="@color/blue3"
-                android:textSize="12sp" />
+                android:textSize="15sp" />
 
 
         </androidx.cardview.widget.CardView>
@@ -125,31 +114,32 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="25dp"
-            android:backgroundTint="@color/pastel_yellow"
-            app:cardCornerRadius="25dp"
+            android:backgroundTint="@color/white"
             android:textColor="@color/black"
+            app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
+            android:background="@drawable/common_card"
             app:cardMaxElevation="15dp"
             app:cardPreventCornerOverlap="true">
 
 
-            <ImageView
-                android:id="@+id/vid_icon"
+<!--            <ImageView-->
+<!--                android:id="@+id/vid_icon"-->
 
-                android:layout_width="34dp"
-                android:layout_height="40dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
+<!--                android:layout_width="34dp"-->
+<!--                android:layout_height="40dp"-->
+<!--                android:layout_alignParentStart="true"-->
+<!--                android:layout_alignParentTop="true"-->
 
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginEnd="240dp"
-                android:padding="5dp"
+<!--                android:layout_alignParentEnd="true"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_marginStart="25dp"-->
+<!--                android:layout_marginTop="30dp"-->
+<!--                android:layout_marginEnd="240dp"-->
+<!--                android:padding="5dp"-->
 
-                android:scaleType="centerInside"
-                android:src="@drawable/charts" />
+<!--                android:scaleType="centerInside"-->
+<!--                android:src="@drawable/charts" />-->
 
             <TextView
 
@@ -157,17 +147,18 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:text="Fit and Focus"
-                android:textColor="@color/blue3"
-                android:fontFamily="@font/montserratbold"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentBottom="true"
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="240dp"
+                android:fontFamily="@font/montserratbold"
                 android:padding="5dp"
+                android:textSize="18sp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/h"
+                android:text="Fit and Focus"
+                android:textColor="@color/blue3"
                 tools:ignore="HardcodedText" />
 
             <TextView
@@ -179,10 +170,11 @@
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="center"
                 android:fontFamily="@font/montserrat_medium"
-                android:padding="12dp"
+                android:padding="15dp"
+                android:layout_marginTop="40dp"
                 android:text="Shape up your body and mind with Fit and Focused - develop healthy habits for strength, endurance, and mental clarity"
                 android:textColor="@color/blue3"
-                android:textSize="12sp"
+                android:textSize="15sp"
                 tools:ignore="HardcodedText" />
 
 
@@ -197,21 +189,21 @@
 
     </LinearLayout>
 
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottom_nav"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:background="@color/white"-->
-<!--        app:itemIconTint="@color/blue3"-->
-<!--        app:itemTextColor="@color/blue3"-->
-<!--        app:labelVisibilityMode="labeled"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+    <!--        android:id="@+id/bottom_nav"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:background="@color/white"-->
+    <!--        app:itemIconTint="@color/blue3"-->
+    <!--        app:itemTextColor="@color/blue3"-->
+    <!--        app:labelVisibilityMode="labeled"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
 
-<!--        app:menu="@menu/bottom_nav_menu"-->
-<!--        tools:ignore="DuplicateIds" />-->
+    <!--        app:menu="@menu/bottom_nav_menu"-->
+    <!--        tools:ignore="DuplicateIds" />-->
 
 
     <!-- Bottom navigation view -->

@@ -55,7 +55,7 @@ class MQuiz : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_monthly_que)
-
+        supportActionBar?.title = getString(R.string.m_q)
         questionTextView = findViewById(R.id.question_text_view)
         answerRadioGroup = findViewById(R.id.answer_radio_group)
         submitButton = findViewById(R.id.submit_button)

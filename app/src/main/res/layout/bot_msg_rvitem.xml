@@ -18,7 +18,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_margin="10dp"
-            android:src="@drawable/chatbot" />
+            android:src="@drawable/chatbott" />
 
         <TextView
             android:id="@+id/idTvBot"

@@ -58,22 +58,46 @@ class Home: AppCompatActivity() {
         // initialize the CalendarView
         calendarView = findViewById(R.id.calendarView)
 
+
         calendarView.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val note = retrieveNoteForDate(year, month, dayOfMonth)
 
             if (note.isNotEmpty()) {
                 // display the existing note to the user using an AlertDialog
                 val builder = AlertDialog.Builder(this)
-                builder.setTitle("Note for $year/$month/$dayOfMonth")
+                builder.setTitle("DateMinder for $year/$month/$dayOfMonth")
                 builder.setMessage(note)
-                builder.setPositiveButton("OK") { dialog, _ ->
+
+                builder.setPositiveButton("Update") { dialog, _ ->
+                    val updateBuilder = AlertDialog.Builder(this)
+                    updateBuilder.setTitle("Update Note")
+
+                    val input = EditText(this)
+                    input.setText(note) // Set the existing note as the initial text in the EditText
+                    updateBuilder.setView(input)
+
+                    updateBuilder.setPositiveButton("Save") { _, _ ->
+                        val updatedNote = input.text.toString()
+                        // Update the note in your data storage
+                        updateNoteForDate(year, month, dayOfMonth, updatedNote)
+                    }
+
+                    updateBuilder.setNegativeButton("Cancel") { _, _ ->
+                        // Do nothing
+                    }
+
+                    updateBuilder.show()
+                }
+
+                builder.setNegativeButton("OK") { dialog, _ ->
                     dialog.dismiss()
                 }
+
                 builder.show()
             } else {
                 // create an AlertDialog to prompt the user for a note
                 val builder = AlertDialog.Builder(this)
-                builder.setTitle("Add Note")
+                builder.setTitle("Add DateMinder")
 
                 val input = EditText(this)
                 builder.setView(input)
@@ -276,6 +300,12 @@ class Home: AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("Notes", Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()
         editor.putString("$year-$month-$dayOfMonth", note)
+        editor.apply()
+    }
+    private fun updateNoteForDate(year: Int, month: Int, dayOfMonth: Int, updatedNote: String) {
+        val sharedPreferences = getSharedPreferences("Notes", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("$year-$month-$dayOfMonth", updatedNote)
         editor.apply()
     }
 

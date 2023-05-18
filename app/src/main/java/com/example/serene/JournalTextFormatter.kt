@@ -10,89 +10,90 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.util.Log
+import android.view.View
 import android.widget.EditText
 import android.widget.RadioButton
 import android.widget.TextView
 import android.widget.Toast
+import com.example.serene.daily_habits.documentID
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import kotlinx.android.synthetic.main.activity_update_journal.*
+import kotlinx.android.synthetic.main.activity_update_profile.*
+lateinit var documentID: String
+class JournalTextFormatter: AppCompatActivity() {
 
-class JournalTextFormatter {}
-//    : AppCompatActivity() {
-//    lateinit var cancelFormatButton: FloatingActionButton
-//    lateinit var saveFormatButton: FloatingActionButton
-//    lateinit var startInt: EditText
-//    lateinit var endInt: EditText
-//    lateinit var resultTV: TextView
-//    lateinit var redRadioB: RadioButton
-//    lateinit var blueRadioB: RadioButton
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_text_formatter)
-//
-//        cancelFormatButton=findViewById(R.id.formatBackButton)
-//        saveFormatButton=findViewById(R.id.formatSaveButton)
-//        startInt=findViewById(R.id.startInt)
-//        endInt=findViewById(R.id.endInt)
-//        resultTV=findViewById(R.id.resultTV)
-//        redRadioB=findViewById(R.id.colorRadioButton)
-//
-//
-//
-//
-//        cancelFormatButton.setOnClickListener{
-//            val intent = Intent(this@TextFormatter,AddEditNoteActivity::class.java)
-//            startActivity(intent)
-//            this.finish()
-//        }
-//
-//        saveFormatButton.setOnClickListener{
-//            if(startInt.text.isNotEmpty() && endInt.text.isNotEmpty()){
-//                formatText()
-//            }else{
-//                Toast.makeText(this, "Please fill TO and FROM",Toast.LENGTH_SHORT).show()
-//            }
-//        }
-//    }
-//
-//    private fun formatText() {
-//
-//        //Log.d("solutionnnnnn", (start+end).toString())
-//        //Log.d("the sringg ",spannableString.toString())
-//
-//
-//        var title: String = intent.getStringExtra("title").toString()
-//        var description: String = intent.getStringExtra("description").toString()
-//        val spannableString: SpannableString = SpannableString(description)
-//
-//        val start = startInt.text.toString().toInt()
-//        val end = endInt.text.toString().toInt()
-//
-//        /*var fColor= ForegroundColorSpan(Color.BLACK)
-//        spannableString.setSpan(fColor,start,end,Spannable.SPAN_INCLUSIVE_INCLUSIVE)*/
-//
-//        if (redRadioB.isChecked){
-//            var fColor= ForegroundColorSpan(Color.RED)
-//            spannableString.setSpan(fColor,start,end,Spannable.SPAN_INCLUSIVE_INCLUSIVE)
-//        }
-//        /* if (blueRadioB.isChecked){
-//             var fColor= ForegroundColorSpan(Color.BLUE)
-//             spannableString.setSpan(fColor,start,end,Spannable.SPAN_INCLUSIVE_INCLUSIVE)
-//         }*/
-//
-//
-//        resultTV.text= spannableString
-//
-//
-//
-//
-//
-//        /*val intent = Intent(this@TextFormatter,AddEditNoteActivity::class.java)
-//        intent.putExtra("formattedTitle", title)
-//        intent.putExtra("formattedDesc", spannableString)
-//        startActivity(intent)
-//        this.finish()*/
-//
-//
-//    }
-//}
+    lateinit var ettitle: EditText
+    lateinit var etdes: EditText
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        try {
+            this.supportActionBar!!.hide()
+        } catch (e: NullPointerException) {}
+
+        setContentView(R.layout.activity_update_journal)
+
+        ettitle = findViewById(R.id.et_title)
+       etdes = findViewById(R.id.et_des)
+
+
+       // FirebaseFirestore.getInstance().collection("journal").document(FirebaseAuth.getInstance().currentUser!!.uid).get().addOnSuccessListener {
+            FirebaseFirestore.getInstance().collection("journal").document(documentID.toString()).get()     .addOnSuccessListener {
+
+
+            et_title.setText(it.data!!.getValue("title").toString())
+            et_des.setText(it.data!!.getValue("description").toString())
+
+
+        }.addOnFailureListener{
+            Toast.makeText(applicationContext,"Cannot Get Data from Server", Toast.LENGTH_LONG).show()
+
+            startActivity(Intent(this, Profile::class.java))
+            finish()
+        }
+    }
+
+    fun validate():Boolean{
+        if (etdes.text.toString().equals("")) {
+            etdes.setError("Name Cannot be Empty")
+            return false
+
+        }else{
+            return true
+        }
+    }
+
+    fun updateJournalData(view: View){
+        if(validate()){
+            val description = etdes.text.toString()
+           val title = ettitle.text.toString()
+//            val mobile = etPhoneNumber.text.toString()
+
+            val journal = hashMapOf(
+                "title" to title,
+                "description" to description,
+
+                "email" to FirebaseAuth.getInstance().currentUser!!.email
+            )
+
+            Firebase.firestore.collection("journal").document(FirebaseAuth.getInstance().currentUser!!.uid).set(journal).addOnSuccessListener {
+                Toast.makeText(applicationContext,"Updated Successful", Toast.LENGTH_LONG).show()
+                startActivity(Intent(this, Home::class.java))
+                finish()
+            }.addOnFailureListener{
+                Toast.makeText(applicationContext,"Cannot Update", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this, Profile::class.java))
+        finish()
+    }
+}

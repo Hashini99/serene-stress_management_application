@@ -9,6 +9,8 @@ import android.util.TypedValue
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -40,23 +42,46 @@ data class DailyHabit(
 
         )
 
-class  DailyHabitViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
-
+class  DailyHabitViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    val itemPriImg: ImageView = itemView.findViewById(R.id.item_priority_level)
+}
 class DailyHabitsMain : AppCompatActivity() {
+
+    private val q_habits = listOf(
+        "Read a book",
+        "Take a 5-minute walk outside",
+        "Drink a glass of water",
+    "Take a 5-minute walk outside.",
+        "Practice deep breathing for 1 minute",
+        "Stretch your arms and legs for a quick break",
+    "Do 10 push-ups or modified push-ups",
+        "Write down three things you're grateful for",
+        "Listen to your favorite energizing song and dance for a minute"
+    )
+
         val db = Firebase.firestore
 
         override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             setContentView(R.layout.activity_daily_habit_list)
-//            try {
-//                this.supportActionBar!!.setBackgroundDrawable(
-//                    ColorDrawable(
-//                        getResources()
-//                            .getColor(R.color.dark_blue_grey)
-//                    )
-//                )
-//            } catch (e: NullPointerException) {
+
+            val habitTextView = findViewById<TextView>(R.id.habit_text_view)
+//            val habitSelectorButton = findViewById<Button>(R.id.habit_selector_button)
+
+            val random = Random()
+
+//            habitSelectorButton.setOnClickListener {
+//                val habitSelectorDialog = HabitSelectorDialog(this, habits) { selectedHabit ->
+//                    habitTextView.text = selectedHabit
+//                }
+//                habitSelectorDialog.show()
 //            }
+
+            findViewById<Button>(R.id.random_habit_button).setOnClickListener {
+                val randomHabit = q_habits[random.nextInt(q_habits.size)]
+                habitTextView.text = randomHabit
+            }
+//
             supportActionBar?.title = getString(R.string.h_s)
             val query = db.collection("habits")
                 .whereEqualTo("user", FirebaseAuth.getInstance().currentUser!!.uid)
@@ -69,6 +94,8 @@ class DailyHabitsMain : AppCompatActivity() {
                         .inflate(R.layout.daily_habit_card, parent, false)
                     return DailyHabitViewHolder(view)
                 }
+
+
 
 
                 override fun onBindViewHolder(holder: DailyHabitViewHolder, position: Int, model: DailyHabit) {
@@ -103,7 +130,16 @@ class DailyHabitsMain : AppCompatActivity() {
 //                        item_tv_title.setTextColor(Color.parseColor("#ff0000"))
 //                    }
 
+                    val item_priority_level = holder.itemPriImg
+                    if (model.priorityLevel == "High") {
+                        item_priority_level.setImageResource(R.drawable.selected_date_background)
+                    } else if (model.priorityLevel == "Medium") {
+                        item_priority_level.setImageResource(R.drawable.ic_priority_low)
+                    }
 
+                    else {
+                        item_priority_level.setImageResource(R.drawable.ic_priority_medium)
+                    }
 
 
                     val documentId = snapshots.getSnapshot(position).id

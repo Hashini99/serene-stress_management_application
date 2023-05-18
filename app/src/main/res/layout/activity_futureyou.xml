@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/pastel_yellow"
 
     tools:context="com.example.serene.moods.MoodFix">
 
@@ -79,7 +79,7 @@
                 android:layout_width="128dp"
                 android:layout_height="95dp"
                 android:layout_gravity="center_horizontal|top"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="65dp"
                 android:src="@drawable/sr" />
 
             <!--            <TextView-->
@@ -140,7 +140,7 @@
                 android:layout_width="125dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center_horizontal|top"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="65dp"
                 android:src="@drawable/cm" />
 
 <!--            <TextView-->
@@ -201,7 +201,7 @@
                 android:layout_width="122dp"
                 android:layout_height="102dp"
                 android:layout_gravity="center_horizontal|top"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="65dp"
                 android:src="@drawable/fm" />
 
 <!--            <TextView-->
@@ -220,7 +220,7 @@
             android:layout_height="200dp"
             android:layout_marginStart="204dp"
             android:layout_marginTop="116dp"
-            android:background="@drawable/card_background"
+            android:background="@drawable/common_card"
             app:cardCornerRadius="25dp"
             app:cardElevation="10dp"
             android:backgroundTint="@color/white"

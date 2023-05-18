@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    tools:context=".JournalTextFormatter">
+
+    <!--    <ScrollView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_alignParentTop="true">-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="78dp">
+
+            <TextView
+                style="@style/viewParent.headerText.NoMode"
+                android:layout_width="174dp"
+                android:layout_height="74dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="8dp"
+                android:text="Update Journal"
+                android:textColor="@color/blue3" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="352dp"
+            android:layout_height="620dp"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_name"
+                style="@style/parent"
+                android:layout_marginTop="@dimen/viewsMargin">
+
+                <EditText
+                    android:id="@+id/et_title"
+                    style="@style/modifiedEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Title"
+                    android:inputType="textPersonName"
+                    android:maxLines="1" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layout_name2"
+                style="@style/parent"
+                android:layout_marginTop="@dimen/viewsMargin">
+
+                <EditText
+                    android:id="@+id/et_des"
+                    style="@style/modifiedEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Description"
+                    android:inputType="textPersonName"
+                    android:maxLines="15" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text"
+                style="@style/parent"
+                android:layout_height="12dp"
+                android:layout_marginTop="@dimen/viewsMargin" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="182dp"
+                android:layout_height="79dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/blue3"
+                android:onClick="updateJournalData"
+                android:text="CONFIRM" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:weightSum="12">
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <!--    </ScrollView>-->
+
+</RelativeLayout>

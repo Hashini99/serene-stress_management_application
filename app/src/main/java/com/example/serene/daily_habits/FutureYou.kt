@@ -15,7 +15,8 @@ class FutureYou : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_futureyou)
-        supportActionBar?.title = getString(R.string.h_m)
+        supportActionBar?.title = getString(R.string.f_y)
+
 
         sh.setOnClickListener {
             startActivity(Intent(this, SocialHabit::class.java))

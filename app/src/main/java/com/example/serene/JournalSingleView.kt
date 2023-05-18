@@ -85,4 +85,8 @@ class JournalSingleView: AppCompatActivity() {
         startActivity(Intent(this, JournalMainActivity::class.java))
         finish()
     }
+    fun update_journal(view: View) {
+        startActivity(Intent(this, JournalTextFormatter::class.java))
+        finish()
+    }
 }

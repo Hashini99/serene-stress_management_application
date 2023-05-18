@@ -28,6 +28,19 @@
         android:textColor="@color/white"
         android:layout_below="@id/imageView"
         android:padding="20dp"/>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Give your stress wings and let it fly away"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/montserrat_mediumitalic"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:layout_below="@id/imageView"
+        android:padding="12dp"/>
+
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="match_parent"

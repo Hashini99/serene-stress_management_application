@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:background="@color/pastel_yellow"
     android:padding="16dp">
 
     <TextView
@@ -11,6 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="18sp"
+        android:textColor="@color/blue3"
+        android:fontFamily="@font/montserrat_medium"
         android:textStyle="bold" />
 
     <View
@@ -22,7 +25,9 @@
         android:id="@+id/habit_difficulty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/blue3"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_medium"
         android:textSize="14sp" />
 
     <TextView
@@ -30,5 +35,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:textColor="@color/blue3"
+        android:fontFamily="@font/montserrat_medium"
         android:textSize="14sp" />
 </LinearLayout>

@@ -39,6 +39,7 @@
             android:name=".expert_support.ExpertList"
             android:exported="true"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".montly_quiz.MQuiz"
             android:exported="true"
@@ -85,6 +86,10 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".daily_habits.RandomHabitOne"
+            android:exported="true"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".JournalTextFormatter"
             android:exported="true"
             android:screenOrientation="portrait"/>
 

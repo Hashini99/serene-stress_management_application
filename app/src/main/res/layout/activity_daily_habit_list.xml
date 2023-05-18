@@ -88,83 +88,106 @@
 <!--    </LinearLayout>-->
 
 
-    <LinearLayout
-        android:layout_width="400dp"
-        android:layout_height="175dp"
-        android:layout_alignParentBottom="true"
+<!--    <LinearLayout-->
+<!--        android:layout_width="400dp"-->
+<!--        android:layout_height="175dp"-->
+<!--        android:layout_alignParentBottom="true"-->
 
-        android:layout_marginBottom="556dp"
+<!--        android:layout_marginBottom="556dp"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="16dp">-->
+
+
+<!--        <Button-->
+<!--            android:id="@+id/h1"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="155dp"-->
+<!--            android:backgroundTint="@color/cardSecondColor"-->
+<!--            android:onClick="h1"-->
+<!--            android:text="Habit1"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="17sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/h2"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="155dp"-->
+<!--            android:backgroundTint="@color/orange_200"-->
+<!--            android:onClick="h2"-->
+<!--            android:text="Habit 2"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="17sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/h3"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="155dp"-->
+<!--            android:backgroundTint="@color/cards"-->
+<!--            android:onClick="h3"-->
+<!--            android:text="Habit3"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="17sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/h4"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="155dp"-->
+<!--            android:backgroundTint="@color/blue5"-->
+<!--            android:onClick="h4"-->
+<!--            android:text="Habit4"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="17sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/h5"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="155dp"-->
+<!--            android:backgroundTint="@color/schedule_underline_on"-->
+<!--            android:onClick="h4"-->
+<!--            android:text="Habit5"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="17sp"-->
+<!--            android:textStyle="bold" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/h6"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="155dp"-->
+<!--            android:backgroundTint="@color/text_fields"-->
+<!--            android:onClick="h5"-->
+<!--            android:text="Habit6"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="17sp"-->
+<!--            android:textStyle="bold" />-->
+<!--    </LinearLayout>-->
+
+
+<!--    <TextView-->
+<!--        android:id="@+id/habit_text_view"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerVertical="true"-->
+<!--        android:layout_marginTop="90dp"-->
+<!--        android:text="random_habit"-->
+<!--        android:textSize="24sp" />-->
+
+    <Button
+        android:id="@+id/random_habit_button"
+        android:layout_width="216dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/yellow"
+
         android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="16dp">
 
-
-        <Button
-            android:id="@+id/h1"
-            android:layout_width="50dp"
-            android:layout_height="155dp"
-            android:backgroundTint="@color/cardSecondColor"
-            android:onClick="h1"
-            android:text="Habit1"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/h2"
-            android:layout_width="50dp"
-            android:layout_height="155dp"
-            android:backgroundTint="@color/orange_200"
-            android:onClick="h2"
-            android:text="Habit 2"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/h3"
-            android:layout_width="50dp"
-            android:layout_height="155dp"
-            android:backgroundTint="@color/cards"
-            android:onClick="h3"
-            android:text="Habit3"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/h4"
-            android:layout_width="50dp"
-            android:layout_height="155dp"
-            android:backgroundTint="@color/blue5"
-            android:onClick="h4"
-            android:text="Habit4"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/h5"
-            android:layout_width="50dp"
-            android:layout_height="155dp"
-            android:backgroundTint="@color/schedule_underline_on"
-            android:onClick="h4"
-            android:text="Habit5"
-            android:textColor="@color/black"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/h6"
-            android:layout_width="50dp"
-            android:layout_height="155dp"
-            android:backgroundTint="@color/text_fields"
-            android:onClick="h5"
-            android:text="Habit6"
-            android:textColor="@color/white"
-            android:textSize="17sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+        android:text="Active Break" />
 
     <TextView
         android:id="@+id/textView45"
@@ -173,10 +196,10 @@
         android:layout_marginTop="250dp"
         android:fontFamily="@font/montserrat_medium"
         android:gravity="center"
-        android:textSize="18sp"
         android:text="Create Your Own"
-        android:textStyle="bold"
-        android:textColor="@color/black" />
+        android:textColor="@color/blue3"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dailyhabitsRecyclerView"
@@ -204,15 +227,19 @@
         android:src="@drawable/journal_add_icon" />
 
     <TextView
-        android:id="@+id/textView5"
-        android:layout_width="253dp"
-        android:layout_height="35dp"
-        android:textStyle="bold"
+        android:id="@+id/habit_text_view"
+        android:layout_width="353dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="40dp"
         android:fontFamily="@font/montserrat_medium"
         android:gravity="center"
-        android:text="Select Random Habit"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
+
+
+        android:textColor="@color/blue3"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 
     <!--    <Button-->

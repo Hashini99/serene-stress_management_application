@@ -1,136 +1,114 @@
 package com.example.serene
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import com.example.serene.academic_goal.AddGoal
-import com.example.serene.academic_goal.GoalMain
-import com.example.serene.chatbot.BotActivity
-import com.example.serene.daily_habits.AddDailyHabits
-import com.example.serene.daily_habits.DailyHabitsMain
-import com.example.serene.expert_support.ChannelList
-import com.example.serene.expert_support.Channeling
-//import com.example.serene.daily_habits.Habit
-import com.example.serene.expert_support.VideoChat
-import com.example.serene.history.MoodHistory
-import com.example.serene.history.StressTrackerOverview
-import com.example.serene.meditation.MeditationMain
-import com.example.serene.montly_quiz.Quiz
-import com.example.serene.moods.SelectMood
+
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
 
 
-class Login: AppCompatActivity() {
-   private lateinit var  auth: FirebaseAuth
+//class Login: AppCompatActivity() {
+//   private lateinit var  auth: FirebaseAuth
+//
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        setContentView(R.layout.activity_login)
+//        title="Login"
+//        auth= FirebaseAuth.getInstance()
+//
+//        try {
+//            this.supportActionBar!!.hide()
+//        } catch (e: NullPointerException) {}
+//    }
+//
+//    fun login(view: View){
+//        val email=editTextEmail.text.toString()
+//        val password=editTextPassword.text.toString()
+//        auth.signInWithEmailAndPassword(email,password).addOnCompleteListener { task ->
+//            if(task.isSuccessful){
+//                val intent= Intent(this,Home::class.java)
+//                startActivity(intent)
+//                finish()
+//            }
+//        }.addOnFailureListener { exception ->
+//            Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()
+//        }
+//    }
+//
+//    fun goToRegister(view: View){
+//        startActivity(Intent(this, CreateAccount::class.java))
+//        finish()
+//    }
+//
+//    fun goToForgetPassword(view: View){
+//        startActivity(Intent(this, ForgetPassword::class.java))
+//        finish()
+//    }
+//}
+
+class Login : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+    private lateinit var sharedPreferences: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        title="Login"
-        auth= FirebaseAuth.getInstance()
+        title = "Login"
+        auth = FirebaseAuth.getInstance()
+        sharedPreferences = getSharedPreferences("login_status", Context.MODE_PRIVATE)
 
         try {
             this.supportActionBar!!.hide()
-        } catch (e: NullPointerException) {}
-    }
-
-    fun login(view: View){
-        val email=editTextEmail.text.toString()
-        val password=editTextPassword.text.toString()
-        auth.signInWithEmailAndPassword(email,password).addOnCompleteListener { task ->
-            if(task.isSuccessful){
-                val intent= Intent(this,Home::class.java)
-                startActivity(intent)
-                finish()
-            }
-        }.addOnFailureListener { exception ->
-            Toast.makeText(applicationContext,exception.localizedMessage, Toast.LENGTH_LONG).show()
+        } catch (e: NullPointerException) {
         }
     }
 
-    fun goToRegister(view: View){
+    override fun onStart() {
+        super.onStart()
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            // User is already logged in, redirect to Home activity
+            navigateToHome()
+        }
+    }
+
+    fun login(view: View) {
+        val email = editTextEmail.text.toString()
+        val password = editTextPassword.text.toString()
+
+        auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                // Login successful, store login status and navigate to Home activity
+                sharedPreferences.edit().putBoolean("isLoggedIn", true).apply()
+                navigateToHome()
+            }
+        }.addOnFailureListener { exception ->
+            Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
+        }
+    }
+
+    fun goToRegister(view: View) {
         startActivity(Intent(this, CreateAccount::class.java))
         finish()
     }
 
-    fun goToForgetPassword(view: View){
+    fun goToForgetPassword(view: View) {
         startActivity(Intent(this, ForgetPassword::class.java))
+        finish()
+    }
+
+    private fun navigateToHome() {
+        val intent = Intent(this, Home::class.java)
+        startActivity(intent)
         finish()
     }
 }
 
 
-
-//package com.example.serene
-//
-//import android.content.Context
-//import android.content.Intent
-//import android.content.SharedPreferences
-//import android.os.Bundle
-//import android.view.View
-//import android.widget.Toast
-//import androidx.appcompat.app.AppCompatActivity
-//import com.google.firebase.auth.FirebaseAuth
-//import kotlinx.android.synthetic.main.activity_login.*
-//
-//class Login : AppCompatActivity() {
-//
-//    private lateinit var auth: FirebaseAuth
-//    private lateinit var sharedPrefs: SharedPreferences
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_login)
-//        title = "Login"
-//        auth = FirebaseAuth.getInstance()
-//        sharedPrefs = getSharedPreferences("myPrefs", Context.MODE_PRIVATE)
-//
-//        try {
-//            this.supportActionBar!!.hide()
-//        } catch (e: NullPointerException) {}
-//
-//        // Check if user is already signed in
-//        if (sharedPrefs.getBoolean("isUserLoggedIn", false)) {
-//            val intent = Intent(this, Home::class.java)
-//            startActivity(intent)
-//            finish()
-//        }
-//    }
-//
-//    fun login(view: View) {
-//        val email = editTextEmail.text.toString()
-//        val password = editTextPassword.text.toString()
-//
-//        auth.signInWithEmailAndPassword(email, password)
-//            .addOnCompleteListener { task ->
-//                if (task.isSuccessful) {
-//                    // Save login status
-//                    val editor = sharedPrefs.edit()
-//                    editor.putBoolean("isUserLoggedIn", true)
-//                    editor.apply()
-//
-//                    // Go to Home activity
-//                    val intent = Intent(this, Home::class.java)
-//                    startActivity(intent)
-//                    finish()
-//                }
-//            }
-//            .addOnFailureListener { exception ->
-//                Toast.makeText(applicationContext, exception.localizedMessage, Toast.LENGTH_LONG).show()
-//            }
-//    }
-//
-//    fun goToRegister(view: View) {
-//        startActivity(Intent(this, CreateAccount::class.java))
-//        finish()
-//    }
-//
-//    fun goToForgetPassword(view: View) {
-//        startActivity(Intent(this, ForgetPassword::class.java))
-//        finish()
-//    }
-//}

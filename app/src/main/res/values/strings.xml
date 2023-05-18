@@ -263,12 +263,20 @@
 
 
     <string name="a_g">Create Goal</string>
-    <string name="a_gm">Academic Related Goal</string>
+    <string name="a_gm">Academic Related Tasks</string>
     <string name="h_s">Habit Setting</string>
     <string name="g_l">Fix Your Mood</string>
     <string name="a_j"> Write Your Journal</string>
     <string name="s_m">Select Your Mood</string>
 
+    <string name="c_d">Career Development</string>
+    <string name="s_r">Social Relationship</string>
+    <string name="f_m">Financial Management</string>
+    <string name="t_m">Time Management</string>
+    <string name="h_d">Select Habit Type</string>
+    <string name="y_h">Your Progress</string>
+    <string name="m_q">Monthly Assessment</string>
+    <string name="f_y">Future You</string>
 
 
 
