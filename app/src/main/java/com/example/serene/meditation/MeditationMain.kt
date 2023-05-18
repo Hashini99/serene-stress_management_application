@@ -14,7 +14,7 @@ class MeditationMain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_meditation_main)
-
+        supportActionBar?.title = getString(R.string.me)
         val sharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
 
         val firstTime = sharedPreferences.getString("FirstTimeInstall", "")

@@ -34,6 +34,8 @@ import android.speech.RecognizerIntent
 
 
 import android.view.View
+import android.widget.Button
+import androidx.core.content.ContextCompat.startActivity
 
 import com.google.firebase.firestore.ktx.firestore
 
@@ -63,13 +65,16 @@ val title:String=""
 )
 class JournalAddEditNoteActivity : AppCompatActivity() {
     lateinit var backButton: FloatingActionButton
-//    lateinit var formatButton: FloatingActionButton
+
+    //    lateinit var formatButton: FloatingActionButton
     lateinit var editTitle: EditText
     lateinit var editDesc: EditText
-    lateinit var saveButton: FloatingActionButton
+
+    //lateinit var saveButton: FloatingActionButton
+    lateinit var saveButton: Button
 
     //    lateinit var viewModel: JourViewModel
-    lateinit var addImageButton: FloatingActionButton
+//    lateinit var addImageButton: FloatingActionButton
     lateinit var theimage: ImageView
     private var ImageURI: Uri? = null
     private var bmp: Bitmap? = null
@@ -77,6 +82,7 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
 
     lateinit var micIV: ImageView
     private val REQUEST_CODE_SPEECH_INPUT = 1
+
     companion object {
         const val IMAGE_REQ_CODE = 100
 
@@ -89,9 +95,9 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
         editTitle = findViewById(R.id.editNoteTitle)
         editDesc = findViewById(R.id.editNoteDescription)
         saveButton = findViewById(R.id.jourSaveButton)
-        backButton = findViewById(R.id.backButton)
-        addImageButton = findViewById(R.id.jourAddImgButton)
-       // formatButton = findViewById(R.id.jourFormatButton)
+//        backButton = findViewById(R.id.backButton)
+        // addImageButton = findViewById(R.id.jourAddImgButton)
+        // formatButton = findViewById(R.id.jourFormatButton)
         theimage = findViewById(R.id.imageView1)
 
         micIV = findViewById(R.id.idIVMic)
@@ -135,9 +141,6 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
         }
 
 
-
-
-
         val noteType = intent.getStringExtra("noteType")
         if (noteType.equals("Edit")) {
             val noteTitle = intent.getStringExtra("noteTitle")
@@ -165,15 +168,6 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
             }
         }
 
-        /*val formattedTitle = intent.getStringExtra("formattedTitle")
-        val formattedDesc =intent.getStringExtra("formattedDesc")
-        if(formattedTitle!="null" && formattedDesc!="null"){
-            editTitle.setText(formattedTitle)
-            editDesc.setText(formattedDesc)
-        }
-        Log.d("valuess", formattedDesc.toString())
-*/
-
 
 
         saveButton.setOnClickListener {
@@ -189,65 +183,56 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
                 "description" to editDesc.text.toString(),
                 "image" to ImageURI,
                 "datetime" to Timestamp.now(),
-                "date" to "${Calendar.getInstance().get(Calendar.YEAR)}-${Calendar.getInstance().get(Calendar.MONTH)+1}-${Calendar.getInstance().get(Calendar.DAY_OF_MONTH)}",
+                "date" to "${Calendar.getInstance().get(Calendar.YEAR)}-${
+                    Calendar.getInstance().get(Calendar.MONTH) + 1
+                }-${Calendar.getInstance().get(Calendar.DAY_OF_MONTH)}",
                 "time" to "${
                     Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
                 }:${Calendar.getInstance().get(Calendar.MINUTE)}",
 
-            )
+                )
             Firebase.firestore.collection("journal").add(journal).addOnSuccessListener {
                 startActivity(Intent(this, JournalMainActivity::class.java))
                 finish()
             }
 
 
-
-
-
         }
 
-        backButton.setOnClickListener{
-            val intent = Intent(this@JournalAddEditNoteActivity,JournalMainActivity::class.java)
-            startActivity(intent)
-            this.finish()
-        }
-
-//        formatButton.setOnClickListener{
-//            val intent = Intent(this@JournalAddEditNoteActivity,JournalTextFormatter::class.java)
-//            intent.putExtra("title", editTitle.text.toString())
-//            intent.putExtra("description", editDesc.text.toString())
+//        backButton.setOnClickListener{
+//            val intent = Intent(this@JournalAddEditNoteActivity,JournalMainActivity::class.java)
 //            startActivity(intent)
 //            this.finish()
 //        }
 
 
-        addImageButton.setOnClickListener{
-            pickImageGallery()
+        //addImageButton.setOnClickListener{
+        //  pickImageGallery()
 
-        }
     }
 
-    private fun pickImageGallery() {
-        val intent = Intent(Intent.ACTION_PICK)
-        intent.type = "image/"
-        startActivityForResult(intent, IMAGE_REQ_CODE)
-    }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?){
+//    private fun pickImageGallery() {
+//        val intent = Intent(Intent.ACTION_PICK)
+//        intent.type = "image/"
+//        startActivityForResult(intent, IMAGE_REQ_CODE)
+//    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode== IMAGE_REQ_CODE && resultCode==RESULT_OK){
+        if (requestCode == IMAGE_REQ_CODE && resultCode == RESULT_OK) {
 
-            ImageURI  = data?.data!!
+            ImageURI = data?.data!!
 
 
-            if (ImageURI!=null){
+            if (ImageURI != null) {
                 theimage.setImageURI(data.data)
 
                 try {
                     bmp = MediaStore.Images.Media.getBitmap(contentResolver, ImageURI)
                     theimage.setImageBitmap(bmp)
 
-                }catch(exception: IOException){
+                } catch (exception: IOException) {
                     exception.printStackTrace()
 
                 }
@@ -272,13 +257,13 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
                 )
             }
         }
-
     }
+
     override fun onBackPressed() {
         super.onBackPressed()
         startActivity(Intent(this, JournalMainActivity::class.java))
         finish()
     }
 
-
 }
+

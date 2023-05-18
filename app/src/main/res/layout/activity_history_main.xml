@@ -115,7 +115,7 @@
                 android:layout_marginEnd="240dp"
                 android:padding="5dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/h" />
+                android:src="@drawable/hf" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -128,8 +128,8 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:padding="12dp"
                 android:text="Mood Journal"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:textColor="@color/blue3"
+                android:textSize="20sp" />
 
 
         </androidx.cardview.widget.CardView>
@@ -162,7 +162,7 @@
                 android:padding="5dp"
 
                 android:scaleType="centerInside"
-                android:src="@drawable/charts" />
+                android:src="@drawable/jou" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -174,9 +174,9 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/montserrat_medium"
                 android:padding="12dp"
-                android:text="Assesment"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:text="Stress Tracker"
+                android:textColor="@color/blue3"
+                android:textSize="20sp" />
 
 
         </androidx.cardview.widget.CardView>

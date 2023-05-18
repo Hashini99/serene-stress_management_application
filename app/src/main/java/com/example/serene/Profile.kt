@@ -182,16 +182,9 @@ class Profile: AppCompatActivity()
 
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navpr)
+        bottomNavigationView.selectedItemId = R.id.settings_graph
 
 
-
-//        // Create a ColorStateList object from the selector XML file
-//        val colorStateList = resources.getColorStateList(R.color.bottom_nav_colors, null)
-//
-//// Set the color of the selected item to the ColorStateList
-//        bottomNavigationView.itemTextColor = colorStateList
-//        bottomNavigationView.itemIconTintList = colorStateList
-//
 
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {

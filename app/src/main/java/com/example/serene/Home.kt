@@ -136,34 +136,98 @@ class Home: AppCompatActivity() {
 
 
 
-    FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().currentUser!!.uid).get().addOnSuccessListener {
-
-            display_name.text = it.data!!.getValue("name").toString()
-
-
-        }.addOnFailureListener {
-            Toast.makeText(applicationContext, "Cannot Get Data from Server", Toast.LENGTH_LONG)
-                .show()
-        }
-//nav bar
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navho)
-
-//        // Create a ColorStateList object from the selector XML file
-//        val colorStateList = resources.getColorStateList(R.color.bottom_nav_colors, null)
-//// Set the color of the selected item to the ColorStateList
-//        bottomNavigationView.itemTextColor = colorStateList
-//        bottomNavigationView.itemIconTintList = colorStateList
+//    FirebaseFirestore.getInstance().collection("users").document(FirebaseAuth.getInstance().currentUser!!.uid).get().addOnSuccessListener {
 //
+//            display_name.text = it.data!!.getValue("name").toString()
+//
+//
+//        }.addOnFailureListener {
+//            Toast.makeText(applicationContext, "Cannot Get Data from Server", Toast.LENGTH_LONG)
+//                .show()
+//        }
 
 
-        bottomNavigationView.setOnItemSelectedListener { menuItem ->
-            when (menuItem.itemId) {
+        FirebaseFirestore.getInstance().collection("users")
+            .document(FirebaseAuth.getInstance().currentUser!!.uid)
+            .get()
+            .addOnSuccessListener { documentSnapshot ->
+                val data = documentSnapshot.data
+                if (data != null) {
+                    val name = data["name"]
+                    if (name != null) {
+                        display_name.text = name.toString()
+                    } else {
+                        // Handle case where 'name' field is null
+                    }
+                } else {
+                    // Handle case where documentSnapshot.data is null
+                }
+            }
+            .addOnFailureListener { exception ->
+                Toast.makeText(applicationContext, "Cannot Get Data from Server", Toast.LENGTH_LONG).show()
+            }
+
+
+//nav bar
+//        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navho)
+//
+//
+//        bottomNavigationView.setOnItemSelectedListener { menuItem ->
+//            when (menuItem.itemId) {
+////                R.id.home_graph -> {
+////                    val intent = Intent(this, Home::class.java)
+////                    startActivity(intent)
+////                    //bottomNavigationView.selectedItemId = menuItem.itemId
+////                    true
+////                }
 //                R.id.home_graph -> {
-//                    val intent = Intent(this, Home::class.java)
+//                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
+//                        // Do nothing if the selected item is already the home page
+//                        return@setOnItemSelectedListener true
+//                    } else {
+//                        val intent = Intent(this, Home::class.java)
+//                        startActivity(intent)
+//                        bottomNavigationView.selectedItemId = menuItem.itemId
+//                        true
+//                    }
+//                }
+//                R.id.main_graph -> {
+//                    val intent = Intent(this, MainTasks::class.java)
+//                    startActivity(intent)
+//                  //  bottomNavigationView.selectedItemId = menuItem.itemId
+//                    true
+//                }
+//                R.id.charts_graph -> {
+//                    val intent = Intent(this, HistoryMain::class.java)
+//                    startActivity(intent)
+//                   // bottomNavigationView.selectedItemId = menuItem.itemId
+//                    true
+//                }
+//                R.id.expert_graph -> {
+//                    val intent = Intent(this, ExpertSupportMain::class.java)
+//                    startActivity(intent)
+//                   // bottomNavigationView.selectedItemId = menuItem.itemId
+//                    true
+//                }
+//                R.id.settings_graph -> {
+//                    val intent = Intent(this, Profile::class.java)
 //                    startActivity(intent)
 //                    //bottomNavigationView.selectedItemId = menuItem.itemId
 //                    true
 //                }
+//                else -> false
+//            }
+//
+//        }
+
+
+                val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navho)
+
+        bottomNavigationView.selectedItemId = R.id.home_graph
+
+        bottomNavigationView.setOnItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+
                 R.id.home_graph -> {
                     if (menuItem.itemId == bottomNavigationView.selectedItemId) {
                         // Do nothing if the selected item is already the home page
@@ -204,68 +268,10 @@ class Home: AppCompatActivity() {
 
         }
 
-//        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navho)
-//
-//        bottomNavigationView.setOnItemSelectedListener { menuItem ->
-//            when (menuItem.itemId) {
-//                R.id.home_graph -> {
-//                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
-//                        // Do nothing if the selected item is already the home page
-//                        return@setOnItemSelectedListener true
-//                    } else {
-//                        val intent = Intent(this, Home::class.java)
-//                        startActivity(intent)
-//                        bottomNavigationView.selectedItemId = menuItem.itemId
-//                        true
-//                    }
-//                }
-//                R.id.main_graph -> {
-//                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
-//                        // Do nothing if the selected item is already the main tasks page
-//                        return@setOnItemSelectedListener true
-//                    } else {
-//                        val intent = Intent(this, MainTasks::class.java)
-//                        startActivity(intent)
-//                        bottomNavigationView.selectedItemId = menuItem.itemId
-//                        true
-//                    }
-//                }
-//                R.id.charts_graph -> {
-//                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
-//                        // Do nothing if the selected item is already the history page
-//                        return@setOnItemSelectedListener true
-//                    } else {
-//                        val intent = Intent(this, HistoryMain::class.java)
-//                        startActivity(intent)
-//                        bottomNavigationView.selectedItemId = menuItem.itemId
-//                        true
-//                    }
-//                }
-//                R.id.expert_graph -> {
-//                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
-//                        // Do nothing if the selected item is already the expert support page
-//                        return@setOnItemSelectedListener true
-//                    } else {
-//                        val intent = Intent(this, ExpertSupportMain::class.java)
-//                        startActivity(intent)
-//                        bottomNavigationView.selectedItemId = menuItem.itemId
-//                        true
-//                    }
-//                }
-//                R.id.settings_graph -> {
-//                    if (menuItem.itemId == bottomNavigationView.selectedItemId) {
-//                        // Do nothing if the selected item is already the profile page
-//                        return@setOnItemSelectedListener true
-//                    } else {
-//                        val intent = Intent(this, Profile::class.java)
-//                        startActivity(intent)
-//                        bottomNavigationView.selectedItemId = menuItem.itemId
-//                        true
-//                    }
-//                }
-//                else -> false
-//            }
-//        }
+
+
+
+
 
         mood_card.setOnClickListener {
             startActivity(Intent(this,SelectMood::class.java))

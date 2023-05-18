@@ -114,7 +114,7 @@ class MeditationSecond : AppCompatActivity() { //Timer variables
         setContentView(R.layout.activity_meditation_second)
         setContentView(R.layout.activity_meditation_second_phase)
 
-
+        supportActionBar?.title = getString(R.string.me)
         mNotificationManager = getSystemService(AppCompatActivity.NOTIFICATION_SERVICE) as NotificationManager
 
         //DND

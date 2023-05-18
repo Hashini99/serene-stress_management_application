@@ -18,7 +18,7 @@ android:layout_height="match_parent"
         android:layout_height="70dp"
         android:layout_centerInParent="true"
         android:scaleType="centerCrop"
-        android:src="@drawable/icon_agora_largest"
+        android:src="@drawable/theme1"
         tools:ignore="ContentDescription" />
 
 </RelativeLayout>
@@ -39,7 +39,7 @@ android:layout_height="match_parent"
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:scaleType="centerCrop"
-        android:src="@drawable/icon_agora_large"
+        android:src="@drawable/theme1"
         tools:ignore="ContentDescription" />
 </FrameLayout>
 
@@ -53,12 +53,11 @@ android:layout_height="match_parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageButton
+        <TextView
             android:id="@+id/buttonCall"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
             android:scaleType="centerCrop"
             android:src="@drawable/btn_endcall"
             tools:ignore="ContentDescription" />
@@ -70,12 +69,12 @@ android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:layout_marginEnd="30dp"
             android:layout_toStartOf="@id/buttonCall"
-            android:scaleType="centerCrop"
-            android:src="@drawable/btn_unmute"
-            tools:ignore="ContentDescription"
-
             android:onClick="joinChannel"
+            android:scaleType="centerCrop"
+            android:src="@drawable/btn_startcall"
+
             android:text="Join"
+            tools:ignore="ContentDescription"
 
             />
 
@@ -86,9 +85,9 @@ android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:layout_marginStart="30dp"
             android:layout_toEndOf="@id/buttonCall"
-            android:scaleType="centerCrop"
             android:onClick="leaveChannel"
-            android:src="@drawable/btn_switch_camera"
+            android:scaleType="centerCrop"
+            android:src="@drawable/btn_endcall"
             tools:ignore="ContentDescription" />
 
 

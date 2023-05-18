@@ -16,7 +16,7 @@
         android:fontFamily="@font/montserrat_medium"
         android:layout_height="wrap_content"
 
-        android:textColor="@color/black"
+        android:textColor="@color/blue3"
         android:textStyle="bold"
         android:padding="10dp"
         android:textSize="30sp"
@@ -80,7 +80,7 @@
                     android:onClick="Addmood"
                     android:padding="10dp"
                     android:text="happy"
-                    android:textColor="@color/black"
+                    android:textColor="@color/blue3"
                     android:textSize="20sp"
                     style="@style/Widget.MaterialComponents.Button.TextButton"/>
 
@@ -126,7 +126,7 @@
                     android:padding="12dp"
                     android:textStyle="bold"
                     android:backgroundTint="@color/white"
-                    android:textColor="@color/black"
+                    android:textColor="@color/blue3"
                     android:textSize="20sp"
 
                     style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -177,7 +177,7 @@
                     android:fontFamily="@font/montserrat_medium"
                     android:padding="12dp"
                     android:backgroundTint="@color/white"
-                    android:textColor="@color/black"
+                    android:textColor="@color/blue3"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     style="@style/Widget.MaterialComponents.Button.TextButton"
@@ -221,18 +221,18 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/button4"
-                    android:text="contempt"
-                    android:layout_width="162dp"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="190dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:padding="12dp"
                     android:backgroundTint="@color/white"
-                    android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    style="@style/Widget.MaterialComponents.Button.TextButton"
-                    android:onClick="Addmood"/>
+                    android:fontFamily="@font/montserrat_medium"
+                    android:onClick="Addmood"
+                    android:padding="12dp"
+                    android:text="contempt"
+                    android:textColor="@color/blue3"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
 
             </androidx.cardview.widget.CardView>
@@ -284,7 +284,7 @@
                     android:fontFamily="@font/montserrat_medium"
                     android:padding="12dp"
                     android:backgroundTint="@color/white"
-                    android:textColor="@color/black"
+                    android:textColor="@color/blue3"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     style="@style/Widget.MaterialComponents.Button.TextButton"

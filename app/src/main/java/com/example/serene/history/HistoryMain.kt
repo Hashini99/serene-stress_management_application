@@ -37,6 +37,8 @@ class HistoryMain  : AppCompatActivity() {
 
         //nav bar
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navhi)
+        bottomNavigationView.selectedItemId = R.id.charts_graph
+
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home_graph -> {

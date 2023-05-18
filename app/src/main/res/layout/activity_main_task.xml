@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/blue3"
     tools:context=".MainTasks">
 <!--    <ScrollView-->
 <!--        android:layout_width="match_parent"-->
@@ -95,9 +95,9 @@
 
                 android:fontFamily="@font/montserrat_medium"
                 android:padding="12dp"
-                android:text="Habit Setting"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:text="Habit Planner"
+                android:textColor="@color/blue3"
+                android:textSize="20sp" />
 
 
         </androidx.cardview.widget.CardView>
@@ -143,9 +143,9 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/montserrat_medium"
                 android:padding="12dp"
-                android:text="Goal Setting"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:text="Study Goal Setter"
+                android:textColor="@color/blue3"
+                android:textSize="20sp" />
 
 
         </androidx.cardview.widget.CardView>
@@ -203,8 +203,8 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:padding="12dp"
                 android:text="Journal"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:textColor="@color/blue3"
+                android:textSize="20sp" />
 
             <ImageView
 
@@ -257,8 +257,8 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:padding="12dp"
                 android:text="Meditation"
-                android:textColor="@color/black"
-                android:textSize="24sp" />
+                android:textColor="@color/blue3"
+                android:textSize="20sp" />
 
 
         </androidx.cardview.widget.CardView>
@@ -271,8 +271,8 @@
         android:layout_alignParentBottom="true"
         android:background="@color/white"
         app:itemIconTint="@drawable/selector_bottom_nav"
-
         app:itemTextColor="@color/blue3"
+
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

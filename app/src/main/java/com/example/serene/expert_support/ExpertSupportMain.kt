@@ -22,6 +22,9 @@ class ExpertSupportMain : AppCompatActivity() {
 
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_naves)
+
+        bottomNavigationView.selectedItemId = R.id.expert_graph
+
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home_graph -> {

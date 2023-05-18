@@ -25,6 +25,8 @@ class MainTasks: AppCompatActivity() {
 
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottom_navmt)
+        bottomNavigationView.selectedItemId = R.id.main_graph
+
         bottomNavigationView.setOnItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.home_graph -> {
@@ -50,6 +52,7 @@ class MainTasks: AppCompatActivity() {
                         true
                     }
                 }
+
                 R.id.charts_graph -> {
                     val intent = Intent(this, HistoryMain::class.java)
                     startActivity(intent)
