@@ -120,12 +120,12 @@ class JournalAddEditNoteActivity : AppCompatActivity() {
                 Locale.getDefault()
             )
 
-            // on below line we are specifying a prompt
+            // on below line  specifying a prompt
             // message as speak to text on below line.
             intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speak to text")
 
-            // on below line we are specifying a try catch block.
-            // in this block we are calling a start activity
+            // on below line  specifying a try catch block.
+            // in this block  calling a start activity
             // for result method and passing our result code.
             try {
                 startActivityForResult(intent, REQUEST_CODE_SPEECH_INPUT)
