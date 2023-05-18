@@ -23,7 +23,7 @@ import com.example.serene.MainTasks
 import com.example.serene.R
 import com.example.serene.daily_habits.DailyHabit
 import com.example.serene.daily_habits.DailyHabitViewHolder
-import com.example.serene.montly_quiz.tot
+
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.github.mikephil.charting.charts.LineChart

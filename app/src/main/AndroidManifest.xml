@@ -209,53 +209,8 @@
             android:name=".JournalMainActivity"
             android:exported="true"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".montly_quiz.Quiz"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".montly_quiz.Question2"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".montly_quiz.Question3"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".montly_quiz.Question4"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".montly_quiz.Question5"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".montly_quiz.Question6"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".montly_quiz.Question7"
-            android:exported="true"
-            android:screenOrientation="portrait" />
-        <activity
-        android:name=".montly_quiz.Question8"
-        android:exported="true"
-        android:screenOrientation="portrait" />
-        <activity
-        android:name=".montly_quiz.Qusetion9"
-        android:exported="true"
-        android:screenOrientation="portrait" />
-        <activity
-            android:name=".montly_quiz.Question10"
-            android:exported="true"
-            android:screenOrientation="portrait" />
 
 
-
-        <activity
-            android:name=".montly_quiz.QuizResult"
-            android:exported="true"
-            android:screenOrientation="portrait" />
 
         <activity
             android:name=".chatbot.BotActivity"

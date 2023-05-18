@@ -20,7 +20,7 @@ import com.example.serene.history.HistoryMain
 import com.example.serene.home_status.CalmStatus
 import com.example.serene.home_status.Motivational_Status
 import com.example.serene.meditation.MeditationMain
-import com.example.serene.montly_quiz.Quiz
+
 import com.example.serene.montly_quiz.QuizIntro
 import com.example.serene.moods.SelectMood
 import com.google.android.material.bottomnavigation.BottomNavigationView
