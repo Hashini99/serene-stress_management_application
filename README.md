@@ -15,7 +15,7 @@
   - Breathing exercises and mindfulness support.
 
 - 😊 **Mood Prediction**
-  - Machine learning–based mood predictor trained on user habits and inputs.
+  
 
 - 🧠 **Stress Detection Questionnaire**
   - Scientifically designed questionnaire to assess stress levels.
