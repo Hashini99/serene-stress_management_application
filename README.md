@@ -37,14 +37,7 @@
 |--------------|------------------------------|
 | Language     | Java, Kotlin                 |
 | Backend      | Firebase Authentication, Firestore, Realtime DB |
-| Machine Learning | TensorFlow Lite (optional)       |
 | UI/UX        | Android XML, Material Design |
 | Tools        | Android Studio, Firebase Console |
 
 ---
-
-## 📦 Installation
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/serene-app.git
